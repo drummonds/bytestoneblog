@@ -1,9 +1,9 @@
-baseURL = "http://example.org/"
+baseURL = "http://www.bytestone.uk/"
 languageCode = "en"
 DefaultContentLanguage = "en"
 theme = "simpleness"
 
-title = "Rainer Chiang"
+title = "Bytestone Blog"
 enableInlineShortcodes = true
 enableEmoji = true
 googleAnalytics = ""
@@ -19,7 +19,7 @@ googleAnalytics = ""
 
 [params.valine]
   enable = false
-  lang = 'en' # zh-CN
+  lang = 'en' 
   appId = ''
   appKey = ''
   placeholder = 'Say Something......'
@@ -40,7 +40,7 @@ googleAnalytics = ""
   weight = 2
 
 [social]
-  github = "https://github.com/RainerChiang"
+  github = "https://github.com/Drummonds"
   rss = "index.xml"
 
 [taxonomies]
