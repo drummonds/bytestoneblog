@@ -15,7 +15,7 @@ This was one of the est unfaded squares.
 
 Then there is the fine detail:
 
-![Tartan detail](TartanDetail.jpg "Old 1820 Fine Plaid Detail")
+![thread detail](FineTartanDetail.jpg "Old 1820 Fine Plaid Detail")
 
 This for part of the tartan gives a thread count of:
 
