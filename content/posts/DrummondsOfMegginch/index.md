@@ -57,11 +57,20 @@ eg R-4 DB-1 R-2 DB-2 R-6 LB-2 R-2 DB-5 R-2 G-2 R-2 G-6 R-3 DB-2 R-4
 
 ## Summary setts table of thread counts
 
-| Name          | Sum | 01  | 02  | 03  | 04  | 05  | 06  | 07  | 08   | 09  | 10  | 11  | 12  | 13  | 14  | 15  |
-| ------------- | --- | --- | --- | --- | --- | --- | --- | --- | ---- | --- | --- | --- | --- | --- | --- | --- |
-| 1849 Kilt     |     | R14 | DB2 | R4  | DB4 | R70 | LB4 | R4  | DB20 | R4  | G4  | R4  | G74 | R6  | DB4 | R12 |
-| 1997 New Kilt |     | R12 | DB2 | R4  | DB4 | R62 | LB4 | R4  | DB20 | R4  | G4  | R4  | G64 | R6  | DB4 | R14 |
-| Child kilt    |     | R12 | DB2 | R4  | DB4 | R28 | LB4 | R4  | DB8  | R4  | G4  | R4  | G24 | R6  | DB4 | R12 |
+| Name          | Sum | R i | DB ii | R iii | DB iv | R v | LB vi | R vii | DB viii | R ix | G x | R xi | G xii | R xiii | DB xiv | R xv |
+| ------------- | --- | --- | ----- | ----- | ----- | --- | ----- | ----- | ------- | ---- | --- | ---- | ----- | ------ | ------ | ---- |
+| 1849 Kilt     |     | 14  | 2     | 4     | 4     | 70  | B4    | 4     | 20      | 4    | 4   | 4    | 74    | 6      | 4      | 12   |
+| 1997 New Kilt |     | 12  | 2     | 4     | 4     | 62  | B4    | 4     | 20      | 4    | 4   | 4    | 64    | 6      | 4      | 14   |
+| Child kilt    |     | 12  | 2     | 4     | 4     | 28  | B4    | 4     | 8       | 4    | 4   | 4    | 24    | 6      | 4      | 12   |
+
+Colour Legend
+
+| Abreviation | Colour Name       | Sample |
+| ----------- | ----------------- | ------ |
+| R           | Red               |        |
+| DB          | Dark Blue         |        |
+| LB          | Light Blue, Azure |        |
+| G           | Green             |        |
 
 ## Relative size table
 
