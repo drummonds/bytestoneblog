@@ -2,16 +2,22 @@
 title: "Drummonds of Megginch Tartan Notes"
 date: "2022-05-28"
 ---
+
 Drummonds of Megginch Tartan
 
-Originall writteen May 16, 2018
+Originally written May 16, 2018
+
+There has long been confusion about the tartan for the Drummonds of Megginch. This is due the tartan being very similar to the Grant tartan that was recorded in the early weavers books.
+
 Drummonds of Megginch Tartan different from Wilson Grant pattern.
 
 The earliest example I currently have of the tartans that the Drummonds of Megginch is a kilt dating from 1849 which I wore from about 1975 to 2000. The picture is of the inside which has faded less the outer. I can be confident of the date as there is a picture of JMD (James Murray Drummond) wearing this with a sporran which I also have. The sporran was made in 1849 in Edinbugh and can be dated from the silver makers mark.
 
+There is probably an older tartan shawl which is thought to date from around 1820 but the precise history is uncertain.
+
 My old Kilt:
 
-![My Old Kilt](myOldKilt.jpg "My Old Kilt")  
+![My Old Kilt](myOldKilt.jpg "My Old Kilt")
 
 which uses the following sett:
 
@@ -21,9 +27,9 @@ This is very similar to Drummond 1819 Clan as listed in the Scottish Tartans Aut
 
 R12 B2 R4 B4 R64 LB2 R4 B16 R4 G4 R4 G48 R4 B4 R12
 
-(The Scottish Tartan Authority vary it as Dark Purple rather than a Dark Blue). Looking at the light blue squares makes the lenght of the small square 85% of the large square.
+(The Scottish Tartan Authority vary it as Dark Purple rather than a Dark Blue). Looking at the light blue squares makes the length of the small square 85% of the large square.
 
-R12 DP2 R4 DP4 R64 LB4 R4 DP16 R4 G4 R4 G48 R4 DP4 R12 
+R12 DP2 R4 DP4 R64 LB4 R4 DP16 R4 G4 R4 G48 R4 DP4 R12
 
 In fact when I got married I got a new kilt made and woven by DC Dagleish and they have used another set of thread counts which gives the ratio of the light blue square to be 68.6% this is close to the 64% in the original kilt.
 
@@ -49,6 +55,18 @@ The pattern can probably be further abstracted by ordering the sizes of the thre
 
 eg R-4 DB-1 R-2 DB-2 R-6 LB-2 R-2 DB-5 R-2 G-2 R-2 G-6 R-3 DB-2 R-4
 
+## Summary setts table of thread counts
+
+| Name          | Sum | 01  | 02  | 03  | 04  | 05  | 06  | 07  | 08   | 09  | 10  | 11  | 12  | 13  | 14  | 15  |
+| ------------- | --- | --- | --- | --- | --- | --- | --- | --- | ---- | --- | --- | --- | --- | --- | --- | --- |
+| 1849 Kilt     |     | R14 | DB2 | R4  | DB4 | R70 | LB4 | R4  | DB20 | R4  | G4  | R4  | G74 | R6  | DB4 | R12 |
+| 1997 New Kilt |     | R12 | DB2 | R4  | DB4 | R62 | LB4 | R4  | DB20 | R4  | G4  | R4  | G64 | R6  | DB4 | R14 |
+| Child kilt    |     | R12 | DB2 | R4  | DB4 | R28 | LB4 | R4  | DB8  | R4  | G4  | R4  | G24 | R6  | DB4 | R12 |
+
+## Relative size table
+
+This is different a sett as you divide by the smallest repeat to get the pattern
+
 In order for this to work you need 12 and 14 to be in the same thickness bracket so that all the Tartans have the same descriptor. 20% variation if sufficent for that. This is a lossy process but allows different weaving patterns to be classifed as the same design.
 Conclusion
 
@@ -56,4 +74,3 @@ The Drummond of Megginch tartan pattern from the Megginch Castle collection is d
 Epilogue
 
 Thanks to Field Precision Services for a very handy Windows ruler which you can calibrate eg to threadcounts. After calibration on a picture you can then read off thread counts on the onscreen ruler.
-
