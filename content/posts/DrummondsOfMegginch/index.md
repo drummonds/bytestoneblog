@@ -57,11 +57,13 @@ eg R-4 DB-1 R-2 DB-2 R-6 LB-2 R-2 DB-5 R-2 G-2 R-2 G-6 R-3 DB-2 R-4
 
 ## Summary setts table of thread counts
 
-| Name          | Sum | R i | DB ii | R iii | DB iv | R v | LB vi | R vii | DB viii | R ix | G x | R xi | G xii | R xiii | DB xiv | R xv |
-| ------------- | --- | --- | ----- | ----- | ----- | --- | ----- | ----- | ------- | ---- | --- | ---- | ----- | ------ | ------ | ---- |
-| 1849 Kilt     |     | 14  | 2     | 4     | 4     | 70  | B4    | 4     | 20      | 4    | 4   | 4    | 74    | 6      | 4      | 12   |
-| 1997 New Kilt |     | 12  | 2     | 4     | 4     | 62  | B4    | 4     | 20      | 4    | 4   | 4    | 64    | 6      | 4      | 14   |
-| Child kilt    |     | 12  | 2     | 4     | 4     | 28  | B4    | 4     | 8       | 4    | 4   | 4    | 24    | 6      | 4      | 12   |
+| Name            | Sum | R i | DB ii | R iii | DB iv | R v | LB vi | R vii | DB viii | R ix | G x | R xi | G xii | R xiii | DB xiv | R xv |
+| --------------- | --- | --- | ----- | ----- | ----- | --- | ----- | ----- | ------- | ---- | --- | ---- | ----- | ------ | ------ | ---- |
+| 1820 Plaid      |     | 26  | 2     | 6     | 6     | 126 | 6     | 6     | 38      | 6    | 6   | 6    | 130   | 10     | 6      | 18   |
+| 1820 scaled     |     | 13  | 1.3   | 4     | 4     | 84  | 4     | 4     | 25.3    | 4    | 4   | 4    | 86.7  | 6.7    | 4      | 12   |
+| 1849 Kilt       |     | 14  | 2     | 4     | 4     | 70  | B4    | 4     | 20      | 4    | 4   | 4    | 74    | 6      | 4      | 12   |
+| 1997 New Kilt   |     | 12  | 2     | 4     | 4     | 62  | B4    | 4     | 20      | 4    | 4   | 4    | 64    | 6      | 4      | 14   |
+| 1890 Child kilt |     | 12  | 2     | 4     | 4     | 28  | B4    | 4     | 8       | 4    | 4   | 4    | 24    | 6      | 4      | 12   |
 
 Colour Legend
 
@@ -80,6 +82,7 @@ In order for this to work you need 12 and 14 to be in the same thickness bracket
 Conclusion
 
 The Drummond of Megginch tartan pattern from the Megginch Castle collection is distinct from the Wilson Grant / New Bruce pattern and has been for at least 180 years. The differences have been quantified in terms of the relationship of the sizes of the Azure pattern.
-Epilogue
 
-Thanks to Field Precision Services for a very handy Windows ruler which you can calibrate eg to threadcounts. After calibration on a picture you can then read off thread counts on the onscreen ruler.
+### Epilogue
+
+Thanks to Field Precision Services for a very handy Windows ruler which you can calibrate eg to threadcounts. After calibration on a picture you can then read off thread counts on the onscreen ruler.  As of 2022 it now no longer seems extant.
