@@ -1,4 +1,4 @@
-baseURL = "http://www.bytestone.uk/"
+baseURL = "https://www.bytestone.uk/"
 languageCode = "en"
 DefaultContentLanguage = "en"
 theme = "simpleness"
