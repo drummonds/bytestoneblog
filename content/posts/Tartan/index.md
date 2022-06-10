@@ -1,6 +1,7 @@
 ---
 title: "What is Tartan?"
 date: 2022-06-02
+tags: ["tartan"]
 ---
 
 Tartan or checked weaving pattern has ancient origins.  Perhaps it came with the spread of the ancient Bronze age Celts from Austria and Turkey.  To the East there may be a link to the [Tarim Mummies][] as was popularised by Elizabeth Barber[^1].  This currently has got caught up in origin stories of the Han.  Notable mummies are the tall, red-haired "Chärchän man" or the "Ur-David" (1000 BCE); who wore a red twill tunic and tartan leggings.  Elizabeth Barber highlights the similarities between this and  fragments recovered from salt mines associated with the Hallstatt culture.
@@ -74,5 +75,20 @@ In a Castle of Dreams[^2] Admiral Adam Drummond writes to his son John (JMD) who
 That was the start of the [Drummonds of Megginch tartan][].
 
 [Drummonds of Megginch tartan]:{{< ref "DrummondsOfMegginch" >}}
-
 [^2]: Castle of Dreams, Cherry Drummond 1970 Typewritten manuscript.
+
+## Weaving patterns
+
+The simplest weaving pattern is a plain weave:
+
+![Plain Weave](PlainWeave.png "Simple weave")
+
+By doing two threads at once you get a basket weave.  The weft shuttle goes forwards and backwards before the worp threads have to change:
+
+![Basket Weave](BasketWeave.png "Basket")
+
+By offseting the change by one you get a 2 x 2 twill.  There are other patterns possible but this give you nice diagonal stripes and is what is used for tartan:
+
+![Tartan or Twill Weave](2_2TwillWeave.png "Twill, tartan weave")
+
+

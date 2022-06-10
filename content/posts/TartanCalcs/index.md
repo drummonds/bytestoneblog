@@ -9,8 +9,6 @@ Wait for this to come out
 
 ```python
 test = "R14 DB2 R4 DB4 R70 LB4 R4 DB20 R4 G4 R4 G74 R6 DB4 R12"
-
-    
 ```
 
 ```python
