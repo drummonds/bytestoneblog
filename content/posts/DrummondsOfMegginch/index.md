@@ -7,7 +7,7 @@ Drummonds of Megginch Tartan
 
 Originally written May 16, 2018
 
-There has long been confusion about the tartan for the Drummonds of Megginch. This is due the tartan being very similar to the Grant tartan that was recorded in the early weavers books.
+There has long been confusion about the tartan for the Drummonds of Megginch. This is due the tartan being very similar to the New Grant tartan that was recorded by Wilson in the 1819 weaving pattern book.
 
 Drummonds of Megginch Tartan different from Wilson Grant pattern.
 
@@ -22,6 +22,9 @@ My old Kilt:
 which uses the following sett:
 
 R14 DB2 R4 DB4 R70 LB4 R4 DB20 R4 G4 R4 G74 R6 DB4 R12
+
+(The colours of this are not yet quite matched)
+![Drummond1849](Drummond1849Tartan.png "Drummond 1849")
 
 This is very similar to Drummond 1819 Clan as listed in the Scottish Tartans Authority, the Wilson Pattern book describes it as New Bruce. In the setts of the Tartans by DC Stewart p53 it is referred to as Grant although he notes others eg Logan have recorded it as a Drummond tartan:
 
@@ -59,6 +62,7 @@ eg R-4 DB-1 R-2 DB-2 R-6 LB-2 R-2 DB-5 R-2 G-2 R-2 G-6 R-3 DB-2 R-4
 
 | Name            | Sum | R i | DB ii | R iii | DB iv | R v | LB vi | R vii | DB viii | R ix | G x | R xi | G xii | R xiii | DB xiv | R xv |
 | --------------- | --- | --- | ----- | ----- | ----- | --- | ----- | ----- | ------- | ---- | --- | ---- | ----- | ------ | ------ | ---- |
+| 1819 New Grant  |     | 12  | DP2   | 4     | DP4   | 64  | A2    | 4     | DP16    | 4    | 4   | 4    | 48    | 4      | DP4    | 12   |
 | 1820 Plaid      |     | 26  | 2     | 6     | 6     | 126 | 6     | 6     | 38      | 6    | 6   | 6    | 130   | 10     | 6      | 18   |
 | 1820 scaled     |     | 13  | 1.3   | 4     | 4     | 84  | 4     | 4     | 25.3    | 4    | 4   | 4    | 86.7  | 6.7    | 4      | 12   |
 | 1849 Kilt       |     | 14  | 2     | 4     | 4     | 70  | B4    | 4     | 20      | 4    | 4   | 4    | 74    | 6      | 4      | 12   |
@@ -71,6 +75,7 @@ Colour Legend
 | ----------- | ----------------- | ------ |
 | R           | Red               |        |
 | DB          | Dark Blue         |        |
+| DP          | Dark Purple         |        |
 | LB          | Light Blue, Azure |        |
 | G           | Green             |        |
 
@@ -85,4 +90,4 @@ The Drummond of Megginch tartan pattern from the Megginch Castle collection is d
 
 ### Epilogue
 
-Thanks to Field Precision Services for a very handy Windows ruler which you can calibrate eg to threadcounts. After calibration on a picture you can then read off thread counts on the onscreen ruler.  As of 2022 it now no longer seems extant.
+Thanks to Field Precision Services for a very handy Windows ruler which you can calibrate eg to threadcounts. After calibration on a picture you can then read off thread counts on the onscreen ruler. As of 2022 it now no longer seems extant.
