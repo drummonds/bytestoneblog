@@ -19,7 +19,7 @@ IP 66  | 12.5mm jets from any direction
 IP 66  | 1M submersion
 IP 68  | beyond 1M eg Hermetically sealed
 
-[DSMT]: (http://www.dsmt.com/resources/ip-rating-chart/)
+[DSMT]: (https://www.dsmt.com/resources/ip-rating-chart/)
 
 # Table of Lamps
 Lamp | Amazon UK | Amazon Fr | Manufacturer  | Watt | IP Rating | comment
@@ -98,7 +98,7 @@ manufacture boxes just for this purpose
 
 There are a two variants of these conectors re waterproofing
 IP44 splashproof and IP67 water tight.  See here for a range
-http://www.internationalconfig.com/catalog_pages/pg172.pdf
+https://www.internationalconfig.com/catalog_pages/pg172.pdf
 
 The  colour denotes the voltage range, Blue is for 200-250V.
 
