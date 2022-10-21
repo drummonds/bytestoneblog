@@ -28,7 +28,7 @@ This is a 3/1 Twill.  The importance is that twill weaving patterns associated w
 
 ## Scottish tartans
 
-There are a couple of examples from the Roman Era.  The [BBC reported][] on a statue in Morrocco, North Africa of Emperor Caracalla (198 to 217) with a small Caledonian warrior.  The picture below shows a fragment of the legging of the warrier with a black and white check pattern.
+There are a couple of examples from the Roman Era.  The [BBC reported][] on a statue in Morocco, North Africa of Emperor Caracalla (198 to 217) with a small Caledonian warrior.  The picture below shows a fragment of the legging of the warrier with a black and white check pattern.
 
 ![First depiction of Scottish Tartan](CheckedLeggings.png "Checked Leggings")
 
