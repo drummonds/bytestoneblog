@@ -1,8 +1,8 @@
 ---
 title: "Filing MicroEntity Accounts   "
+tags: ["accounts", "hmrc", "tax"]
+date: 2022-10-20
 ---
-Date 2021-10-10
-Tags: Accounts
 
 # Filing microentity accounts
 This is meant to document how to use HMRC's service

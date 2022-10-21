@@ -13,7 +13,7 @@ Tartan or checked weaving pattern has ancient origins.  Perhaps it came with the
 ## Cherchen man:
 
 ![Cherchen Man](CherchenMan.jpg "https://chinesemummies.weebly.com/cherchen-man.html")
-![Cherchen Man Front](CherchenMan2.jpg "https://www.ancient-wisdom.com/chinacherchen.htm")
+![Cherchen Man Front](CherchenMan2.jpg "http://www.ancient-wisdom.com/chinacherchen.htm")
 
 ## Halstatt patterns
 The [Hallstatt weaving][] was more complex than simple tartans:
@@ -31,7 +31,7 @@ There are a couple of examples from the Roman Era.  The [BBC reported][] on a st
 ### Falkirk tartan
 The [first actual sample of tartan][] was a scrap found buried in a pot near the Antoine Wall and is now in the [National Museum for Scotland][].
 
-[National Museum for Scotland]: https://nms.scran.ac.uk/database/record.php?usi=000-100-036-743-C
+[National Museum for Scotland]: http://nms.scran.ac.uk/database/record.php?usi=000-100-036-743-C
 ![Falkirk Sett](FalkirkSett.png "Falkirk Sett")
 
 This is amazingly a 2/2 twill with a threadcount of ca White/8 Black/8.  It was dated by the coinage also contained in the pot to about the middle of the 3rd century.  There have been changes in technique over the centuries as the Falkirk Local history society has an [examination of the weave][].  So the Falkirk tartan uses  Z spun whereas most modern tartans by Lochcarron are S spun, this denotes the direction of rotation of the thread.
@@ -65,7 +65,7 @@ sufficient dress. Those who wear the Highland dress must,
 however, be careful to be armed in the proper Highland
 fashion, —steel-wrought pistols, broadsword, and dirk
 ```
-[Highland Society of London]: https://highlandsocietyoflondon.org/history.php
+[Highland Society of London]: http://highlandsocietyoflondon.org/history.php
 
 
 ## Drummonds of Megginch Tartan
