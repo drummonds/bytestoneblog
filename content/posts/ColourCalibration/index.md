@@ -25,7 +25,7 @@ gamut clipping...
 
 [datacolor used to publish]: https://web.archive.org/web/20170714114019/http://www.datacolor.com/wp-content/uploads/2016/08/SpyderCheckr_Color_Data.pdf
 
-This has been captured by [Christoph Bartneck][] and converted into a table. I have reproduced the table here and added the annotation for the| 24 patch version:
+This has been captured by [Christoph Bartneck][] and converted into a table. I have corrected and reproduced the table here and added the annotation for the| 24 patch version:
 
 - LAB is from Lab
 - First RGB is sRGB, sR s G sB
@@ -49,8 +49,8 @@ This has been captured by [Christoph Bartneck][] and converted into a table. I h
 | 14     | 2C    | Lighter Skin       | 74.28 | 9.05  | 27.21  | 211 | 175 | 133 | 200 | 174 | 134 |
 | 15     | 3C    | Moderate Skin      | 64.57 | 12.39 | 37.24  | 193 | 149 | 91  | 180 | 148 | 95  |
 | 16     | 4C    | Medium Skin        | 44.49 | 17.23 | 26.24  | 139 | 93  | 61  | 127 | 93  | 65  |
-| 17     | SC    | Deep Skin          | 25.29 | 7.95  | 8.87   | 74  | 55  | 46  | 71  | 58  | 50  |
-| 18     | SC    | 95% Gray           | 22.67 | 2.11  | -1.1   | 57  | 54  | 56  | 59  | 57  | 59  |
+| 17     | 5C    | Deep Skin          | 25.29 | 7.95  | 8.87   | 74  | 55  | 46  | 71  | 58  | 50  |
+| 18     | 6C    | 95% Gray           | 22.67 | 2.11  | -1.1   | 57  | 54  | 56  | 59  | 57  | 59  |
 | 19     | 1D    | 5% Gray            | 92.72 | 1.89  | 2.76   | 241 | 233 | 229 | 238 | 233 | 229 |
 | 20     | 2D    | 10% gray           | 88.85 | 1.59  | 2.27   | 229 | 222 | 220 | 226 | 221 | 219 |
 | 21     | 3D    | 30% Gray           | 73.42 | 0.99  | 1.89   | 182 | 178 | 176 | 180 | 177 | 174 |
@@ -79,7 +79,18 @@ This has been captured by [Christoph Bartneck][] and converted into a table. I h
 | 44     | 2H    | Lavender           | 54.38 | 8.84  | -25.71 | 126 | 125 | 174 | 125 | 124 | 171 |
 | 45     | 3H    | Evergreen          | 42.03 | -15.8 | 22.93  | 82  | 106 | 60  | 90  | 106 | 65  |
 | 46     | 4H    | Steel Blue         | 48.82 | -5.11 | -23.08 | 87  | 120 | 155 | 98  | 119 | 152 |
-| 47     | SH    | Classic Light Skin | 65.1  | 18.14 | 18.68  | 197 | 145 | 125 | 183 | 144 | 125 |
+| 47     | 5H    | Classic Light Skin | 65.1  | 18.14 | 18.68  | 197 | 145 | 125 | 183 | 144 | 125 |
 | 48     | 6H    | Classic Dark Skin  | 36.13 | 14.15 | 15.78  | 112 | 76  | 60  | 103 | 77  | 63  |
 
-Christoph Bartneck: https://www.bartneck.de/2017/10/24/patch-color-definitions-for-datacolor-spydercheckr-48/
+[Christoph Bartneck]: https://www.bartneck.de/2017/10/24/patch-color-definitions-for-datacolor-spydercheckr-48/
+
+## Corrections
+At the bottom of Barnecks table there are some comments about errors.  I have assumed the LAB numbers are correct.  I then used the original sRGB numbers to construct a plot:
+
+{{ partial "svg" "datacolor24_a" }}
+
+The Blueprint is clearly off when compared to my physical SpyderChekr24 sample.  Stuart commented on Barnecks page `square 2G has a typo by the way, it should be RGB 58/88/159`
+
+I recalculated all the sRGB values using [python-colormath][] from the LAB values.  Almost every value is off a little eg by 2, some by 3. The colour Blueprint 2G is clearly very different.  My calculation has it as 58, 88, 159 and clearly wrong in the orginal Datacolor pdf.  So this has been corrected to it.
+
+[python-colormath]: https://python-colormath.readthedocs.io/en/latest/index.html
