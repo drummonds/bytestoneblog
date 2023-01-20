@@ -2,6 +2,7 @@
 title: Colour encoding and perception
 date: 2023-01-21
 tags: ["colour"]
+slug: colour
 ---
 
 This is my journey to explore colour perception and spaces.
