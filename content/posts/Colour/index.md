@@ -10,9 +10,9 @@ This is my journey to explore colour perception and spaces.
 
 # Links
 
-[Pointer's gamut review][]  This is a great artical covering pointers gamut and how it fits into perceptual rendering.  Although written int 2015 it also covers diffrences in monitors and display panels and the ACES standard encoding using floating point.
+[Pointers gamut review][]  This is a great artical covering pointers gamut and how it fits into perceptual rendering.  Although written int 2015 it also covers diffrences in monitors and display panels and the ACES standard encoding using floating point.
 
-[Pointer's gamut review]:https://tftcentral.co.uk/articles/pointers_gamut
+[Pointers gamut review]:https://tftcentral.co.uk/articles/pointers_gamut
 
 https://chrisbrejon.com/articles/albedo-and-pointers-gamut/
 
