@@ -9,7 +9,7 @@ There was a great go library called [ghostscad][] that generated OpenSCAD langua
 
 ## Signed distance functions
 
-There are two libraries out there which I have come across for doing CAD with signed distance functions [sdfx][] and [sdf][].
+There are two libraries out there which I have come across for doing CAD with signed distance functions [sdfx][] and [sdf][].  I originally went with sdf as it was under current development or found it first.  sdfx is still being atively developed.  So switching to sdf to see how it goes.
 
 -{{< github_button button="view"  user="deadsy" repo="sdfx" >}}
 {{< github_button button="star"  user="deadsy" repo="sdfx" count="true">}}
