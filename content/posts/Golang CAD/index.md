@@ -9,15 +9,19 @@ There was a great go library called [ghostscad][] that generated OpenSCAD langua
 
 ## Signed distance functions
 
-There are two libraries out there which I have come across for doing CAD with signed distance functions [sdfx][] and sdf
+There are two libraries out there which I have come across for doing CAD with signed distance functions [sdfx][] and [sdf][].
 
-{{< github_button button="view"  user="deadsy" repo="sdfx" >}}
+-{{< github_button button="view"  user="deadsy" repo="sdfx" >}}
 {{< github_button button="star"  user="deadsy" repo="sdfx" count="true">}}
+-{{< github_button button="view"  user="soypat" repo="sdf" >}}
+{{< github_button button="star"  user="soypat" repo="sdf" count="true">}}
 
+https://github.com/soypat/sdf
 There are other use cases like https://github.com/daveagill/go-sdf which is about morphing 2 d images from one to another.
 
 [ghostscad]:https://github.com/ljanyst/ghostscad
 [sdfx]:https://github.com/deadsy/sdfx
+[sdf]:https://github.com/soypat/sdf
 
 Some of this I got from this great list of gui packages [go-gui-projects][] but not in curated [awesome-go][] packages:
 
