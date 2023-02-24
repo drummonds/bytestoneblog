@@ -19,9 +19,12 @@ There are other use cases like https://github.com/daveagill/go-sdf which is abou
 [ghostscad]:https://github.com/ljanyst/ghostscad
 [sdfx]:https://github.com/deadsy/sdfx
 
-Some of this I got from this great list of curated [awesome-go][] packages:
+Some of this I got from this great list of gui packages [go-gui-projects][] but not in curated [awesome-go][] packages:
 
-{{< github_button button="view"  user="avelino" repo="awesome-go" >}}
-{{< github_button button="star"  user="avelino" repo="awesome-go" count="true">}}
+- {{< github_button button="view"  user="go-graphics" repo="awesome-go" >}}
+  {{< github_button button="star"  user="go-graphics" repo="awesome-go" count="true">}}
+- {{< github_button button="view"  user="avelino" repo="go-gui-projects" >}}
+{{< github_button button="star"  user="avelino" repo="go-gui-projects" count="true">}}
 
+[go-gui-projects]: https://github.com/go-graphics/go-gui-projects
 [awesome-go]:https://github.com/avelino/awesome-go
