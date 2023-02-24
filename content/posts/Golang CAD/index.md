@@ -12,7 +12,7 @@ There was a great go library called [ghostscad][] that generated OpenSCAD langua
 There are two libraries out there which I have come across for doing CAD with signged distance functions  .sdfx and sdf
 
 {{< github_button button="view"  user="deadsy" repo="sdfx" >}}
-{{< github_button button="star"  user="deadsy" repo="sdfx" >}}
+{{< github_button button="star"  user="deadsy" repo="sdfx" count="true">}}
 
 There are other use cases like https://github.com/daveagill/go-sdf which is about morphing 2 d images from one to another.
 
