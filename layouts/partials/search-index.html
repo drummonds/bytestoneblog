@@ -1,0 +1,74 @@
+<script>
+
+    async function get_index() {
+        const response = await fetch('/search_index.json');
+        const json = await response.json();
+        window.store = await json; 
+        // lunr.Index.load(JSON.parse(await json))
+    }
+    get_index();
+    const debug2 = document.getElementById("results2");
+    debug2.innerHTML = `After: get index results = ?`;
+
+
+</script>
+<!-- Include Lunr and code for your search function,
+which you'll write in the next section -->
+<script>
+    async function get_source_list() {
+        const response = await fetch('/search_index.json');
+        const json = await response.json();
+        return json
+        }
+
+    // This is the main function once the data has been go
+    function render_source_list(jsonData) {
+        let idx = convertToIDX(jsonData)
+        let results = lunr_search(idx)
+        // convert list to dictionary
+        let dictionary = Object.assign({}, ...(jsonData).map((x) => ({[x.location]: x})));
+
+        doRender(results, dictionary)
+        }
+
+    function convertToIDX(mydata) {
+        var idx = lunr(function () {
+            this.ref('location')
+            this.field('title')
+            this.field('text')
+
+            mydata.forEach(function (doc) {
+                this.add(doc)
+            }, this)
+        })
+        return idx
+        }
+
+    function lunr_search(idx) {
+        var urlParams = new URLSearchParams(window.location.search);
+        let query = urlParams.get("query");
+        if (query.length < 2) {
+            return;
+        }
+        let results = idx.search(query);
+        return results
+    }
+
+
+    function doRender(results, sourceDict) {
+        const resultsElement = document.getElementById("results");
+        var urlParams = new URLSearchParams(window.location.search);
+        var query = urlParams.get("query");
+        this_text = `<p>For query ${query}</p>`;
+        if (results.length > 0) {
+            this_text  += `<ul>`
+            results.forEach(thisRef => this_text+=`<li>Location: <a href="${thisRef.ref}">${thisRef.ref}</a></li>`)
+            this_text  += `</ul>`
+        } 
+        resultsElement.innerHTML = this_text;
+        }
+
+    get_source_list().then(data => { render_source_list(data)})
+</script>
+<script src="/js/lunr.js"></script>
+<script src="/js/search.js"></script>

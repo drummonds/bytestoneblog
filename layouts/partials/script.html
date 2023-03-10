@@ -1,0 +1,12 @@
+<script src="/js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>
+<!-- MermaidJS (if enabled in front matter) -->
+{{ if (.Params.mermaid) }}
+<script async src="https://unpkg.com/mermaid@latest/dist/mermaid.min.js"></script>
+{{ end }}
+{{ if .HasShortcode "github_button" }}
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+{{end}}
+
