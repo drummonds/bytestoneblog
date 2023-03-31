@@ -59,10 +59,10 @@ which you'll write in the next section -->
         const resultsElement = document.getElementById("results");
         var urlParams = new URLSearchParams(window.location.search);
         var query = urlParams.get("query");
-        this_text = `<p>For query ${query}</p>`;
+        this_text = `<p>For query <em>${query}</em></p>`;
         if (results.length > 0) {
             this_text  += `<ul>`
-            results.forEach(thisRef => this_text+=`<li>Location: <a href="${thisRef.ref}">${thisRef.ref}</a></li>`)
+            results.forEach(thisRef => this_text+=`<li>Location  {{ .Site.BaseURL }}: <a href="${thisRef.ref}">${thisRef.ref}</a></li>`)
             this_text  += `</ul>`
         } 
         resultsElement.innerHTML = this_text;
