@@ -62,7 +62,7 @@ which you'll write in the next section -->
         this_text = `<p>For query <em>${query}</em></p>`;
         if (results.length > 0) {
             this_text  += `<ul>`
-            results.forEach(thisRef => this_text+=`<li>Location  {{ .Site.BaseURL }}: <a href="${thisRef.ref}">${thisRef.ref}</a></li>`)
+            results.forEach(thisRef => this_text+=`<li>Location: <a href="${thisRef.ref}">${thisRef.ref}</a></li>`)
             this_text  += `</ul>`
         } 
         resultsElement.innerHTML = this_text;
