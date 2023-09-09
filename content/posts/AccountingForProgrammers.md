@@ -3,7 +3,6 @@ title: "Accounting for Programmers"
 date: "2016-10-30"
 categories: ["Humphrey"]
 tags: ["Humphrey"]
-slug: "AccountingForProgrammers"
 author: "Humphrey Drummond"
 summary: "An introduction to accounting for programmers."
 ---

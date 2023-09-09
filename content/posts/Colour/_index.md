@@ -2,7 +2,6 @@
 title: Colour encoding and perception
 date: 2023-05-01
 tags: ["colour"]
-slug: colour
 ---
 
 This is my journey to explore colour encoding and perception. There are others who have looked at the same question:
