@@ -41,46 +41,51 @@ financial instruments, restructuring?
     - ***No***
 1. Do you need to report contingent assets?
     - ***No***
-1. Do you need to report any of   
-    -   the following:  
+1. We need to know if the company has:  
         - Charity turnover above £6.5 million per year
-        - Company turnover above £632,000 per year
+        - company turnover (plus any coronavirus grants) of more than £632,000 per year
         - Research and Development (R&D) costs
-        - Income over £1,000 that doesn't come from your organisation's main trade
-        - Non-trading income (except interest received)
+        - income over £1,000 that does not come from your organisation's main trade (except any coronavirus grants)
+        - non-trading income (except interest received or any coronavirus grants)
         - Gross income from property over £5,200
-        - Annual Investment Allowance (AIA) above £200,000
-        - Income from property where expenses are greater than income
-        - Complex loan relationships
-        - Leased car
+        - spent more than £200,000 on assets on which you want to claim the annual investment allowance
+        - decided to claim the Freeport enhanced capital allowance
+        - decided to claim the Freeport enhanced structures and buildings allowance
+        - decided to claim the 50% special rate allowance
+        - income from property where expenses are greater than income
+        - complex loan relationships
+        - leased cars
+        - electric vehicle charging points
+        - zero emissions goods vehicles
+
     - ***No***
-1. Do you need to claim capital allowances?
+2. Do you need to claim capital allowances?
     - ***No***
-1. Choose your filing type
+3. Choose your filing type
     - ***Companies House and HMRC***
-1. Where was the company registered? 
+4. Where was the company registered? 
     - ***England and Wales***
 Enter company registration number and e filing code
 1.Confirm your company accounts dates
     - ***confirmed***
 1. Confirm your Corporation Tax filing dates
     - ***confirmed***
-1. Was the company dormant for the entire period you're filing for?
+2. Was the company dormant for the entire period you're filing for?
     - ***No***
-1. Was your turnover £632,000 or less?  
+3. Was your turnover £632,000 or less?  
     - ***Yes***
-1. Was your balance sheet total £316,000 or less? 
+4. Was your balance sheet total £316,000 or less? 
     - ***Yes***
-1. Did you have an average of 10 employees or fewer in the period? 
+5. Did you have an average of 10 employees or fewer in the period? 
     - ***Yes***
-1. What type of accounts have you prepared?
+6. What type of accounts have you prepared?
     - ***Micro Entity***
 ## You've started your filing
 And HMRC says: `If you leave the service, your saved entries will be here when you return.`
 
 1. Did you have any turnover from inside off-payroll working (OPW) engagements in this period?
    - ***No***
-1. `AC8023` Have you prepared a directors' report?
+2. `AC8023` Have you prepared a directors' report?
     - ***No***
  
 ## First page - Profit and Loss
