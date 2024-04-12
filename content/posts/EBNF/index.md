@@ -136,7 +136,7 @@ Note that [IETF RFC5234][] uses a quite a different family of rules which are no
 
 [ietf xml]: https://www.w3.org/TR/REC-xml/#sec-notation
 
-[IETF RFC5234](https://datatracker.ietf.org/doc/html/rfc5234)
+[IETF RFC5234]: //datatracker.ietf.org/doc/html/rfc5234
 
 This describes an ABNF, I have abbreviated here to eliminate some of the lower level tokenisation rules
 
