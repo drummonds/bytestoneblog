@@ -48,7 +48,7 @@ do breakinglass or add it in the app.
 
 ### Hello world
 
-The most basic program.  you can see that it has run in the online web statuts
+The most basic program.  you can see that it has run in the online web status
 ```go
 package main
 
