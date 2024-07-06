@@ -4,7 +4,7 @@ date: 2024-04-28
 ---
 
 Very excited to be getting gokrazy to work as a deployment platform for devices.  My first project
-is to use our Samsang smart screen as a photo display.
+is to use our Samsung smart screen as a [photo display](https://github.com/drummonds/gophoto).
 
 It has taken a little while to work out how to use effectively use gokrazy from WSL and here are some of my notes.
 
@@ -42,6 +42,20 @@ sure how to use a USB as a permanent store so when fails doesn't affect main mem
 You can't use the extraFiles in config to write the /perm area so get a file there you either have to 
 do breakinglass or add it in the app.
 
+### Using Raspberry pi graphic modes.
+
+I want to display pictures as high resolution photo albums.  At the moment I am just getting the first image to display.  The default image is I thinking HD at 16b its per pixel.  This means only 5 or 6 per colour.  There are two improvements to be done:
+- Switch to a higher resolution mode of 32 bits per pixel perhaps at 4K which I think the raspberry pi 4 supports.  This can be done I think by change the config.txt on boot up;
+- Use 10 bit colour.  This is a lot harder and may involve:
+  -  custom graphics drivers
+  -  Switching  to RGBA64 as basic colours
+
+One thing that will make it easier is that I don't care about the refresh rate that much so as long as the buffer can out put the data at the required refresh rate, the CPU has plenty of time to calculate the next screen.
+
+See the following links
+
+- 10bit format for YUV420 https://forums.raspberrypi.com/viewtopic.php?t=342120
+- good summary https://psychtoolbox.discourse.group/t/raspberry-pi-4-high-bit-depth-output/4824/2
 
 
 ## Journey
