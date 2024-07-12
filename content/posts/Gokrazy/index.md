@@ -8,8 +8,8 @@ is to use our Samsung smart screen as a [photo display](https://github.com/drumm
 
 It has taken a little while to work out how to use effectively use gokrazy from WSL and here are some of my notes.
 
-1) When building the initial image you can use `-file x.img` to output to a file rather than 
-a device which allows you to export the img fril from wsl and burn on Windows.  Attaching an Sd card
+1) When building the initial image you can use `gok -i hello overwrite --full x.img --target_storage_bytes=1258299392` to output to a file rather than 
+a device which allows you to export the img from from wsl and burn on Windows.  Attaching an sd card
 to the WSL instance I found tricky.
 2) To cross compile and update I used `CGO_ENABLED=0 GOARCH=arm64 gok -i hello update` for a raspberry pi 3B+.
 
@@ -48,7 +48,7 @@ I want to display pictures as high resolution photo albums.  At the moment I am 
 - Switch to a higher resolution mode of 32 bits per pixel perhaps at 4K which I think the raspberry pi 4 supports.  This can be done I think by change the config.txt on boot up;
 - Use 10 bit colour.  This is a lot harder and may involve:
   -  custom graphics drivers
-  -  Switching  to RGBA64 as basic colours
+  -  Switching to RGBA64 as basic colours
 
 One thing that will make it easier is that I don't care about the refresh rate that much so as long as the buffer can out put the data at the required refresh rate, the CPU has plenty of time to calculate the next screen.
 

@@ -1,0 +1,20 @@
+---
+title: "Running Gokrazy on WSL"
+date: "2024-07-12"
+---
+
+# Technical issues
+
+For testing I want to run gokrazy on my laptop for testing local development of gophoto.  This requires a framebuffer.  This becomes a more complicated question.  You can install QEMU which gokrazy supports on Windows but it is slow compared if it doesn't run at the hardware emulation layer.
+
+You can also run QEMU in WSL Linux (I use Ubuntu).  The only snag with that is that you don't have a frame buffer.  So using the https://gokrazy.org/userguide/qemu/ I found you only need a little adaption (remove the KVM accelerator `-machine accel=kvm`):
+
+```bash
+qemu-system-x86_64 \
+  -smp 8 \
+  -m 2048 \
+  -drive file=virtual.img,format=raw \
+  -nographic
+```
+
+This then booted up ok although not yet with the grokrazy web interface.  I am working on a train and it seems to have picked up an IP address from the onboard servers and so is not serving locally.
