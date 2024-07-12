@@ -18,3 +18,67 @@ qemu-system-x86_64 \
 ```
 
 This then booted up ok although not yet with the grokrazy web interface.  I am working on a train and it seems to have picked up an IP address from the onboard servers and so is not serving locally.
+
+The issue is that 10.0.2.n is the local (QEMU) networking but that Windows can't route to it.  Once that is fixed it should be accessible.
+
+## Success of Gokrazy network install
+
+So setting up a NAT pass through and working on port 8080 (seem to need both sides to match) you get:
+
+Taskfile.yml
+```task
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  virtual:
+    cmds:
+      - >
+        qemu-system-x86_64
+        -smp 8 -m 2048
+        -drive file=virtual.img,format=raw
+        -nographic
+        -device e1000,netdev=net0
+        -netdev user,id=net0,hostfwd=tcp::8080-:8080
+  virtual_build:
+    cmds:
+      - GOARCH=amd64 gok -i virtual overwrite --full virtual.img --target_storage_bytes 4294967296
+```
+
+config.json
+```json
+{
+    "Hostname": "virtual",
+    "Update": {
+        "HTTPPassword": "gokrazy",
+        "HTTPPort": "8080"
+    },
+    "Packages": [
+        "github.com/gokrazy/hello",
+        "github.com/gokrazy/serial-busybox",
+        "github.com/gokrazy/breakglass"
+    ],
+    "PackageConfig": {
+        "github.com/gokrazy/breakglass": {
+            "CommandLineFlags": [
+                "-authorized_keys=/etc/breakglass.authorized_keys"
+            ],
+            "ExtraFilePaths": {
+                "/etc/breakglass.authorized_keys": "/home/hum3/gokrazy/virtual/breakglass.authorized_keys"
+            }
+        },
+        "github.com/gokrazy/gokrazy/cmd/randomd": {
+            "ExtraFileContents": {
+                "/etc/machine-id": "4456d47275d74a0fafee414a84bf6cd5\n"
+            }
+        }
+    },
+    "KernelPackage": "github.com/rtr7/kernel",
+    "FirmwarePackage": "github.com/rtr7/kernel",
+    "SerialConsole": "ttyS0,115200"
+}
+```
+
+### Still to do
+- update doesn't work - you need to `poweroff` and rebuild and restart.
