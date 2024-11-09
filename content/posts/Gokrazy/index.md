@@ -57,6 +57,9 @@ See the following links
 - 10bit format for YUV420 https://forums.raspberrypi.com/viewtopic.php?t=342120
 - good summary https://psychtoolbox.discourse.group/t/raspberry-pi-4-high-bit-depth-output/4824/2
 
+### Linux Frame Buffer
+
+The Kernel frame buffer documentation [is here](https://www.kernel.org/doc/html/latest/fb/api.html) at www.kernel.org and describes the frame buffer api.
 
 ## Journey
 
