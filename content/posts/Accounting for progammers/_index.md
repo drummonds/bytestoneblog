@@ -10,7 +10,7 @@ summary: "An introduction to accounting for programmers."
 # Accounting for Programmers
 
 
-This is a book to introduce the concepts of accounting to programmers.  It is born of my own exploration into the subject.  It take a somewhat different approach to most books in that we will be looking at accounting
+This is an extended series of posts to introduce the concepts of accounting to programmers.  It is born of my own exploration into the subject and I have started writing in 2016.  It take a somewhat different approach to most books in that we will be looking at accounting
 from the point of view of a programmer, me!
 
 Structure
@@ -25,6 +25,7 @@ Structure
 - Reporting for management info
 - Stock
 - Invoicing
+- [Plain Text accounting](posts/plain-text-accounting/)
 - Free and commercial software packages
 
 ## Accounting records
