@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.121.1">
+  <title> Xero Accounting Tips | Bytestone Blog </title>
+  <meta name="description" content="Varying notes on a very long journey to build bytestone.">
+  <link rel="stylesheet" href="https://www.bytestone.uk/css/simpleness.css">
+  <link rel="canonical" href="https://www.bytestone.uk/posts/xero/">
+  <link rel="alternate" type="application/rss+xml" href="" title="Bytestone Blog">
+  
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  
+</head>
+<body class="container">
+  <nav class="navigation">
+  <div class="nav-left">
+    
+    <div class="nav-item nav-title">
+      <a href="https://www.bytestone.uk/"> Bytestone Blog</a>
+    </div>
+    <div class="nav-item nav-menu">
+      
+      <a href="/"> Home</a>
+      
+      <a href="/about/"> About</a>
+      
+    </div>
+  </div>
+  <div class="nav-item nav-right fontawesome">
+    
+    
+    <a href="https://github.com/Drummonds" target="_blank">
+      <i title="GitHub" class="fab fa-github"></i>
+    </a>
+    
+    
+    <a href="https://www.bytestone.uk/index.xml" target="_blank">
+      <i title="RSS" class="fas fa-rss"></i>
+    </a>
+    
+  </div>
+</nav>
+
+  
+<article class="post">
+  <header class="post-header">
+    <h1 style="text-align: center;" >Xero Accounting Tips</h1>
+    <div class="post-metadata">
+    
+      <time datetime="2018-03-10T00:00:00Z">March 10, 2018</time> &nbsp; 
+    
+    
+    
+    
+    
+      <i class="far fa-clock"></i>
+      
+      
+      
+      
+        3 min
+      
+      10 s
+      &nbsp;
+    
+    
+    </div>
+  </header>
+
+  
+
+  <div class="post-text">
+    <h1 id="directors-loan">Directors loan</h1>
+<h2 id="directors-loan-pay-money-in">Directors loan Pay money in.</h2>
+<p>The standard directors loan account is NC 835.  This can be marked
+so that you can <code>Enable payments to this account</code></p>
+<p>When you pay money into the company for working capital.</p>
+<h3 id="from-other-source">From other source</h3>
+<p>Set up a liability account in Xero. Code the 600 pounds to this account
+and the monthly payments. You then need to do a journal Debit equipment
+purchases and Credit the liability account. You may need to consider
+interest on the loan - not sure how your tax laws work, would be worth discussing with your accountant.</p>
+<h1 id="client-account">Client Account</h1>
+<p>This is very similar to a directors loan.  However it is where Company A, the parent,
+holds money on account in bare trust for another eg Company B.</p>
+<p>The important point is that every transaction in the nominal code in A
+should have an equal transaction in company B.  This is a bit of a pain to enter manually.</p>
+<h2 id="reconciliation">Reconciliation</h2>
+<p>This is currently manual - just do an Account Transactions report for the nominal code in each company.  The final
+balance should be the same.</p>
+<h2 id="receiving-money">Receiving money</h2>
+<p>When money is received this is a current liability for drummonds.net as this is money which is payable on demand.  This
+is modelled in Xero as a current liability account. eg:</p>
+<table>
+<thead>
+<tr>
+<th>Nominal Code</th>
+<th>Company</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>110</td>
+<td>Drummonds</td>
+<td>Current Liability</td>
+</tr>
+<tr>
+<td>110</td>
+<td>Pumba</td>
+<td>Bank account, Current asset</td>
+</tr>
+</tbody>
+</table>
+<p>The transactions are like this:</p>
+<table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Details</th>
+<th>Transaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drummonds</td>
+<td>Receive money for account Client A/C eg NC 110 from X</td>
+<td></td>
+</tr>
+<tr>
+<td>Pumba</td>
+<td>Receive money from X</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-by-step">Step by Step</h3>
+<ul>
+<li>Snip the image of the receipt for storage</li>
+<li>Receipt of money to parent (click on plus sign → Receive Money). This needs to coded to the correct nominal code.
+<ul>
+<li>Current account</li>
+<li>Received as Direct Payment</li>
+<li>Name Pumba Client account</li>
+<li>N/C 110</li>
+<li>Description eg Receipt from SARL</li>
+</ul>
+</li>
+<li>Receipt of money to client</li>
+</ul>
+<h4 id="receipt-of-money-to-parent">Receipt of money to parent</h4>
+<p>So in Drummonds you will have a bank reconciliation entry for money received:
+[Money Received](Money received.png)</p>
+<p>which will end up:</p>
+<p><a href="2018-02-24TransactionReceiveMoney.png">Transaction Receive Money</a></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>NC</th>
+<th>Value before</th>
+<th>Value After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pumba Client account</td>
+<td>Record</td>
+<td>0.0</td>
+<td>Marked as Due</td>
+</tr>
+<tr>
+<td>Pumba Client</td>
+<td>110</td>
+<td>1,475.36</td>
+<td>3,093.98</td>
+</tr>
+<tr>
+<td>P&amp;L</td>
+<td>PBT</td>
+<td>9,708</td>
+<td>9,708</td>
+</tr>
+<tr>
+<td>BS</td>
+<td>Net Assets</td>
+<td>18,104</td>
+<td>18,104</td>
+</tr>
+</tbody>
+</table>
+<h4 id="receipt-of-money-to-client">Receipt of money to client</h4>
+<p>Goto invoice and mark as paid.  Any overpayment will turn up as an overpayment.  Which will need to be written off.
+If paying a number of deposits mark as an overpayment to the account and then pay off each invoice.</p>
+<h2 id="paying-fees-by-client-account">Paying fees by client account</h2>
+<p>Eg Pumba.</p>
+<ul>
+<li>login in to Pumba</li>
+<li>Go to unpaid invoice</li>
+</ul>
+<h1 id="importing-banking-statements-by-hand-into-xero">Importing Banking statements by hand into Xero</h1>
+<p>This saves £36 per account per year.</p>
+<p>Xero has an import feature which accepts OFX, QIF or CSV
+file formats.</p>
+<p>Barclays Bank has an export feature which exports
+in the following formats:</p>
+<table>
+<thead>
+<tr>
+<th>Barclays Description</th>
+<th>Downloaded file format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clearlybookkeeping / Quickbooks 2005</td>
+<td>.qbo</td>
+</tr>
+<tr>
+<td>Microsoft Money 98</td>
+<td>.ofx</td>
+</tr>
+<tr>
+<td>Microsoft Money 99</td>
+<td>.ofx</td>
+</tr>
+<tr>
+<td>Microsoft Money 2000</td>
+<td>.ofx</td>
+</tr>
+<tr>
+<td>Microsoft Money 2001</td>
+<td>.ofx</td>
+</tr>
+<tr>
+<td>Microsoft Money 2002</td>
+<td>.ofx</td>
+</tr>
+<tr>
+<td>Sage Line 50</td>
+<td>.ofx</td>
+</tr>
+<tr>
+<td>Spreadsheet</td>
+<td>.csv</td>
+</tr>
+</tbody>
+</table>
+<p>All the .ofx file formats are the same (tested on a single download)</p>
+<h2 id="barclays-website-download-entry-points">Barclays Website download entry points</h2>
+<p>Once the account is up there are two entry points</p>
+<ul>
+<li>Export all button above list of transactions (exports only the range)</li>
+<li>Manage accounts -&gt; Export my transaction data</li>
+</ul>
+<h2 id="barclays-moving-sort-codes">Barclays moving sort codes</h2>
+<p>You need to be very careful.</p>
+<p>20-67-83 70501123 can export data from 16/01/2018 to 06/04/2018.<br>
+20-67-59 70501123 has been moved and the export is not working</p>
+<h2 id="importing-data">Importing data</h2>
+<p>If the account code has changed then the duplicate account code prevention
+doesn&rsquo;t work.</p>
+<h1 id="drummondsnet-client-invoicing">Drummonds.net client invoicing</h1>
+<h2 id="pumba">Pumba</h2>
+<p>This is set up as an auto invoicing in Drummonds.net
+They also auto appear in Pumba (but not matched to invoices)</p>
+<h2 id="in-pumba">In Pumba:</h2>
+<ul>
+<li>Click on each bill</li>
+<li>Make date paid date of invoice</li>
+<li>paid from 110 Drummonds.net trust account</li>
+<li>no Ref</li>
+<li>Click Add Payment</li>
+<li><strong>After all bill paid</strong> go to bank statement</li>
+<li>reconcile each one in turn
+<ul>
+<li>right click open in new tab</li>
+<li>use option mark as reconciled</li>
+<li>close tab (all at end)</li>
+</ul>
+</li>
+</ul>
+<h2 id="in-drummondsnet">In drummonds.net</h2>
+<ul>
+<li>find invoice in Awaiting payment and click on each one</li>
+<li>Make date paid date of invoice</li>
+<li>paid from 110 pumba client account</li>
+<li>no Ref</li>
+<li>Click Add Payment</li>
+</ul>
+
+  </div>
+
+  <footer class="post-footer">
+    
+
+    
+
+    
+    
+  </footer>
+  
+  <div class="comments">
+  <div class="comments">
+
+
+
+</div>
+  </div>
+</article>
+
+  <div class="foot">
+  
+  &copy; 2018 - 2024 &#183;
+  <a href="/"> Bytestone Blog </a> &#183;
+  Theme <a href="https://github.com/RainerChiang/simpleness">Simpleness</a> Powered by <a href="https://gohugo.io/">Hugo</a> &#183;
+  <a href="#"><i class="fas fa-chevron-up"></i></a>
+</div>
+</body>
+  <script src="/js/lazyload.min.js"></script>
+<script>
+  var lazyImage = new LazyLoad({container: document.getElementById('article')});
+</script>
+
+
+
+
+</html>

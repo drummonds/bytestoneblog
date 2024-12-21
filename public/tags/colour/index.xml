@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>colour on Bytestone Blog</title>
+    <link>https://www.bytestone.uk/tags/colour/</link>
+    <description>Recent content in colour on Bytestone Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 May 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.bytestone.uk/tags/colour/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Colour encoding and perception</title>
+      <link>https://www.bytestone.uk/posts/colour/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/colour/</guid>
+      <description>This is my journey to explore colour encoding and perception. There are others who have looked at the same question:&#xA;Colour Encoding Jamie Wong Nice graphics Ian Boyd Great answer to question. The spectrum of visible light covers the range from violet 380nm to about red 750nm. The range of colours is seen in rainbows.&#xA;A monochromatic source of light appears coloured and the human eye normally has three different colour detectors.</description>
+    </item>
+    <item>
+      <title>Colour Calibration</title>
+      <link>https://www.bytestone.uk/posts/colourcalibration/</link>
+      <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/colourcalibration/</guid>
+      <description>Standards I used to have a Greta Mcbeth colour calibration both small and large but lost the large one and only have the small one left. Just recently purchased the Datacolor SpyderCheckr| 24 but probably should have bought the| 48 patch version in a hard shell. I have just discovered that| 24 patch is the right side of the| 48 patch. So can use the calibration data from that for checking the DataColour Print.</description>
+    </item>
+  </channel>
+</rss>

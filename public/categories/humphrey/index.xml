@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Humphrey on Bytestone Blog</title>
+    <link>https://www.bytestone.uk/categories/humphrey/</link>
+    <description>Recent content in Humphrey on Bytestone Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 28 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.bytestone.uk/categories/humphrey/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Accounting for Programmers</title>
+      <link>https://www.bytestone.uk/afp/</link>
+      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/afp/</guid>
+      <description>An introduction to accounting for programmers.</description>
+    </item>
+    <item>
+      <title>Accounting for Programmers</title>
+      <link>https://www.bytestone.uk/posts/accounting-for-progammers/</link>
+      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/accounting-for-progammers/</guid>
+      <description>An introduction to accounting for programmers.</description>
+    </item>
+    <item>
+      <title>Accounting for Programmers</title>
+      <link>https://www.bytestone.uk/posts/accounting-for-programmers/</link>
+      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/accounting-for-programmers/</guid>
+      <description>An introduction to accounting for programmers.</description>
+    </item>
+    <item>
+      <title>Accounting for Programmers</title>
+      <link>https://www.bytestone.uk/posts/accountingforprogrammers/</link>
+      <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/accountingforprogrammers/</guid>
+      <description>An introduction to accounting for programmers.</description>
+    </item>
+  </channel>
+</rss>

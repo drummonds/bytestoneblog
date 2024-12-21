@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>htmx on Bytestone Blog</title>
+    <link>https://www.bytestone.uk/tags/htmx/</link>
+    <description>Recent content in htmx on Bytestone Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 10 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.bytestone.uk/tags/htmx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTMX applications</title>
+      <link>https://www.bytestone.uk/posts/htmx/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/htmx/</guid>
+      <description>I have been wondering about finding a simpler development environment that allows me to do graphic programming. My first successful tool was Delphi which allowed me to generate tools with a simple Pascal like language and a great IDE. The interface was the simple VCL ([Visual Control Library][]).&#xA;[Visual Control Library]; https://docwiki.embarcadero.com/RADStudio/Sydney/en/VCL_Overview&#xA;Over time I have moved languages and currently I like writing in Python for expressiveness and Golang for simplicity and robustness.</description>
+    </item>
+  </channel>
+</rss>

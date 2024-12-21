@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bytestone Blog</title>
+    <link>https://www.bytestone.uk/</link>
+    <description>Recent content on Bytestone Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 28 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.bytestone.uk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Plain text accounting</title>
+      <link>https://www.bytestone.uk/posts/plain-text-accounting/</link>
+      <pubDate>Fri, 22 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/plain-text-accounting/</guid>
+      <description>Time series functions A time series is a function that varies over time. For example the amount of money in a piggy bank. This has a value at a point in time as well as changes. This corresponds to a derivative although typically the changes are stochastic not a regular time intervals. There is also an integral version which is the change during a period eg how much was added during 1 week or some other period.</description>
+    </item>
+    <item>
+      <title>Gokrazy WSL and photos</title>
+      <link>https://www.bytestone.uk/posts/gokrazy/</link>
+      <pubDate>Sun, 28 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/gokrazy/</guid>
+      <description>Very excited to be getting gokrazy to work as a deployment platform for devices. My first project is to use our Samsung smart screen as a photo display.&#xA;It has taken a little while to work out how to use effectively use gokrazy from WSL and here are some of my notes.&#xA;When building the initial image you can use gok -i hello overwrite --full x.img --target_storage_bytes=1258299392 to output to a file rather than a device which allows you to export the img from from wsl and burn on Windows.</description>
+    </item>
+    <item>
+      <title>Accounting for Programmers</title>
+      <link>https://www.bytestone.uk/posts/accountingforprogrammers/</link>
+      <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/accountingforprogrammers/</guid>
+      <description>An introduction to accounting for programmers.</description>
+    </item>
+    <item>
+      <title>EBNF Extended Backus Naur Format</title>
+      <link>https://www.bytestone.uk/posts/ebnf/</link>
+      <pubDate>Thu, 04 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/ebnf/</guid>
+      <description>EBNF is a way of describe grammars which is useful for precisely describing the formats of things.&#xA;I was introduced to it in the diagrams of Nicklaus Wirth&amp;rsquo;s book on Pascal where he elegantly defines a language and its syntax.&#xA;I am going to start with the definition of EBNF in EBNF in a go parser&#xA;Package ebnf is a library for EBNF grammars. The input is text ([]byte) satisfying the following grammar (represented itself in EBNF):</description>
+    </item>
+    <item>
+      <title>HTMX applications</title>
+      <link>https://www.bytestone.uk/posts/htmx/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/htmx/</guid>
+      <description>I have been wondering about finding a simpler development environment that allows me to do graphic programming. My first successful tool was Delphi which allowed me to generate tools with a simple Pascal like language and a great IDE. The interface was the simple VCL ([Visual Control Library][]).&#xA;[Visual Control Library]; https://docwiki.embarcadero.com/RADStudio/Sydney/en/VCL_Overview&#xA;Over time I have moved languages and currently I like writing in Python for expressiveness and Golang for simplicity and robustness.</description>
+    </item>
+    <item>
+      <title>Golang CAD versions</title>
+      <link>https://www.bytestone.uk/posts/golang-cad/</link>
+      <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/golang-cad/</guid>
+      <description>I am keen to try out writing and designing in go CAD models. I am on a drive to simplify and unify my coding styles. My process for designing I would much rather be creating my models by programming. So I started with OpenScad. I discovered that as the models got very complicated it would start to have problems particularly with the difference function.&#xA;There was a great go library called ghostscad that generated OpenSCAD language but as it transpiles to OpenSCAD it suffers from the same problems as complexity increases.</description>
+    </item>
+    <item>
+      <title>Colour Calibration</title>
+      <link>https://www.bytestone.uk/posts/colourcalibration/</link>
+      <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/colourcalibration/</guid>
+      <description>Standards I used to have a Greta Mcbeth colour calibration both small and large but lost the large one and only have the small one left. Just recently purchased the Datacolor SpyderCheckr| 24 but probably should have bought the| 48 patch version in a hard shell. I have just discovered that| 24 patch is the right side of the| 48 patch. So can use the calibration data from that for checking the DataColour Print.</description>
+    </item>
+    <item>
+      <title>What is Tartan?</title>
+      <link>https://www.bytestone.uk/posts/tartan/</link>
+      <pubDate>Fri, 21 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/tartan/</guid>
+      <description>Tartan or checked weaving pattern has ancient origins. Perhaps it came with the spread of the ancient Bronze age Celts from Austria and Turkey. To the East there may be a link to the Tarim Mummies as was popularised by Elizabeth Barber1. This currently has got caught up in origin stories of the Han. Notable mummies are the tall, red-haired &amp;ldquo;Chärchän man&amp;rdquo; or the &amp;ldquo;Ur-David&amp;rdquo; (1000 BCE); who wore a red twill tunic and tartan leggings.</description>
+    </item>
+    <item>
+      <title>Filing MicroEntity Accounts   </title>
+      <link>https://www.bytestone.uk/posts/hmrc-microentity-accounts/</link>
+      <pubDate>Thu, 20 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/hmrc-microentity-accounts/</guid>
+      <description>Filing microentity accounts This is meant to document how to use HMRC&amp;rsquo;s service to input accounts and company house data when using Beancount and HMRC.&#xA;Get Beancount up to date Generate annual accounts by editing report Input data here by hand Opening questions These are the questions and the answers to which this process applies.&#xA;What is your organisation?&#xA;Company Do you want to make changes to a Company Tax Return you&amp;rsquo;ve already filed?</description>
+    </item>
+    <item>
+      <title>Drummonds New Bruce 1819</title>
+      <link>https://www.bytestone.uk/posts/drummondsnewbruce/</link>
+      <pubDate>Sat, 18 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/drummondsnewbruce/</guid>
+      <description>&amp;ldquo;XR#D40000; A#5C8CA8; HG#285800; DP#440044;&amp;rdquo;,&amp;ldquo;XR/12 DP2 XR4 DP4 XR64 A2 XR4 DP16 XR4 HG4 XR4 HG48 XR4 DP4 XR/12&amp;rdquo;</description>
+    </item>
+    <item>
+      <title>Carbon Capture for lawns</title>
+      <link>https://www.bytestone.uk/posts/carboncapturelawns/</link>
+      <pubDate>Fri, 10 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/carboncapturelawns/</guid>
+      <description>I have a robot mower that mows my grass. I was wondering if it actually captures carbon.&#xA;I can see that the soil is capturing soil as it is getting higher. I had an edging made of bricks and over the last 15 year the grass has crept up ca 15cm. So about 1 cm a year capture. This is a capture of carbon but need to do the calculations to see if overall positive.</description>
+    </item>
+    <item>
+      <title>Drummond of Megginch Tartan thread counts</title>
+      <link>https://www.bytestone.uk/posts/tartancalcs/</link>
+      <pubDate>Fri, 10 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/tartancalcs/</guid>
+      <description>Given thread counts produce table Wait for this to come out&#xA;test = &amp;#34;R14 DB2 R4 DB4 R70 LB4 R4 DB20 R4 G4 R4 G74 R6 DB4 R12&amp;#34; import re PATTERN = re.compile(&amp;#34;([a-zA-Z]*)(\d*)&amp;#34;) def split_thread(threadcount): &amp;#34;&amp;#34;&amp;#34;Given a thread count such as R14, will split to R and integer 14&amp;#34;&amp;#34;&amp;#34; match = re.search(PATTERN, threadcount) if match: return match.group(1),match.group(2) return threadcount,&amp;#34;&amp;#34; class Stripe: def __init__(self, short_colour, count): self.short_colour = short_colour self.count = int(count) def __str__(self): return f&amp;#34;{self.</description>
+    </item>
+    <item>
+      <title>Details of New proposed Tartan</title>
+      <link>https://www.bytestone.uk/posts/drummondsofmegginchproposal/</link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/drummondsofmegginchproposal/</guid>
+      <description>The following is a picture of the proposed new tartan sample.&#xA;Name Sum R/i DB ii R iii DB iv R v LB vi R vii DB viii R ix G x R xi G xii R xiii DB xiv R/xv 1849 Kilt 14 2 4 4 70 4 4 20 4 4 4 74 6 4 12 1997 New Kilt 18 2 4 4 64 4 4 20 4 4 4 62 4 4 10 </description>
+    </item>
+    <item>
+      <title>Drummonds of Megginch Tartan Notes</title>
+      <link>https://www.bytestone.uk/posts/drummondsofmegginch/</link>
+      <pubDate>Sat, 28 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/drummondsofmegginch/</guid>
+      <description>Drummonds of Megginch Tartan&#xA;Originally written May 16, 2018&#xA;There has long been confusion about the tartan for the Drummonds of Megginch. This is due the tartan being very similar to the New Grant tartan that was recorded by Wilson in the 1819 weaving pattern book.&#xA;Drummonds of Megginch Tartan different from Wilson Grant pattern.&#xA;The earliest example I currently have of the tartans that the Drummonds of Megginch is a kilt dating from 1849 which I wore from about 1975 to 2000.</description>
+    </item>
+    <item>
+      <title>Old Plaid</title>
+      <link>https://www.bytestone.uk/posts/drummondsofmeggincholdplaid/</link>
+      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/drummondsofmeggincholdplaid/</guid>
+      <description>Old Plaid&#xA;Detail of Tartan This was one of the est unfaded squares.&#xA;Then there is the fine detail:&#xA;This for part of the tartan gives a thread count of:&#xA;Name Sum R/i DB ii R iii DB iv R v LB vi R vii DB viii R ix G x R xi G xii R xiii DB xiv R/xv 1849 Kilt 14 2 4 4 70 4 4 20 4 4 4 74 6 4 12 1820 Plaid 26 2 6 6 126 6 6 38 6 6 6 130 10 6 18 1820 scaled 13 1.</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>https://www.bytestone.uk/about/</link>
+      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/about/</guid>
+      <description>About Yourself This is a blog about various things I am interested in, specifically related to Bytestone which is long term digital storage of information&#xA;hugo theme Thanks Rainer for simpleness</description>
+    </item>
+    <item>
+      <title>Converting from Xero to Beancount</title>
+      <link>https://www.bytestone.uk/posts/2019-05-29-conversion-from-xero-to-beancount/</link>
+      <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/2019-05-29-conversion-from-xero-to-beancount/</guid>
+      <description>Xero-&amp;gt;Beancount&#xA;Converting from Xero to Beancount This is about the journed of converting from Xero to Beancount. This version is a scrappy version written for me. The reason is cost, I need to reduce my costs to the absolute limit and can no longer afford the ca£45 for the monthly fee.&#xA;Plan Install Beancount Repeat the following a few times until it works well Export Data from Xero, CSV Massage Convert to Beancount success criteria</description>
+    </item>
+    <item>
+      <title>Outdoor cabling and wiring standards</title>
+      <link>https://www.bytestone.uk/posts/2018-12-05-outdoor-cabling-systems/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/2018-12-05-outdoor-cabling-systems/</guid>
+      <description>Technical issues https://gardenlightinglondon.co.uk/useful-information/mains-versus-low-voltage-for-garden-lighting/&#xA;Reels On french extension wheels have a disconnection button.&#xA;Standards BS 7909:2011 British temporary electrical system Code of practice for temporary electrical systems for entertainment and related purposes&#xA;Size of event Events are divided into different sizes&#xA;IP 67 and IP44 https://www.tcad.co.uk/ip44-ip67-plugs-shall-choose/&#xA;Toolstation sells IP67 connectors&#xA;ur plugs are made by Lewden but other manufacturers include Gewiss and ABB.&#xA;There are also Chinese Manufacturers:&#xA;H07 RN-F and Arctic Cable &amp;ldquo;USE OF ARCTIC CABLE - Ref BS7909 2011 Code of Practice for Temporary Electrical Systems for Entertainment and related Purposes Arctic Blue able can often be seen outdoors at events.</description>
+    </item>
+    <item>
+      <title>RGB Floodlights</title>
+      <link>https://www.bytestone.uk/posts/2018-11-24-rgb-floodlights/</link>
+      <pubDate>Sat, 24 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/2018-11-24-rgb-floodlights/</guid>
+      <description>Aim to cover RGB flood lights that can be sourced in the both the UK and France, should have long term support by been made by named manufacturers.&#xA;IP Ratings DSMT have a useful description.&#xA;IP 6x is dust tight which is the minimium for outside use&#xA;Rating Meaning IP 65 6.3mm jets from any direction IP 66 12.5mm jets from any direction IP 66 1M submersion IP 68 beyond 1M eg Hermetically sealed Table of Lamps Lamp Amazon UK Amazon Fr Manufacturer Watt IP Rating comment Loftek 50W Loftec50WUK £33 [Loftec50WFr] N/A Loftek 50W IP66 RGBW, with TV type control Loftek 30W [Loftec50WFr] 23Eur Loftek 50W IP66 RGBW, with TV type control Ustellar 60W [Ustellar60UK] £36(min 2) IR credit card Controller Ilux 10W Ilux10UK £19 Mesh Bluetooth and app Ustellar 60W RGB Flood lights The unit looks quite good.</description>
+    </item>
+    <item>
+      <title>Companies House Micro Entity accounts </title>
+      <link>https://www.bytestone.uk/posts/companieshouse-microentity-accounts/</link>
+      <pubDate>Sat, 27 Oct 2018 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/companieshouse-microentity-accounts/</guid>
+      <description>This is about the process of using the companies house web site to enter accounts. In Xero there are templates which produce the information you need.&#xA;Accounts prepared to FRS 105.&#xA;Directors loans The following is on the assumption that the directors loans are below 7,500Euro and so disclosure is not required in the notes. FRS 105 (March 2018) 6B.20 Note 11&#xA;Page 1 Balance Sheet There is a PDF of Page 1.</description>
+    </item>
+    <item>
+      <title> Calibration of Ormerod</title>
+      <link>https://www.bytestone.uk/posts/2018-06-25calibrationoformerod/</link>
+      <pubDate>Sat, 23 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/2018-06-25calibrationoformerod/</guid>
+      <description>The aim is to calibrate the Ormerod so that I can accurately print meshing gears for my BluRay Robot. My current version doesn&amp;rsquo;t work well enough.&#xA;I also want to explore using the stepper motor limit currents to allow probing of the extruder. I am assuming that the limiting current is proportional to the force.&#xA;Good Prints Requires both Slic3r settings and RepRap firmware settings to agree as well as be calibration to actual hardware and to the filament.</description>
+    </item>
+    <item>
+      <title>Xero Accounting Tips on Errors</title>
+      <link>https://www.bytestone.uk/posts/xero_errors/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/xero_errors/</guid>
+      <description>Bank reconciliation Old year unreconciled account. Dealing with drummonds.net a couple of problems became apparent:&#xA;a duplicate unreconciled bank transaction had got into the final accounts This helped but was not the only reason the bank reonciliation was close but not accurate. Non material difference The difference was small &amp;lt; £100 so an opening year correction was done. In addition the prior year duplicate was reconciled and then corrected on the first day of the current year.</description>
+    </item>
+    <item>
+      <title>Company Cars</title>
+      <link>https://www.bytestone.uk/posts/companycars/</link>
+      <pubDate>Wed, 04 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/companycars/</guid>
+      <description>Company cards are probably a bad idea, ie they are a more expensive way of getting a benefit than direct ownership.&#xA;Disposal of cars When the car is disposed of, if the company is VAT regsitered.</description>
+    </item>
+    <item>
+      <title>Xero Accounting Tips</title>
+      <link>https://www.bytestone.uk/posts/xero/</link>
+      <pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/xero/</guid>
+      <description>Directors loan Directors loan Pay money in. The standard directors loan account is NC 835. This can be marked so that you can Enable payments to this account&#xA;When you pay money into the company for working capital.&#xA;From other source Set up a liability account in Xero. Code the 600 pounds to this account and the monthly payments. You then need to do a journal Debit equipment purchases and Credit the liability account.</description>
+    </item>
+  </channel>
+</rss>

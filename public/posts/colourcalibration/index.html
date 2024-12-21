@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.121.1">
+  <title> Colour Calibration | Bytestone Blog </title>
+  <meta name="description" content="Varying notes on a very long journey to build bytestone.">
+  <link rel="stylesheet" href="https://www.bytestone.uk/css/simpleness.css">
+  <link rel="canonical" href="https://www.bytestone.uk/posts/colourcalibration/">
+  <link rel="alternate" type="application/rss+xml" href="" title="Bytestone Blog">
+  
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  
+</head>
+<body class="container">
+  <nav class="navigation">
+  <div class="nav-left">
+    
+    <div class="nav-item nav-title">
+      <a href="https://www.bytestone.uk/"> Bytestone Blog</a>
+    </div>
+    <div class="nav-item nav-menu">
+      
+      <a href="/"> Home</a>
+      
+      <a href="/about/"> About</a>
+      
+    </div>
+  </div>
+  <div class="nav-item nav-right fontawesome">
+    
+    
+    <a href="https://github.com/Drummonds" target="_blank">
+      <i title="GitHub" class="fab fa-github"></i>
+    </a>
+    
+    
+    <a href="https://www.bytestone.uk/index.xml" target="_blank">
+      <i title="RSS" class="fas fa-rss"></i>
+    </a>
+    
+  </div>
+</nav>
+
+  
+<article class="post">
+  <header class="post-header">
+    <h1 style="text-align: center;" >Colour Calibration</h1>
+    <div class="post-metadata">
+    
+      <time datetime="2023-01-02T00:00:00Z">January 02, 2023</time> &nbsp; 
+    
+    
+    
+    
+    
+      <i class="far fa-clock"></i>
+      
+      
+      
+      
+        4 min
+      
+      19 s
+      &nbsp;
+    
+    
+    </div>
+  </header>
+
+  
+
+  <div class="post-text">
+    <h1 id="standards">Standards</h1>
+<p>I used to have a Greta Mcbeth colour calibration both small and large but lost the large one and only have the small one left. Just recently purchased the Datacolor SpyderCheckr| 24 but probably should have bought the| 48 patch version in a hard shell. I have just discovered that| 24 patch is the right side of the| 48 patch. So can use the calibration data from that for checking the DataColour Print.</p>
+<p><a href="https://www.bhphotovideo.com/lit_files/381135.pdf">Colour matching quote</a>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span>The color patches on the right half of the SpyderCHECKR, <span style="color:#f92672">and</span> those on the
+</span></span><span style="display:flex;"><span>SpyderCHECKR24 represent the standard<span style="color:#f92672">|</span> <span style="color:#ae81ff">24</span>  colors used <span style="color:#f92672">in</span> a variety of color
+</span></span><span style="display:flex;"><span>products<span style="color:#f92672">.</span> These patches are near <span style="color:#f92672">or</span> within the sRGB color gamut to avoid
+</span></span><span style="display:flex;"><span>gamut clipping<span style="color:#f92672">...</span>
+</span></span></code></pre></div><h1 id="datacolor-checkr-calibration-values">Datacolor Checkr calibration values</h1>
+<p><a href="https://web.archive.org/web/20170714114019/http://www.datacolor.com/wp-content/uploads/2016/08/SpyderCheckr_Color_Data.pdf">Datacolor used to publish</a> the LAB values with a slightly poor pdf as of 2017:</p>
+<p>This has been captured by <a href="https://www.bartneck.de/2017/10/24/patch-color-definitions-for-datacolor-spydercheckr-48/">Christoph Bartneck</a> and converted into a table. I have corrected and reproduced the table here and added the annotation for the| 24 patch version:</p>
+<ul>
+<li>LAB is from Lab</li>
+<li>First RGB is sRGB, sR s G sB</li>
+<li>Second RGB is Adobe RGB aR aG a B</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Patch</th>
+<th>Name</th>
+<th>L*</th>
+<th>a*</th>
+<th>b*</th>
+<th>sR</th>
+<th>sG</th>
+<th>sB</th>
+<th>aR</th>
+<th>aG</th>
+<th>aB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1A</td>
+<td>Low Sat. Red</td>
+<td>61.35</td>
+<td>34.81</td>
+<td>18.38</td>
+<td>210</td>
+<td>121</td>
+<td>117</td>
+<td>189</td>
+<td>121</td>
+<td>117</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2A</td>
+<td>Low Sat. Yellow</td>
+<td>75.5</td>
+<td>5.84</td>
+<td>50.42</td>
+<td>216</td>
+<td>179</td>
+<td>90</td>
+<td>205</td>
+<td>178</td>
+<td>96</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3A</td>
+<td>Low Sat. Green</td>
+<td>66.82</td>
+<td>-25.1</td>
+<td>23.47</td>
+<td>127</td>
+<td>175</td>
+<td>120</td>
+<td>141</td>
+<td>174</td>
+<td>122</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4A</td>
+<td>Low Sat. Cyan</td>
+<td>60.53</td>
+<td>-22.6</td>
+<td>-20.4</td>
+<td>66</td>
+<td>157</td>
+<td>179</td>
+<td>103</td>
+<td>156</td>
+<td>177</td>
+</tr>
+<tr>
+<td>5</td>
+<td>5A</td>
+<td>Low Sat. Blue</td>
+<td>59.66</td>
+<td>-2.03</td>
+<td>-28.46</td>
+<td>116</td>
+<td>147</td>
+<td>194</td>
+<td>125</td>
+<td>146</td>
+<td>191</td>
+</tr>
+<tr>
+<td>6</td>
+<td>6A</td>
+<td>Low Sat. Magenta</td>
+<td>59.15</td>
+<td>30.83</td>
+<td>-5.72</td>
+<td>190</td>
+<td>121</td>
+<td>154</td>
+<td>172</td>
+<td>120</td>
+<td>151</td>
+</tr>
+<tr>
+<td>7</td>
+<td>1B</td>
+<td>10% Red Tint</td>
+<td>82.68</td>
+<td>5.03</td>
+<td>3.02</td>
+<td>218</td>
+<td>203</td>
+<td>201</td>
+<td>213</td>
+<td>202</td>
+<td>200</td>
+</tr>
+<tr>
+<td>8</td>
+<td>2B</td>
+<td>10% Green Tint</td>
+<td>82.25</td>
+<td>-2.42</td>
+<td>3.78</td>
+<td>203</td>
+<td>205</td>
+<td>196</td>
+<td>202</td>
+<td>204</td>
+<td>195</td>
+</tr>
+<tr>
+<td>9</td>
+<td>3B</td>
+<td>10% Blue Unit</td>
+<td>82.29</td>
+<td>2.2</td>
+<td>-2.04</td>
+<td>206</td>
+<td>203</td>
+<td>208</td>
+<td>204</td>
+<td>201</td>
+<td>206</td>
+</tr>
+<tr>
+<td>10</td>
+<td>4B</td>
+<td>90% Red Tone</td>
+<td>24.89</td>
+<td>4.43</td>
+<td>0.78</td>
+<td>66</td>
+<td>57</td>
+<td>58</td>
+<td>66</td>
+<td>60</td>
+<td>60</td>
+</tr>
+<tr>
+<td>11</td>
+<td>5B</td>
+<td>90% Green Tone</td>
+<td>25.16</td>
+<td>-3.88</td>
+<td>2.13</td>
+<td>54</td>
+<td>61</td>
+<td>56</td>
+<td>59</td>
+<td>63</td>
+<td>59</td>
+</tr>
+<tr>
+<td>12</td>
+<td>6B</td>
+<td>90% Blue Tone</td>
+<td>26.13</td>
+<td>2.61</td>
+<td>-5.03</td>
+<td>63</td>
+<td>60</td>
+<td>69</td>
+<td>65</td>
+<td>63</td>
+<td>71</td>
+</tr>
+<tr>
+<td>13</td>
+<td>1C</td>
+<td>Lightest Skin</td>
+<td>85.42</td>
+<td>9.41</td>
+<td>14.49</td>
+<td>237</td>
+<td>206</td>
+<td>186</td>
+<td>225</td>
+<td>202</td>
+<td>183</td>
+</tr>
+<tr>
+<td>14</td>
+<td>2C</td>
+<td>Lighter Skin</td>
+<td>74.28</td>
+<td>9.05</td>
+<td>27.21</td>
+<td>211</td>
+<td>175</td>
+<td>133</td>
+<td>200</td>
+<td>174</td>
+<td>134</td>
+</tr>
+<tr>
+<td>15</td>
+<td>3C</td>
+<td>Moderate Skin</td>
+<td>64.57</td>
+<td>12.39</td>
+<td>37.24</td>
+<td>193</td>
+<td>149</td>
+<td>91</td>
+<td>180</td>
+<td>148</td>
+<td>95</td>
+</tr>
+<tr>
+<td>16</td>
+<td>4C</td>
+<td>Medium Skin</td>
+<td>44.49</td>
+<td>17.23</td>
+<td>26.24</td>
+<td>139</td>
+<td>93</td>
+<td>61</td>
+<td>127</td>
+<td>93</td>
+<td>65</td>
+</tr>
+<tr>
+<td>17</td>
+<td>5C</td>
+<td>Deep Skin</td>
+<td>25.29</td>
+<td>7.95</td>
+<td>8.87</td>
+<td>74</td>
+<td>55</td>
+<td>46</td>
+<td>71</td>
+<td>58</td>
+<td>50</td>
+</tr>
+<tr>
+<td>18</td>
+<td>6C</td>
+<td>95% Gray</td>
+<td>22.67</td>
+<td>2.11</td>
+<td>-1.1</td>
+<td>57</td>
+<td>54</td>
+<td>56</td>
+<td>59</td>
+<td>57</td>
+<td>59</td>
+</tr>
+<tr>
+<td>19</td>
+<td>1D</td>
+<td>5% Gray</td>
+<td>92.72</td>
+<td>1.89</td>
+<td>2.76</td>
+<td>241</td>
+<td>233</td>
+<td>229</td>
+<td>238</td>
+<td>233</td>
+<td>229</td>
+</tr>
+<tr>
+<td>20</td>
+<td>2D</td>
+<td>10% gray</td>
+<td>88.85</td>
+<td>1.59</td>
+<td>2.27</td>
+<td>229</td>
+<td>222</td>
+<td>220</td>
+<td>226</td>
+<td>221</td>
+<td>219</td>
+</tr>
+<tr>
+<td>21</td>
+<td>3D</td>
+<td>30% Gray</td>
+<td>73.42</td>
+<td>0.99</td>
+<td>1.89</td>
+<td>182</td>
+<td>178</td>
+<td>176</td>
+<td>180</td>
+<td>177</td>
+<td>174</td>
+</tr>
+<tr>
+<td>22</td>
+<td>4D</td>
+<td>50% Gray</td>
+<td>57.15</td>
+<td>0.57</td>
+<td>1.19</td>
+<td>139</td>
+<td>136</td>
+<td>135</td>
+<td>137</td>
+<td>135</td>
+<td>134</td>
+</tr>
+<tr>
+<td>23</td>
+<td>5D</td>
+<td>70% Gray</td>
+<td>41.57</td>
+<td>0.24</td>
+<td>1.45</td>
+<td>100</td>
+<td>99</td>
+<td>97</td>
+<td>99</td>
+<td>99</td>
+<td>98</td>
+</tr>
+<tr>
+<td>24</td>
+<td>6D</td>
+<td>90% Gray</td>
+<td>25.65</td>
+<td>1.24</td>
+<td>0.05</td>
+<td>63</td>
+<td>61</td>
+<td>62</td>
+<td>65</td>
+<td>63</td>
+<td>64</td>
+</tr>
+<tr>
+<td>25</td>
+<td>1E</td>
+<td>Card White</td>
+<td>96.04</td>
+<td>2.16</td>
+<td>2.6</td>
+<td>249</td>
+<td>242</td>
+<td>238</td>
+<td>247</td>
+<td>242</td>
+<td>237</td>
+</tr>
+<tr>
+<td>26</td>
+<td>2E</td>
+<td>20% Gray</td>
+<td>80.44</td>
+<td>1.17</td>
+<td>2.05</td>
+<td>202</td>
+<td>198</td>
+<td>195</td>
+<td>199</td>
+<td>196</td>
+<td>193</td>
+</tr>
+<tr>
+<td>27</td>
+<td>3E</td>
+<td>40% Gray</td>
+<td>65.52</td>
+<td>0.69</td>
+<td>1.86</td>
+<td>161</td>
+<td>157</td>
+<td>154</td>
+<td>158</td>
+<td>156</td>
+<td>153</td>
+</tr>
+<tr>
+<td>28</td>
+<td>4E</td>
+<td>60% Gray</td>
+<td>49.62</td>
+<td>0.58</td>
+<td>1.56</td>
+<td>122</td>
+<td>118</td>
+<td>116</td>
+<td>120</td>
+<td>118</td>
+<td>115</td>
+</tr>
+<tr>
+<td>29</td>
+<td>5E</td>
+<td>80% Gray</td>
+<td>33.55</td>
+<td>0.35</td>
+<td>1.4</td>
+<td>80</td>
+<td>80</td>
+<td>78</td>
+<td>81</td>
+<td>81</td>
+<td>79</td>
+</tr>
+<tr>
+<td>30</td>
+<td>6E</td>
+<td>Card Black</td>
+<td>16.91</td>
+<td>1.43</td>
+<td>-0.81</td>
+<td>43</td>
+<td>41</td>
+<td>43</td>
+<td>46</td>
+<td>46</td>
+<td>47</td>
+</tr>
+<tr>
+<td>31</td>
+<td>1F</td>
+<td>Primary Cyan</td>
+<td>47.12</td>
+<td>-32.5</td>
+<td>-28.75</td>
+<td>0</td>
+<td>127</td>
+<td>159</td>
+<td>39</td>
+<td>126</td>
+<td>157</td>
+</tr>
+<tr>
+<td>32</td>
+<td>2F</td>
+<td>Primary Magenta</td>
+<td>50.49</td>
+<td>53.45</td>
+<td>-13.55</td>
+<td>192</td>
+<td>75</td>
+<td>145</td>
+<td>167</td>
+<td>76</td>
+<td>141</td>
+</tr>
+<tr>
+<td>33</td>
+<td>3F</td>
+<td>Primary Yellow</td>
+<td>83.61</td>
+<td>3.36</td>
+<td>87.02</td>
+<td>245</td>
+<td>205</td>
+<td>0</td>
+<td>234</td>
+<td>204</td>
+<td>37</td>
+</tr>
+<tr>
+<td>34</td>
+<td>4F</td>
+<td>Primary Red</td>
+<td>41.05</td>
+<td>60.75</td>
+<td>31.17</td>
+<td>186</td>
+<td>26</td>
+<td>51</td>
+<td>159</td>
+<td>32</td>
+<td>53</td>
+</tr>
+<tr>
+<td>35</td>
+<td>5F</td>
+<td>Primary Green</td>
+<td>54.14</td>
+<td>-40.8</td>
+<td>34.75</td>
+<td>57</td>
+<td>146</td>
+<td>64</td>
+<td>94</td>
+<td>145</td>
+<td>71</td>
+</tr>
+<tr>
+<td>36</td>
+<td>6F</td>
+<td>Primary Blue</td>
+<td>24.75</td>
+<td>13.78</td>
+<td>-49.48</td>
+<td>25</td>
+<td>55</td>
+<td>135</td>
+<td>41</td>
+<td>58</td>
+<td>132</td>
+</tr>
+<tr>
+<td>37</td>
+<td>1G</td>
+<td>Primary Orange</td>
+<td>60.94</td>
+<td>38.21</td>
+<td>61.31</td>
+<td>222</td>
+<td>118</td>
+<td>32</td>
+<td>196</td>
+<td>117</td>
+<td>44</td>
+</tr>
+<tr>
+<td>38</td>
+<td>2G</td>
+<td>Blueprint</td>
+<td>37.8</td>
+<td>7.3</td>
+<td>-43.04</td>
+<td>58</td>
+<td>88</td>
+<td>159</td>
+<td>70</td>
+<td>89</td>
+<td>156</td>
+</tr>
+<tr>
+<td>39</td>
+<td>3G</td>
+<td>Pink</td>
+<td>49.81</td>
+<td>48.5</td>
+<td>15.76</td>
+<td>195</td>
+<td>79</td>
+<td>95</td>
+<td>170</td>
+<td>80</td>
+<td>94</td>
+</tr>
+<tr>
+<td>40</td>
+<td>4G</td>
+<td>Violet</td>
+<td>28.88</td>
+<td>19.36</td>
+<td>-24.48</td>
+<td>83</td>
+<td>58</td>
+<td>106</td>
+<td>78</td>
+<td>61</td>
+<td>104</td>
+</tr>
+<tr>
+<td>41</td>
+<td>5G</td>
+<td>Apple Green</td>
+<td>72.45</td>
+<td>-23.6</td>
+<td>60.47</td>
+<td>157</td>
+<td>188</td>
+<td>54</td>
+<td>165</td>
+<td>186</td>
+<td>69</td>
+</tr>
+<tr>
+<td>42</td>
+<td>6G</td>
+<td>Sunflower</td>
+<td>71.65</td>
+<td>23.74</td>
+<td>72.28</td>
+<td>236</td>
+<td>158</td>
+<td>25</td>
+<td>218</td>
+<td>157</td>
+<td>46</td>
+</tr>
+<tr>
+<td>43</td>
+<td>1H</td>
+<td>Aqua</td>
+<td>70.19</td>
+<td>-31.9</td>
+<td>1.98</td>
+<td>98</td>
+<td>187</td>
+<td>166</td>
+<td>130</td>
+<td>186</td>
+<td>166</td>
+</tr>
+<tr>
+<td>44</td>
+<td>2H</td>
+<td>Lavender</td>
+<td>54.38</td>
+<td>8.84</td>
+<td>-25.71</td>
+<td>126</td>
+<td>125</td>
+<td>174</td>
+<td>125</td>
+<td>124</td>
+<td>171</td>
+</tr>
+<tr>
+<td>45</td>
+<td>3H</td>
+<td>Evergreen</td>
+<td>42.03</td>
+<td>-15.8</td>
+<td>22.93</td>
+<td>82</td>
+<td>106</td>
+<td>60</td>
+<td>90</td>
+<td>106</td>
+<td>65</td>
+</tr>
+<tr>
+<td>46</td>
+<td>4H</td>
+<td>Steel Blue</td>
+<td>48.82</td>
+<td>-5.11</td>
+<td>-23.08</td>
+<td>87</td>
+<td>120</td>
+<td>155</td>
+<td>98</td>
+<td>119</td>
+<td>152</td>
+</tr>
+<tr>
+<td>47</td>
+<td>5H</td>
+<td>Classic Light Skin</td>
+<td>65.1</td>
+<td>18.14</td>
+<td>18.68</td>
+<td>197</td>
+<td>145</td>
+<td>125</td>
+<td>183</td>
+<td>144</td>
+<td>125</td>
+</tr>
+<tr>
+<td>48</td>
+<td>6H</td>
+<td>Classic Dark Skin</td>
+<td>36.13</td>
+<td>14.15</td>
+<td>15.78</td>
+<td>112</td>
+<td>76</td>
+<td>60</td>
+<td>103</td>
+<td>77</td>
+<td>63</td>
+</tr>
+</tbody>
+</table>
+<h2 id="corrections">Corrections</h2>
+<p>At the bottom of Barnecks table there are some comments about errors.  I have assumed the LAB numbers are correct.  I then used the original sRGB numbers to construct a plot:</p>
+<p>{{ partial &ldquo;svg&rdquo; &ldquo;datacolor24_a&rdquo; }}</p>
+<p>The Blueprint is clearly off when compared to my physical SpyderChekr24 sample.  Stuart commented on Barnecks page <code>square 2G has a typo by the way, it should be RGB 58/88/159</code></p>
+<p>I recalculated all the sRGB values using <a href="https://python-colormath.readthedocs.io/en/latest/index.html">python-colormath</a> from the LAB values.  Almost every value is off a little eg by 2, some by 3. The colour Blueprint 2G is clearly very different.  My calculation has it as 58, 88, 159 and clearly wrong in the orginal Datacolor pdf.  So this has been corrected to it.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    
+
+    
+    <div class="post-tags">
+      <i class="fas fa-tags"></i>
+      
+        <a href="/tags/colour">colour</a>
+        &nbsp;
+      
+        <a href="/tags/color">color</a>
+        &nbsp;
+      
+        <a href="/tags/datacolor">datacolor</a>
+        &nbsp;
+      
+    </div>
+    
+
+    
+    
+  </footer>
+  
+  <div class="comments">
+  <div class="comments">
+
+
+
+</div>
+  </div>
+</article>
+
+  <div class="foot">
+  
+  &copy; 2018 - 2024 &#183;
+  <a href="/"> Bytestone Blog </a> &#183;
+  Theme <a href="https://github.com/RainerChiang/simpleness">Simpleness</a> Powered by <a href="https://gohugo.io/">Hugo</a> &#183;
+  <a href="#"><i class="fas fa-chevron-up"></i></a>
+</div>
+</body>
+  <script src="/js/lazyload.min.js"></script>
+<script>
+  var lazyImage = new LazyLoad({container: document.getElementById('article')});
+</script>
+
+
+
+
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.121.1">
+  <title> EBNF Extended Backus Naur Format | Bytestone Blog </title>
+  <meta name="description" content="Varying notes on a very long journey to build bytestone.">
+  <link rel="stylesheet" href="https://www.bytestone.uk/css/simpleness.css">
+  <link rel="canonical" href="https://www.bytestone.uk/posts/ebnf/">
+  <link rel="alternate" type="application/rss+xml" href="" title="Bytestone Blog">
+  
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  
+</head>
+<body class="container">
+  <nav class="navigation">
+  <div class="nav-left">
+    
+    <div class="nav-item nav-title">
+      <a href="https://www.bytestone.uk/"> Bytestone Blog</a>
+    </div>
+    <div class="nav-item nav-menu">
+      
+      <a href="/"> Home</a>
+      
+      <a href="/about/"> About</a>
+      
+    </div>
+  </div>
+  <div class="nav-item nav-right fontawesome">
+    
+    
+    <a href="https://github.com/Drummonds" target="_blank">
+      <i title="GitHub" class="fab fa-github"></i>
+    </a>
+    
+    
+    <a href="https://www.bytestone.uk/index.xml" target="_blank">
+      <i title="RSS" class="fas fa-rss"></i>
+    </a>
+    
+  </div>
+</nav>
+
+  
+<article class="post">
+  <header class="post-header">
+    <h1 style="text-align: center;" >EBNF Extended Backus Naur Format</h1>
+    <div class="post-metadata">
+    
+      <time datetime="2024-04-04T00:00:00Z">April 04, 2024</time> &nbsp; 
+    
+    
+    
+    
+    
+      <i class="far fa-clock"></i>
+      
+      
+      
+      
+        4 min
+      
+      58 s
+      &nbsp;
+    
+    
+    </div>
+  </header>
+
+  
+
+  <div class="post-text">
+    <p>EBNF is a way of describe grammars which is useful for precisely describing the formats of things.</p>
+<p>I was introduced to it in the diagrams of Nicklaus Wirth&rsquo;s book on Pascal where he elegantly defines a language and its syntax.</p>
+<p>I am going to start with the definition of EBNF in EBNF in a <a href="https://pkg.go.dev/golang.org/x/exp/ebnf">go parser</a></p>
+<p>Package ebnf is a library for EBNF grammars. The input is text ([]byte) satisfying the following grammar (represented itself in EBNF):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ebnf" data-lang="ebnf"><span style="display:flex;"><span><span style="color:#66d9ef">Production  </span><span style="color:#f92672">=</span> <span style="color:#66d9ef">name </span><span style="color:#e6db74">&#34;=&#34;</span> [ <span style="color:#66d9ef">Expression </span>] <span style="color:#e6db74">&#34;.&#34;</span> .
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Expression  </span><span style="color:#f92672">=</span> <span style="color:#66d9ef">Alternative </span>{ <span style="color:#e6db74">&#34;|&#34;</span> <span style="color:#66d9ef">Alternative </span>} .
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Alternative </span><span style="color:#f92672">=</span> <span style="color:#66d9ef">Term </span>{ <span style="color:#66d9ef">Term </span>} .
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Term        </span><span style="color:#f92672">=</span> <span style="color:#66d9ef">name </span>| <span style="color:#66d9ef">token </span>[ <span style="color:#e6db74">&#34;…&#34;</span> <span style="color:#66d9ef">token </span>] | <span style="color:#66d9ef">Group </span>| <span style="color:#66d9ef">Option </span>| <span style="color:#66d9ef">Repetition </span>.
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Group       </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;(&#34;</span> <span style="color:#66d9ef">Expression </span><span style="color:#e6db74">&#34;)&#34;</span> .
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Option      </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;[&#34;</span> <span style="color:#66d9ef">Expression </span><span style="color:#e6db74">&#34;]&#34;</span> .
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Repetition  </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;{&#34;</span> <span style="color:#66d9ef">Expression </span><span style="color:#e6db74">&#34;}&#34;</span> .
+</span></span></code></pre></div><p>A name is a Go identifier, a token is a Go string, and comments and white space follow the same rules as for the Go language. Production names starting with an uppercase Unicode letter denote non-terminal productions (i.e., productions which allow white-space and comments between tokens); all other production names denote lexical productions.</p>
+<p>From <a href="https://en.wikipedia.org/wiki/Wirth_syntax_notation">Wikipedia Wirth&rsquo;s 1977 extension</a> written in itself is here:</p>
+<pre><code>SYNTAX     = { PRODUCTION } .
+PRODUCTION = IDENTIFIER &quot;=&quot; EXPRESSION &quot;.&quot; .
+EXPRESSION = TERM { &quot;|&quot; TERM } .
+TERM       = FACTOR { FACTOR } .
+FACTOR     = IDENTIFIER
+        | LITERAL
+        | &quot;[&quot; EXPRESSION &quot;]&quot;
+        | &quot;(&quot; EXPRESSION &quot;)&quot;
+        | &quot;{&quot; EXPRESSION &quot;}&quot; .
+IDENTIFIER = letter { letter } .
+LITERAL    = &quot;&quot;&quot;&quot; character { character } &quot;&quot;&quot;&quot; .
+</code></pre>
+<p>The Wirth Syntax notation leaves out some of the boring detail which might be language specific. This is also the bit that gets tricky with Unicode eg delineating white space:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span> digit = &#34;0&#34; | &#34;1&#34; | &#34;2&#34; | &#34;3&#34; | &#34;4&#34; | &#34;5&#34; | &#34;6&#34; | &#34;7&#34; | &#34;8&#34; | &#34;9&#34; .
+</span></span><span style="display:flex;"><span> upper-case = &#34;A&#34; | &#34;B&#34; | … | &#34;Y&#34; | &#34;Z&#34; .
+</span></span><span style="display:flex;"><span> lower-case = &#34;a&#34; | &#34;b&#34; | … | &#34;y&#34; | &#34;z&#34; .
+</span></span><span style="display:flex;"><span> letter = upper-case | lower-case .
+</span></span></code></pre></div><h2 id="backusnaur-form">Backus–Naur form</h2>
+<p>The BNF form was used by Wirth for Pascal before he revised it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bnf" data-lang="bnf"><span style="display:flex;"><span>&lt;<span style="color:#a6e22e">syntax</span>&gt;         <span style="color:#f92672">::=</span> &lt;<span style="color:#a6e22e">rule</span>&gt; | &lt;<span style="color:#a6e22e">rule</span>&gt; &lt;<span style="color:#a6e22e">syntax</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#a6e22e">rule</span>&gt;           <span style="color:#f92672">::=</span> &lt;<span style="color:#a6e22e">opt-whitespace</span>&gt; &#34;&lt;&#34; &lt;<span style="color:#a6e22e">rule-name</span>&gt; &#34;&gt;&#34; &lt;<span style="color:#a6e22e">opt-whitespace</span>&gt; &#34;<span style="color:#f92672">::=</span>&#34; &lt;<span style="color:#a6e22e">opt-whitespace</span>&gt; &lt;<span style="color:#a6e22e">expression</span>&gt; &lt;<span style="color:#a6e22e">line-end</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#a6e22e">opt-whitespace</span>&gt; <span style="color:#f92672">::=</span> &#34; &#34; &lt;<span style="color:#a6e22e">opt-whitespace</span>&gt; | &#34;&#34;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#a6e22e">expression</span>&gt;     <span style="color:#f92672">::=</span> &lt;<span style="color:#a6e22e">list</span>&gt; | &lt;<span style="color:#a6e22e">list</span>&gt; &lt;<span style="color:#a6e22e">opt-whitespace</span>&gt; &#34;|&#34; &lt;<span style="color:#a6e22e">opt-whitespace</span>&gt; &lt;<span style="color:#a6e22e">expression</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#a6e22e">line-end</span>&gt;       <span style="color:#f92672">::=</span> &lt;<span style="color:#a6e22e">opt-whitespace</span>&gt; &lt;<span style="color:#a6e22e">EOL</span>&gt; | &lt;<span style="color:#a6e22e">line-end</span>&gt; &lt;<span style="color:#a6e22e">line-end</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#a6e22e">list</span>&gt;           <span style="color:#f92672">::=</span> &lt;<span style="color:#a6e22e">term</span>&gt; | &lt;<span style="color:#a6e22e">term</span>&gt; &lt;<span style="color:#a6e22e">opt-whitespace</span>&gt; &lt;<span style="color:#a6e22e">list</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#a6e22e">term</span>&gt;           <span style="color:#f92672">::=</span> &lt;<span style="color:#a6e22e">literal</span>&gt; | &#34;&lt;&#34; &lt;<span style="color:#a6e22e">rule-name</span>&gt; &#34;&gt;&#34;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#a6e22e">literal</span>&gt;        <span style="color:#f92672">::=</span> &#39;&#34;&#39; &lt;<span style="color:#a6e22e">text1</span>&gt; &#39;&#34;&#39; | &#34;&#39;&#34; &lt;<span style="color:#a6e22e">text2</span>&gt; &#34;&#39;&#34;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#a6e22e">text1</span>&gt;          <span style="color:#f92672">::=</span> &#34;&#34; | &lt;<span style="color:#a6e22e">character1</span>&gt; &lt;<span style="color:#a6e22e">text1</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#a6e22e">text2</span>&gt;          <span style="color:#f92672">::=</span> &#39;&#39; | &lt;<span style="color:#a6e22e">character2</span>&gt; &lt;<span style="color:#a6e22e">text2</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#a6e22e">character</span>&gt;      <span style="color:#f92672">::=</span> &lt;<span style="color:#a6e22e">letter</span>&gt; | &lt;<span style="color:#a6e22e">digit</span>&gt; | &lt;<span style="color:#a6e22e">symbol</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#a6e22e">letter</span>&gt;         <span style="color:#f92672">::=</span> &#34;A&#34; | &#34;B&#34; | &#34;C&#34; | &#34;D&#34; | &#34;E&#34; | &#34;F&#34; | &#34;G&#34; | &#34;H&#34; | &#34;I&#34; | &#34;J&#34; | &#34;K&#34; | &#34;L&#34; | &#34;M&#34; | &#34;N&#34; | &#34;O&#34; | &#34;P&#34; | &#34;Q&#34; | &#34;R&#34; | &#34;S&#34; | &#34;T&#34; | &#34;U&#34; | &#34;V&#34; | &#34;W&#34; | &#34;X&#34; | &#34;Y&#34; | &#34;Z&#34; | &#34;a&#34; | &#34;b&#34; | &#34;c&#34; | &#34;d&#34; | &#34;e&#34; | &#34;f&#34; | &#34;g&#34; | &#34;h&#34; | &#34;i&#34; | &#34;j&#34; | &#34;k&#34; | &#34;l&#34; | &#34;m&#34; | &#34;n&#34; | &#34;o&#34; | &#34;p&#34; | &#34;q&#34; | &#34;r&#34; | &#34;s&#34; | &#34;t&#34; | &#34;u&#34; | &#34;v&#34; | &#34;w&#34; | &#34;x&#34; | &#34;y&#34; | &#34;z&#34;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#a6e22e">digit</span>&gt;          <span style="color:#f92672">::=</span> &#34;0&#34; | &#34;1&#34; | &#34;2&#34; | &#34;3&#34; | &#34;4&#34; | &#34;5&#34; | &#34;6&#34; | &#34;7&#34; | &#34;8&#34; | &#34;9&#34;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#a6e22e">symbol</span>&gt;         <span style="color:#f92672">::=</span>  &#34;|&#34; | &#34; &#34; | &#34;!&#34; | &#34;#&#34; | &#34;$&#34; | &#34;%&#34; | &#34;&amp;&#34; | &#34;(&#34; | &#34;)&#34; | &#34;*&#34; | &#34;+&#34; | &#34;,&#34; | &#34;-&#34; | &#34;.&#34; | &#34;/&#34; | &#34;:&#34; | &#34;;&#34; | &#34;&gt;&#34; | &#34;=&#34; | &#34;&lt;&#34; | &#34;?&#34; | &#34;@&#34; | &#34;[&#34; | &#34;\&#34; | &#34;]&#34; | &#34;^&#34; | &#34;_&#34; | &#34;`&#34; | &#34;{&#34; | &#34;}&#34; | &#34;~&#34;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#a6e22e">character1</span>&gt;     <span style="color:#f92672">::=</span> &lt;<span style="color:#a6e22e">character</span>&gt; | &#34;&#39;&#34;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#a6e22e">character2</span>&gt;     <span style="color:#f92672">::=</span> &lt;<span style="color:#a6e22e">character</span>&gt; | &#39;&#34;&#39;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#a6e22e">rule-name</span>&gt;      <span style="color:#f92672">::=</span> &lt;<span style="color:#a6e22e">letter</span>&gt; | &lt;<span style="color:#a6e22e">rule-name</span>&gt; &lt;<span style="color:#a6e22e">rule-char</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#a6e22e">rule-char</span>&gt;      <span style="color:#f92672">::=</span> &lt;<span style="color:#a6e22e">letter</span>&gt; | &lt;<span style="color:#a6e22e">digit</span>&gt; | &#34;-&#34;
+</span></span></code></pre></div><p>The Wikipedia article has a great recasting of this into WSN, which greatly simplifies it and removes extraneous detail:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span> syntax         = rule [ syntax ] .
+</span></span><span style="display:flex;"><span> rule           = opt-whitespace &#34;&lt;&#34; rule-name &#34;&gt;&#34; opt-whitespace &#34;::=&#34;
+</span></span><span style="display:flex;"><span>                  opt-whitespace expression line-end .
+</span></span><span style="display:flex;"><span> opt-whitespace = { &#34; &#34; } .
+</span></span><span style="display:flex;"><span> expression     = list [ &#34;|&#34; expression ] .
+</span></span><span style="display:flex;"><span> line-end       = opt-whitespace EOL | line-end line-end .
+</span></span><span style="display:flex;"><span> list           = term [ opt-whitespace list ] .
+</span></span><span style="display:flex;"><span> term           = literal | &#34;&lt;&#34; rule-name &#34;&gt;&#34; .
+</span></span><span style="display:flex;"><span> literal        = &#34;&#34;&#34;&#34; text &#34;&#34;&#34;&#34; | &#34;&#39;&#34; text &#34;&#39;&#34; .
+</span></span></code></pre></div><h2 id="iso-standard-ebnf"><a href="https://www.iso.org/standard/26153.html">ISO standard EBNF</a></h2>
+<p>There seems controversy over the ISO standard version of EBNF. One of the nice things about the standard is
+that it provides both formal (longer) and informal definitions in themselves. The informal definition is here and it does seem a mess:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ebnf" data-lang="ebnf"><span style="display:flex;"><span><span style="color:#66d9ef">SYNTAX </span><span style="color:#f92672">=</span> <span style="color:#66d9ef">SYNTAX RULE</span>, (<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">SYNTAX RULE </span><span style="color:#960050;background-color:#1e0010">:</span>).
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SYNTAX RULE </span><span style="color:#f92672">=</span> <span style="color:#66d9ef">META IDENTIFIER</span>, <span style="color:#e6db74">&#39;=&#39;</span>, <span style="color:#66d9ef">DEFINITIONS LIST</span>, <span style="color:#e6db74">&#39;.&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">DEFINITIONS LIST </span><span style="color:#f92672">=</span> <span style="color:#66d9ef">SINGLE DEFINITION</span>, (<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;/&#39;</span>, <span style="color:#66d9ef">SINGLE DEFINITION </span><span style="color:#960050;background-color:#1e0010">:</span>).
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SINGLE DEFINITION </span><span style="color:#f92672">=</span> <span style="color:#66d9ef">TERM</span>, (<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;,&#39;</span> <span style="color:#66d9ef">TERM </span><span style="color:#960050;background-color:#1e0010">:</span>).
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">TERM </span><span style="color:#f92672">=</span> <span style="color:#66d9ef">FACTOR</span>, (<span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#e6db74">&#39;-&#39;</span>, <span style="color:#66d9ef">EXCEPTION </span><span style="color:#960050;background-color:#1e0010">/</span>).
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">EXCEPTION </span><span style="color:#f92672">=</span> <span style="color:#66d9ef">FACTOR</span>.
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FACTOR </span><span style="color:#f92672">=</span> (<span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#66d9ef">INTEGER</span>, <span style="color:#e6db74">&#39;*&#39;</span> <span style="color:#960050;background-color:#1e0010">/</span>), <span style="color:#66d9ef">PRIMARY</span>.
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">PRIMARY </span><span style="color:#f92672">=</span> <span style="color:#66d9ef">OPTIONAL SEQUENCE </span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#66d9ef">REPEATED SEQUENCE </span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#66d9ef">SPECIAL SEQUENCE </span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#66d9ef">GROUPED SEQUENCE </span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#66d9ef">META IDENTIFIER </span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#66d9ef">TERMINAL </span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#66d9ef">EMPTY</span>.
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">EMPTY </span><span style="color:#f92672">=</span> .
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">OPTIONAL SEQUENCE </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;(/&#39;</span>, <span style="color:#66d9ef">DEFINITIONS LIST</span>, <span style="color:#e6db74">&#39;/)&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">REPEATED SEQUENCE </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;(:&#39;</span>, <span style="color:#66d9ef">DEFINITIONS LIST</span>, <span style="color:#e6db74">&#39;:)&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUPED SEQUENCE </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;(&#39;</span>, <span style="color:#66d9ef">DEFINITIONS LIST</span>, <span style="color:#e6db74">&#39;)&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">TERMINAL</span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#39;&#34;</span> , <span style="color:#66d9ef">CHARACTER - </span><span style="color:#e6db74">&#34;&#39;&#34;</span>, (<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">CHARACTER - </span><span style="color:#e6db74">&#34;&#39;&#34;</span> <span style="color:#960050;background-color:#1e0010">:</span>), <span style="color:#e6db74">&#34;&#39;&#34;</span> <span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#e6db74">&#39;&#34;&#39;</span> , <span style="color:#66d9ef">CHARACTER - </span><span style="color:#e6db74">&#39;&#34;&#39;</span>, (<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">CHARACTER - </span><span style="color:#e6db74">&#39;&#34;&#39;</span> <span style="color:#960050;background-color:#1e0010">:</span>), <span style="color:#e6db74">&#39;&#34;&#39;</span> .
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">META IDENTIFIER </span><span style="color:#f92672">=</span> <span style="color:#66d9ef">LETTER</span>, (<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">LETTER </span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#66d9ef">DIGIT </span><span style="color:#960050;background-color:#1e0010">:</span>).
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INTEGER </span><span style="color:#f92672">=</span> <span style="color:#66d9ef">DIGIT</span>, (<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">DIGIT </span><span style="color:#960050;background-color:#1e0010">:</span>).
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SPECIAL SEQUENCE </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;?&#39;</span>, (<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">CHARACTER - </span><span style="color:#e6db74">&#39;?&#39;</span> <span style="color:#960050;background-color:#1e0010">:</span>), <span style="color:#e6db74">&#39;?&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">COMMENT </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;(*&#39;</span>, (<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">COMMENT SYMBOL </span><span style="color:#960050;background-color:#1e0010">:</span>), <span style="color:#e6db74">&#39;*)&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">COMMENT SYMBOL </span><span style="color:#f92672">=</span> <span style="color:#66d9ef">COMMENT </span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#66d9ef">TERMINAL </span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#66d9ef">SPECIAL SEQUENCE </span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#66d9ef">CHARACTER</span><span style="color:#960050;background-color:#1e0010">/</span>
+</span></span></code></pre></div><p>The extra symbols and brackets eg { to (:, using white space in tokens and changing the
+default optionality | to / seems wrong. As does duplication like defining an exception as a factor. It also lacks support for Unicode.</p>
+<p>It does also point to using succinctness that you get from a non formal system. Over specification leads to
+complexity. In the go version this is done by using go definitions of white space and
+tokens rather than respecifying them.</p>
+<h2 id="ietf-xml"><a href="https://www.w3.org/TR/REC-xml/#sec-notation">IETF XML</a></h2>
+<p>The XML standard reverts to BNF form for specifying rules as ::=. There is a lot of detail about using regex&rsquo;s for
+character mapping.</p>
+<p>Note that <a href="//datatracker.ietf.org/doc/html/rfc5234">IETF RFC5234</a> uses a quite a different family of rules which are not considered here.</p>
+<p>This describes an ABNF, I have abbreviated here to eliminate some of the lower level tokenisation rules</p>
+<p>Name changes</p>
+<table>
+<thead>
+<tr>
+<th>Go</th>
+<th>Wirth</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>SYNTAX</td>
+</tr>
+<tr>
+<td>PRODUCTION</td>
+<td>SYNTAX</td>
+</tr>
+</tbody>
+</table>
+
+  </div>
+
+  <footer class="post-footer">
+    
+
+    
+    <div class="post-tags">
+      <i class="fas fa-tags"></i>
+      
+        <a href="/tags/ebnf">EBNF</a>
+        &nbsp;
+      
+    </div>
+    
+
+    
+    
+  </footer>
+  
+  <div class="comments">
+  <div class="comments">
+
+
+
+</div>
+  </div>
+</article>
+
+  <div class="foot">
+  
+  &copy; 2018 - 2024 &#183;
+  <a href="/"> Bytestone Blog </a> &#183;
+  Theme <a href="https://github.com/RainerChiang/simpleness">Simpleness</a> Powered by <a href="https://gohugo.io/">Hugo</a> &#183;
+  <a href="#"><i class="fas fa-chevron-up"></i></a>
+</div>
+</body>
+  <script src="/js/lazyload.min.js"></script>
+<script>
+  var lazyImage = new LazyLoad({container: document.getElementById('article')});
+</script>
+
+
+
+
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EBNF on Bytestone Blog</title>
+    <link>https://www.bytestone.uk/tags/ebnf/</link>
+    <description>Recent content in EBNF on Bytestone Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 04 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.bytestone.uk/tags/ebnf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EBNF Extended Backus Naur Format</title>
+      <link>https://www.bytestone.uk/posts/ebnf/</link>
+      <pubDate>Thu, 04 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/ebnf/</guid>
+      <description>EBNF is a way of describe grammars which is useful for precisely describing the formats of things.&#xA;I was introduced to it in the diagrams of Nicklaus Wirth&amp;rsquo;s book on Pascal where he elegantly defines a language and its syntax.&#xA;I am going to start with the definition of EBNF in EBNF in a go parser&#xA;Package ebnf is a library for EBNF grammars. The input is text ([]byte) satisfying the following grammar (represented itself in EBNF):</description>
+    </item>
+  </channel>
+</rss>

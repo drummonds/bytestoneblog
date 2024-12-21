@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tax on Bytestone Blog</title>
+    <link>https://www.bytestone.uk/tags/tax/</link>
+    <description>Recent content in tax on Bytestone Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 20 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.bytestone.uk/tags/tax/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Filing MicroEntity Accounts   </title>
+      <link>https://www.bytestone.uk/posts/hmrc-microentity-accounts/</link>
+      <pubDate>Thu, 20 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.bytestone.uk/posts/hmrc-microentity-accounts/</guid>
+      <description>Filing microentity accounts This is meant to document how to use HMRC&amp;rsquo;s service to input accounts and company house data when using Beancount and HMRC.&#xA;Get Beancount up to date Generate annual accounts by editing report Input data here by hand Opening questions These are the questions and the answers to which this process applies.&#xA;What is your organisation?&#xA;Company Do you want to make changes to a Company Tax Return you&amp;rsquo;ve already filed?</description>
+    </item>
+  </channel>
+</rss>
