@@ -1,0 +1,60 @@
+{{ define "main" }}
+{{ $Pages := .Pages }}
+{{ $home := .IsHome }}
+<h2>My Layout/index.html</h2>
+<article class="archive">
+<div class="post-list">
+    <!-- Display AFP Content -->
+    <h2>Accounting for Programmers</h2>
+    <p>This is an extended series of articles on understanding accounting from 
+    a programming perspective.</p>
+    <p>
+    <ul><li><a href="/afp/">Accounting for programmers</a></li></ul>
+    </p>
+
+    <!-- Display Regular Posts -->
+    {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+    {{ range $paginator.Pages }}
+    <h2>Blog Posts</h2>
+    <div class="archive-list">
+    {{ range $Pages.GroupByDate "2006" }}
+      <h2 class="archive-year">{{ .Key }}</h2>
+      <ul>
+      {{ range .Pages.GroupByDate "January"}} <!-- .Pages in $Pages -->
+        {{ range .Pages }}
+          <li class="archive-item">
+          {{ if .Date }}
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          {{ end }}
+          </li>
+          {{ end }}
+      {{ end }}
+      </ul>
+    {{ end }}
+    </div>
+
+    {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+    {{ range $paginator.Pages }}
+    <article class="post-entry">
+        <header class="post-header">
+            <h3 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <div class="post-meta">
+                <time>{{ .Date.Format "2006-01-02" }}</time>
+                {{ with .Params.tags }}
+                <span class="post-tags">
+                    {{ range . }}
+                    #<a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a>&nbsp;
+                    {{ end }}
+                </span>
+                {{ end }}
+            </div>
+        </header>
+        {{ if .Summary }}
+        <div class="post-summary">{{ .Summary }}</div>
+        {{ end }}
+    </article>
+    {{ end }}
+    {{ template "_internal/pagination.html" . }}
+</div>
+{{ end }} 
