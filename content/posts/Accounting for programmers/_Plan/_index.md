@@ -1,8 +1,13 @@
 ---
 title: Plan for accounting for programmers
 date: 2024-12-26
+tags: ["9sc", "move"]
+mermaid: true
 ---
 
+This is the plan
+
+## Mindmap
 {{< mermaid >}}
 mindmap
   afp ((accounting for programmers))
