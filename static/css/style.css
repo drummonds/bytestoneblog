@@ -1,0 +1,10 @@
+.pagination {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+  padding: 0;
+}
+
+.pagination li {
+  display: inline-block;
+} 

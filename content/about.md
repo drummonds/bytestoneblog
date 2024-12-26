@@ -17,7 +17,7 @@ disableAutoCollapse: true
 
 ## About Yourself
 
-This is a blog about various things I am interested in, specifically related to Bytestone which is long term digital storage of information
+This is a blog about various things I am interested in, specifically related to Bytestone which is long term digital storage of information.
 
 ## hugo theme 
 
