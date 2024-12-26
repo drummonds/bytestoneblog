@@ -12,7 +12,6 @@ This is an outline of the plan to complete this section.
 {{< mermaid >}}
 mindmap
   afp((accounting for programmers))
-{{< /mermaid >}}
   Historic
     Summerian Uruk
     Indian
@@ -24,3 +23,4 @@ mindmap
     Negative numbers
   Balance sheet
   Profit and loss
+{{< /mermaid >}}
