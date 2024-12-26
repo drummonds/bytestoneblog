@@ -12,15 +12,15 @@ This is an outline of the plan to complete this section.
 {{< mermaid >}}
 mindmap
   afp((accounting for programmers))
-  Historic
-    Summerian Uruk
-    Indian
-  Entity
-  Counting
-  Movements
-    Balance to Zero
-    Credit and debits
-    Negative numbers
-  Balance sheet
-  Profit and loss
+    Historic
+      Summerian Uruk
+      Indian
+    Entity
+    Counting
+    Movements
+      Balance to Zero
+      Credit and debits
+      Negative numbers
+    Balance sheet
+    Profit and loss
 {{< /mermaid >}}
