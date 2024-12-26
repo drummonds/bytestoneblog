@@ -5,12 +5,14 @@ tags: ["9sc", "move"]
 mermaid: true
 ---
 
-This is the plan
+This is an outline of the plan to complete this section.
 
 ## Mindmap
+
 {{< mermaid >}}
 mindmap
-  afp ((accounting for programmers))
+  afp((accounting for programmers))
+{{< /mermaid >}}
   Historic
     Summerian Uruk
     Indian
@@ -22,4 +24,3 @@ mindmap
     Negative numbers
   Balance sheet
   Profit and loss
-{{< /mermaid >}}

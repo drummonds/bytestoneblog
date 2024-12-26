@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+  {{ partial "head.html" . }}
+<body class="container">
+  {{ partial "navigation.html" . }}
+  {{ block "main" . }}{{ end }}
+  {{ partial "foot.html" . }}
+</body>
+  {{ partial "scripts.html" . }}
+  {{ partial "script.html" . }}
+</html>
