@@ -2,7 +2,7 @@
 {{ $Pages := .Pages }}
 {{ $home := .IsHome }}
 {{ if .IsHome }}
-  {{ $Pages = where site.RegularPages "Type" "in" .Site.Params.mainSections }}
+{{ $Pages = where site.RegularPages "Type" "in" .Site.Params.mainSections }}
 {{ end }}
 <article class="archive">
   {{ if not .IsHome }}
@@ -11,27 +11,30 @@
       {{ .Title }}
     </h1>
   </header>
-    <div class="content">
+  <div class="content">
     {{ .Content }}
   </div>
 
   {{ end }}
   <div class="archive-list">
-  {{ range $Pages.GroupByDate "2006" }}
+    {{ range $Pages.GroupByDate "2006" }}
     <h2 class="archive-year">{{ .Key }}</h2>
     <ul>
-    {{ range .Pages.GroupByDate "January"}} <!-- .Pages in $Pages -->
-    {{ range .Pages }}
+      {{ range .Pages.GroupByDate "January"}} <!-- .Pages in $Pages -->
+      {{ range .Pages }}
       <li class="archive-item">
-      {{ if .Date }}
-        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
+        {{ if .Date }}
+        <time datetime="{{ .Date.Format " 2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
         <a href="{{ .Permalink }}">{{ .Title }}</a>
-      {{ end }}
+        {{ end }}
       </li>
       {{ end }}
-    {{ end }}
+      {{ end }}
     </ul>
-  {{ end }}
+    {{ end }}
   </div>
+  <aside>
+    Last modified on {{ .Lastmod.Format "2006-01-02"}}.
+  </aside> 
 </article>
 {{ end }}

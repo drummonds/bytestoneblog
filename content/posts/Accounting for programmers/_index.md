@@ -1,6 +1,6 @@
 ---
 title: "Accounting for Programmers"
-date: "2024-11-28"
+date: "2024-24-27"
 first: "2016-10-30"
 categories: ["Humphrey"]
 tags: ["Humphrey"]
@@ -13,11 +13,22 @@ summary: "An introduction to accounting for programmers."
 This is an extended series of posts to introduce the concepts of accounting to programmers.  It is born of my own exploration into the subject and I have started writing in 2016.  It take a somewhat different approach to most books in that we will be looking at accounting
 from the point of view of a programmer, me!
 
+There two goals, in the first part I am exploring the nature of double entry book keeping with
+the directed graph approach and how accounting emerges from this.  There is a lot of explanation and 
+exploration as to the nature of accounting records and why the credit/debit system is isomorphic 
+with positive and negative balances.  
+
+The movement from single entry booking to double entry keeping exemplified by Datini from 1370 to 1390 correlates with computer software migrating from single entry to double entry systems.
+
+
+It is currently a work in progress so see the overall [plan](/afp/_plan/).
+
 Structure
+- [Movements](/afp/movements/)
 - Accounting Records
 - The PiggyBank
 - Time series data
-- Historical and current state
+- [Historical](/afp/uruk/), current state
 - Single Entry and Double entry accounting
 - Petty cash accounting
 - The trial balance (and the accounting equation)
@@ -25,8 +36,8 @@ Structure
 - Reporting for management info
 - Stock
 - Invoicing
-- [Plain Text accounting](posts/plain-text-accounting/)
-- Free and commercial software packages
+- [Plain Text accounting](/afp/plain-text-accounting/)
+- [Free and commercial software packages](/afp/free-and-commercial-software-packages/)
 
 ## Accounting records
 
@@ -53,7 +64,7 @@ When you are looking at an accounting system it usually applies to a specific en
 The piggy bank is the simplest model of an accounting system you have a single box into which you can put money in or take money out.  At any one point in time there is so much money in the piggy.
 You could imagine a business selling oranges on the street and supposing you are able to get oranges on a sale or return basis from friendly green grocers.  At the beginning of the day you borrow a box of oranges and go out onto the street.  During the day you sell your oranges and put the money in the piggy bank. You sell your oranges and at the end of the day your return to your friendly green grocers.  You return the unsold oranges, pay the green grocer.  The money left over in your piggy bank at the end of the day is your profit.
 
-There is also a limitation in that you only have the cuurent value of the profit and there is not historical record.  If this was a virtual poggy bank you would have no record of what you had made in a week month or a year.  This leads onto time series data.
+There is also a limitation in that you only have the current value of the profit and there is not historical record.  If this was a virtual piggy bank you would have no record of what you had made in a week month or a year.  This leads onto time series data.
 
 ## Time Series Data
 
@@ -86,29 +97,3 @@ When you invoice you create an entry against a debtors control account to indica
 In a simple business all the stock is represented in a single account.  At the end of the accounting period the stock is revalued and the difference between the beginning plus the purchases and end valuations is then  cost of goods sold.
 In a more elaborate stock taking system the value of each stock item will be measured in real time.
 
-Free and Commerical packages
-This is an eclectic list and is just those which I have been familiar with.
-
-## Gnucash
-
-I have used this both directly and va piecash.  Piecash is a very nice SQLAlchemy based ORM which hides many of the idyosyncracies of GnuCash.  From a database point of view the problem is that the database definition has been frozen for a while and all the changes have been done by adding key value pairs in a generic KVP data.
-
-## Sage line 50
-This has an OBC connection although it is 32bits.
-
-## [Beancount](https://beancount.github.io/)
-
-I have used this when I converted from [Xero to Beancount](posts/2019-05-29-conversion-from-xero-to-beancount/).  Martin Blais writes clearly
-and in depth.  He also has a cleaner description and version of a plain text accounting grammar.
-
-He also considers in depth FX conversions and stock pricing.
-
-## [Coin](https://github.com/mkobetic/coin)
-
-I like this as it is fast, written in go and simplified.  It also uses big int's as a rational 
-basis for storing amounts.  It actually abstracts the amount so that different methods can be used.
-It also has good test coverage.
-
-One of the snags with it is the syntax follows ledger rather than beancount. 
-- Balance assertions come on a single posting and become order dependent.  This is 
-particle bad as the order for bank reconciliation may be different from that of entries in the file.

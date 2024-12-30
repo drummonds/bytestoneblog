@@ -3,43 +3,13 @@ title: "Plain text accounting"
 date: "2024-11-22"
 ---
 
-## Time series functions
+[plaintextaccounting.org](https://plaintextaccounting.org/)  has a nice overview of the topic.
 
-A time series is a function that varies over time. For example the amount of money in a piggy bank.
-This has a value at a point in time as well as changes. This corresponds to a derivative although typically the changes are stochastic not a regular time intervals. There is also an integral version which is the change during a period eg how much was added during 1 week or some other period. Here the period can be regular.
-
-Accounting is about the transfer of money or other quantity from one place to another.
-
-This has been the case for a [very long time](https://posit-dev.github.io/great-tables/blog/design-philosophy/):
-
-When agriculture became more widespread (ca. 10,000 years ago), there was the need to document and manage economic transactions to do with farming, livestock, and the division of labour. In the fourth millennium BC, Mesopotamian cities that traded with far way kingdoms needed to keep such records. Clay tablets recovered from the ancient Sumerian city of Uruk show early yet sophisticated tables. Here is a drawing of one of the recovered tablets, which contains an accounting of deliveries of barley and malt from two individuals for the production of beer.
-
-![Uruk table with annotations](uruk_tablet_with_annotations.png)
-
-Drawing of clay tablet from Sumerian city of Uruk, circa 3200-3000 BC. Uruk III Tablet (MSVO 3, 51, Louvre Museum, Paris, France). Annotated with the meanings of the columns, rows, and cells.
-
-Note that the recovered tablet is meant to be read from right to left. Inside each box is an ideogram (a symbol that represented a word or idea) and a numerical value representing a quantity.
-
-Its structure is where things get super interesting:
-
-    Rows: there are roughly two rows, each corresponding to an individual.
-    Columns: the first two columns from the right contain counts of malt (rightmost column) and barley (second rightmost column).
-    Subtotals: the third column from the right sums barley and malt within each individual, and the left-most column displays the grand total.
-
-As a bonus, the table has a footer, since the bottom row contains the name of the official in charge.
-
-## Plain text accounting
-
-This will be the introduction to cover a range of subjects:
+This will be the introduction to cover a range of subjects as part of the [general accounting for programmers](/afp/) series of posts:
 
 - EBNF
-- Time formats
 - Beancount flavour of plain text accounting
 - Text version of t side accounting
-- History of accounting
-- direct graphs for transactions
-- Negative numbers or debits and credits
-- Time series data
 
 - Ledger modelling
 
