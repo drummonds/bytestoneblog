@@ -35,3 +35,7 @@ British and American english terminology has diverged from a common root.
 | Credit Note                        | Credit Memo                 |
 
 Note the different meanings of stock in British and American terminology.
+
+Their are some common terms:
+
+- Total Net Assets

@@ -10,12 +10,13 @@ googleAnalytics = ""
 
 [params]
   lazyImage = true
-  enableMathJax = false # enable it in Front Matter
+  enableMathJax = true # enable it in Front Matter
   enableReadingTime = true
   favicon = "favicon.ico"
   startyear = "2018"
   description = "Varying notes on a very long journey to build bytestone."
   disqus = ""
+  math = true
 
 [params.valine]
   enable = false
@@ -63,4 +64,11 @@ tag = "tags"
     noClasses = true
     style = "monokai" # github, dracula, vim, monokai
     tabWidth = 4
-    
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+

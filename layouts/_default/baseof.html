@@ -8,4 +8,8 @@
 </body>
   {{ partial "scripts.html" . }}
   {{ partial "script.html" . }}
+  {{ if .Param "math" }}
+    {{ partialCached "math.html" . }}
+  {{ end }}
+
 </html>

@@ -85,6 +85,13 @@ flowchart LR
    E -- £25 --> C
 {{< /mermaid >}}
 
+This change of viewpoint from looking at multiple entities to the interactions of a single
+entity is conceptually a big change.  There is a parallel with the first law of thermodynamics 
+where energy is preserved in a closed system.  Arguably it is this change in view point that
+the Northern Italian merchants made in there large trading companies that gave rise to double entry 
+book keeping.  In the initial diagrams each entity is regarded by itself as a single entry book keeping 
+system.
+
 From now on we are only going to treat this as the accounting records of the business. This is 
 one of the main tennets of double entry accounting.  Following
 [Kleppmann][Kleppmann2011] each node represents an account and each edge (vector) represents a transaction.  
@@ -248,8 +255,6 @@ value of a business is the value of the assets minus its liabilities.  The value
 
 We should be able to see:
 
-   <!--  -->
-
 {{< mermaid >}}
 flowchart LR
    classDef classEquity  fill:#EEB;
@@ -276,6 +281,16 @@ flowchart LR
    F -- £25 --> S
    S -- £25 --> CG
 {{< /mermaid >}}
+
+Looking at the position of the entrepeur, they have inested £25 in the business and so the rest 
+of the balances will add up to £25.  This says nothing about the health of the business (Balance sheet) or its 
+trading (Profit and Loss).
+
+The balance sheet is the sum of all the assets minus the liabilities. (Green minus the grey)  The 
+value of the balance sheet is the total net assets:
+
+\[totalNetAssets=Assets-Liabilities\]
+
 
 
 ### Connection to double entry accounting
