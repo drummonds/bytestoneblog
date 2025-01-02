@@ -1,14 +1,16 @@
 ---
 title: Accounting movements
-date: 2024-12-26
+date: 2025-01-01
 mermaid: true
 ----
 
 ## Movements
 
 
-Accounting is really the tracking of resources.  [Kleppmann][Kleppmann2011]
- [IA](https://web.archive.org/web/20110717155537/https://martin.kleppmann.com/2011/03/07/accounting-for-computer-scientists.html) really crystallised this concept for me by explaing them as graph theory.  A transaction is about the movement of resources from one place to another.
+Accounting is really the tracking of resources.  This article was inspired by a post explaining accounting for computer scientists by [Martin Kleppmann][Kleppmann2011]
+ [📚](https://web.archive.org/web/20110717155537/https://martin.kleppmann.com/2011/03/07/accounting-for-computer-scientists.html).
+  This crystallised the concept for me by explaining accounting transactions as graph
+ theory.  A transaction is simply the movement of resources from one place to another (one account to another) at a particular time.
 
 [Kleppmann2011]: https://martin.kleppmann.com/2011/03/07/accounting-for-computer-scientists.html
 
@@ -25,10 +27,17 @@ The founder is hoping that the business will do well and then the following will
 {{< mermaid >}}
 flowchart LR
    I -- £5 --> B
+   B -. Trading .-> B
    B([Business]) -- £100 --> I([Investor])
 {{< /mermaid >}}
 
-One of the principles of accounting is that is done from the point of view of single entity.  Here we have two, the investor and the business.  If the investor is self employed and investing in their own business then the boundaries between the two get blurred.  In the UK the tax authority [HMRC](https://www.gov.uk/money/income-tax) will normally require as self employed person to complete a tax return on behalf of you and your business.
+## Entity and the boundary of the firm
+
+One of the principles of accounting is that is done from the point of view of single entity.  Here
+we have two, the investor and the business.  If the investor is self employed and investing in
+ their own business then the boundaries between the two get blurred.  In the UK the tax authority
+  [HMRC](https://www.gov.uk/money/income-tax) will normally require as self employed person to 
+  complete a tax return on behalf of you and your business.
 
 From the point of view of transactions there are two separate entities:
 
@@ -43,12 +52,78 @@ flowchart LR
    I -- £5 --> B
 {{< /mermaid >}}
 
-## Business as an entity
+## Business as a single separate entity
 
 In the previous paragraph we were looking from the outside at a transaction between two entities.
-One of the features of double entry book keeping.
+The great Venetian addition was to consider the business entity as separate from the owners and
+this is a core feature of double entry book keeping practice.
 
-## Accounts balancing
+So in the diagram above we are only considering transactions within the business.
+
+{{< mermaid >}}
+flowchart LR
+   I([Investor])
+   classDef classAssets  fill:#CDA;
+   subgraph Business
+    B([Business])
+    class B classAssets;
+  end
+   I -- £5 --> B
+{{< /mermaid >}}
+
+This presents a problem in that we have movements of resources from outside the business to inside
+the business.  This is dealt with by keeping matching input and output accounts which account for
+all the flows in and out of the business.
+
+{{< mermaid >}}
+flowchart LR
+   classDef classEquity  fill:#EEB;
+   classDef classAssets  fill:#CDA;
+   I([Investor])
+   class I classEquity;
+   subgraph Business
+   direction LR
+      E([Equity Input])
+      class E classEquity;
+      B([Assets])
+      class B classAssets;
+   end
+   I -- £5 --> Business
+   E -- £5 --> B
+{{< /mermaid >}}
+
+
+### Input and outputs
+
+We can model what the investor hopes will happening by adding trading and the revenue out:
+
+{{< mermaid >}}
+flowchart LR
+   classDef classEquity  fill:#EEB;
+   classDef classAssets  fill:#CDA;
+   I([Investor])
+   I1([Investor])
+   class I,I1 classEquity;
+   subgraph Business
+   direction LR
+      E([Equity Input])
+      D([Dividend output])
+      class E,D classEquity;
+      B([Assets])
+      class B classAssets;
+      R([Revenue])
+      Ex([Expense])
+   end
+   I -- £5 --> Business
+   E -- £5 --> B
+   R -. Sales .-> B
+   B -- £1000 --> D
+   B -. Expense .-> Ex
+   Business -- £1000 --> I1
+{{< /mermaid >}}
+
+
+## Accounts balance
 
 From [Kleppmann][Kleppmann2011]:
 
@@ -59,7 +134,7 @@ The account balances have two nice properties:
 
 The sum is zero as every movement has a negative amount in one account and a positive in the other account.
 
-## Simplest business transaction
+## Detailed simplest business transaction
 
 This is a very simple business model.  You invest in your business.  You then buy oranges from an orange farmer, take them to market and sell them at a profit.  You then keep the profit.
 
@@ -88,11 +163,13 @@ flowchart LR
 This change of viewpoint from looking at multiple entities to the interactions of a single
 entity is conceptually a big change.  There is a parallel with the first law of thermodynamics 
 where energy is preserved in a closed system.  Arguably it is this change in view point that
-the Northern Italian merchants made in there large trading companies that gave rise to double entry 
-book keeping.  In the initial diagrams each entity is regarded by itself as a single entry book keeping 
-system.
+the Northern Italian merchants made in there large trading companies that gave rise to double
+entry book keeping.  In the initial diagrams each entity is regarded by itself as a single entry
+book keeping system.
 
-From now on we are only going to treat this as the accounting records of the business. This is 
+In contrast to the system for thermodynamics the system overall is not closed.  The entrepreneur node denotes input to the system.  You can also have exit nodes as we will see later.
+
+From now on we are only going to look at the accounting records of a single business. This is 
 one of the main tennets of double entry accounting.  Following
 [Kleppmann][Kleppmann2011] each node represents an account and each edge (vector) represents a transaction.  
 
@@ -204,7 +281,7 @@ flowchart LR
    FM -- £25 --> SM
 {{< /mermaid >}}
 
-You get the satisfying transfer of £25 to inventory from cash.  The balance with the farmer is
+You get the satisfying transfer of £25 to stock from cash.  The balance with the farmer is
 zero as the goods have been paid for.
 
 ### Converting sale of oranges to money equivalent
@@ -238,7 +315,7 @@ flowchart LR
    E([Entrepreneur **-£25**])
    C([Cash **£37.50**])
    F([Farmer **£0**])
-   M([Market **-£12.50**])
+   M([Market **-£37.50**])
    S([Stock **£0**])
    CG([Cost of goods sold **£25**])
    E -- £25 --> C
@@ -251,9 +328,20 @@ flowchart LR
 
 From this you can see that no money is owed to the Farmer nor is there any stock.  However the
 overall profit and health of the business is unclear.  At a point in time (eg after trading) the 
-value of a business is the value of the assets minus its liabilities.  The value incudes the investments by the entrepreneur.
+value of a business is the value of the assets minus its liabilities.  The value incudes the
+investments by the entrepreneur.
 
-We should be able to see:
+So by colouring in the various boxes and giving them a are more expressive title:
+
+Colour  | Meaning
+---|----
+$$\definecolor{equity}{RGB}{238,238,187}\colorbox{equity}{Equity}$$ | Money invested by the owners or their profits
+$$\definecolor{asset}{RGB}{204,221,170}\colorbox{asset}{Asset}$$ | Things that the entity has or is owing to it
+$$\definecolor{liability}{RGB}{221,221,221}\colorbox{liability}{Liabilities}$$ | Things that the entity has or is owing to it
+$$\definecolor{income}{RGB}{187,204,238}\colorbox{income}{Income}$$ | Income earned by the business
+$$\definecolor{expense}{RGB}{255,204,204}\colorbox{expense}{Expense}$$ | Expenses incurred by the business
+
+If we now label the various accounts above we should be able to see:
 
 {{< mermaid >}}
 flowchart LR
@@ -282,16 +370,65 @@ flowchart LR
    S -- £25 --> CG
 {{< /mermaid >}}
 
-Looking at the position of the entrepeur, they have inested £25 in the business and so the rest 
-of the balances will add up to £25.  This says nothing about the health of the business (Balance sheet) or its 
-trading (Profit and Loss).
+The farmer is either an asset if you pay before receiving the goods, or a liability if you pay
+after receiving the goods.  So in this example the balance is zero as we paid at the time of 
+receiving the goods and have marked as an example of a liability.
+
+In order to show a liability we have shown the position where you have agreed to pay the farmer on
+the way back from the market. 
+
+{{< mermaid >}}
+flowchart LR
+   classDef classEquity  fill:#EEB;
+   classDef classAssets  fill:#CDA;
+   classDef classIncome  fill:#BCE;
+   classDef classExpense  fill:#FCC;
+   classDef classLiabilities  fill:#DDD;
+   E@{ shape: stadium, label: "Entrepreneur **-£25**"}
+   class E classEquity;
+   C([Cash **£62.50**])
+   class C classAssets;
+   F([Farmer **£-25**])
+   class F classLiabilities;
+   M([Market **-£37.50**])
+   class M classIncome;
+   S([Stock **£0**])
+   class S classAssets;
+   CG([Cost of goods sold **£25**])
+   class CG classExpense;
+   E -- £25 --> C
+   C -- £25 --> F
+   M -- £37.50 --> C
+
+   F -- £25 --> S
+   S -- £25 --> CG
+{{< /mermaid >}}
+
+Looking at the position of the entrepreneur, they have invested £25 in the business and so the
+rest of the balances will add up to £25.  This says nothing about the health of the business
+(Balance sheet) or its trading position (Profit and Loss).
+
 
 The balance sheet is the sum of all the assets minus the liabilities. (Green minus the grey)  The 
 value of the balance sheet is the total net assets:
 
-\[totalNetAssets=Assets-Liabilities\]
+$$\definecolor{asset}{RGB}{204,221,170}
+\definecolor{liability}{RGB}{221,221,221}
+totalNetAssets=\colorbox{asset}{Assets}+\colorbox{liability}{Liabilities}$$
 
+We add the liabilities to the assets but the liabilities are expressed as negative numbers.
 
+So the full equation becomes:
+
+$$\definecolor{asset}{RGB}{204,221,170}
+\definecolor{liability}{RGB}{221,221,221}
+\definecolor{equity}{RGB}{238,238,187}
+\definecolor{income}{RGB}{187,204,238}
+\definecolor{expense}{RGB}{255,204,204}
+totalNetAssets=\colorbox{asset}{Assets}+\colorbox{liability}{Liabilities}
+=\colorbox{equity}{Equity}+\colorbox{income}{Income}+\colorbox{expense}{Expense}$$
+
+with liabilities, equity and income being typically negative.
 
 ### Connection to double entry accounting
 

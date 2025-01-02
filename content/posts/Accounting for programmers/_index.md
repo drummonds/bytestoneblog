@@ -1,7 +1,7 @@
 ---
 title: "Accounting for Programmers"
-date: "2024-24-27"
-first: "2016-10-30"
+update: "2025-01-02"
+date: "2016-10-30"
 categories: ["Humphrey"]
 tags: ["Humphrey"]
 author: "Humphrey Drummond"
@@ -18,8 +18,6 @@ the directed graph approach and how accounting emerges from this.  There is a lo
 exploration as to the nature of accounting records and why the credit/debit system is isomorphic 
 with positive and negative balances.  
 
-The movement from single entry booking to double entry keeping exemplified by Datini from 1370 to 1390 correlates with computer software migrating from single entry to double entry systems.
-
 
 It is currently a work in progress so see the overall [plan](/afp/_plan/).
 
@@ -29,7 +27,7 @@ Structure
 - The PiggyBank
 - Time series data
 - [Historical](/afp/uruk/), current state
-- Single Entry and Double entry accounting
+- Single Entry and [Double entry accounting](/afp/double-entry-bookkeeping/)
 - Petty cash accounting
 - The trial balance (and the accounting equation)
 - Reporting for Taxes

@@ -25,3 +25,5 @@ Fifth, profit is understood to be the net increase in the owner’s equity (and 
 Sixth, the profit or loss is measured over a clearly defined accounting period.```
 
  
+
+The movement from single entry booking to double entry keeping exemplified by Datini from 1370 to 1390 correlates with computer software migrating from single entry to double entry systems.
