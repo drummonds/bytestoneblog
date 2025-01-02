@@ -9,7 +9,7 @@ mermaid: true
 
 Accounting is really the tracking of resources.  This article was inspired by a post explaining accounting for computer scientists by [Martin Kleppmann][Kleppmann2011]
  [📚](https://web.archive.org/web/20110717155537/https://martin.kleppmann.com/2011/03/07/accounting-for-computer-scientists.html).
-  This crystallised the concept for me by explaining accounting transactions as graph
+  This crystallised the concept for me by explaining accounting transactions using graph
  theory.  A transaction is simply the movement of resources from one place to another (one account to another) at a particular time.
 
 [Kleppmann2011]: https://martin.kleppmann.com/2011/03/07/accounting-for-computer-scientists.html
