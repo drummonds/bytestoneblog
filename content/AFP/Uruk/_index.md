@@ -9,7 +9,7 @@ When agriculture became more widespread (ca. 10,000 years ago), there was the ne
 
 ![Uruk table with annotations](uruk_tablet_with_annotations.png)
 
-Drawing of clay tablet from Sumerian city of Uruk, circa 3200-3000 BC. Uruk III Tablet (MSVO 3, 51, Louvre Museum, Paris, France). Annotated with the meanings of the columns, rows, and cells.
+Drawing of clay tablet from Sumerian city of Uruk {{% ref Chow2011%}}, circa 3200-3000 BC. Uruk III Tablet (MSVO 3, 51, Louvre Museum, Paris, France). Annotated with the meanings of the columns, rows, and cells.
 
 Note that the recovered tablet is meant to be read from right to left. Inside each box is an ideogram (a symbol that represented a word or idea) and a numerical value representing a quantity.
 

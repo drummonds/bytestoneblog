@@ -1,11 +1,24 @@
 ---
 title: Plan for accounting for programmers
-date: 2024-12-27
+date: 2025-01-06
 tags: ["9sc", "move"]
 mermaid: true
 ---
 
 This is an outline of the plan to complete this section.
+
+Current action:
+
+Complete orange_asMoney_ac
+Make the following Paciolo as a diversion and setup the simple graph
+
+show the conversion of simple graph to conventional accounting
+Add in the creation of the balance sheet and profit and loss.
+Add worked example of liabilities with purchase on credit
+Accounting equations
+important of edges
+Conversion to accounting terminology
+
 
 ## Mindmap
 
@@ -17,7 +30,7 @@ mindmap
       Indian
     Entity
     Counting
-    Movements
+    M))Movements((
       Balance to Zero
       Credit and debits
       Negative numbers
@@ -29,11 +42,13 @@ mindmap
 ## Text version of plan
 
 Structure
-- Accounting Records
-- The PiggyBank
-- Time series data
-- [Historical](/afp/uruk/) and current state
+- Accounting Records 
+  - historical context
 - Single Entry and Double entry accounting
+  - The PiggyBank
+- Movements
+- [Historical](/afp/uruk/) and current state
+- Time series data
 - Petty cash accounting
 - The trial balance (and the accounting equation)
 - Reporting for Taxes

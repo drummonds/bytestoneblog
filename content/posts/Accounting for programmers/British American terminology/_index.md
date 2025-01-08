@@ -38,4 +38,6 @@ Note the different meanings of stock in British and American terminology.
 
 Their are some common terms:
 
+- Purchases
+- Sales
 - Total Net Assets
