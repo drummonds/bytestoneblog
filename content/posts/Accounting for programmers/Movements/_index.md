@@ -6,7 +6,9 @@ mermaid: true
 
 ## Accounting Movements is just graph theory
 
-Accounting is really the tracking of resources. This article was inspired by a post explaining accounting for computer scientists by {{% ref Kleppmann2011%}}. The key insight is to view accounting transactions as
+Accounting is the tracking of resources in order to answer question.. This article 
+was inspired by a post explaining accounting for computer scientists by
+{{% ref Kleppmann2011%}}. The key insight is to view accounting transactions as
 a [graph](<https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)>) which is a set of nodes
 (accounts) joined by edges (transactions).
 
@@ -99,3 +101,6 @@ B -- £1000 --> D
 B -. Expense .-> Ex
 Business -- £1000 --> I1
 {{< /mermaid >}}
+
+
+[Parent](/afp/) [Prev](/afp/uruk/) [Next](/afp/double-entry-bookkeeping/)

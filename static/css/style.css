@@ -19,3 +19,80 @@
   list-style: decimal;
   padding-left: 2em;
 }
+
+table.fixed {
+  table-layout: fixed;
+}
+
+table.fixed td {
+  overflow: hidden;
+}
+
+.ledger {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 1em auto;
+  table-layout: fixed;
+  border: 0;
+  box-shadow: none !important;
+}
+
+.ledger,
+.ledger th,
+.ledger td {
+  border: 0;
+}
+
+.ledger td {
+  padding: 0.5em;
+  text-align: center;
+  width: 25%;
+}
+
+.ledger th {
+  text-align: center;
+  padding: 0.5em;
+  font-size: 1.2em;
+  font-weight: bold;
+  box-shadow: none !important;
+}
+
+.ledger td:nth-child(even) {
+  text-align: center;
+}
+
+.ledger .side {
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
+.ledger .header td {
+  border-bottom: none;
+}
+
+
+.post-text .ledger th {
+  box-shadow: 0 0 0 0 var(--white-color);
+}
+
+.post-text .ledger td {
+  box-shadow: 0 0 0 0 var(--white-color);
+}
+
+/* Add vertical line only between debit and credit sides */
+.ledger td:nth-child(2) {
+  border-right: 2px solid black;
+}
+
+
+/* Remove the first border on the side row only */
+.ledger .side th:first-child {
+  border-right: none;
+}
+
+.ledger .side {
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 2px solid black;
+}

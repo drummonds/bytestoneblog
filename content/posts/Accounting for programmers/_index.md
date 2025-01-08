@@ -28,8 +28,8 @@ It is currently a work in progress so see the overall [plan](/afp/_plan/).
 Current Structure
 - [Accounting Records](/afp/accounting-records/)
 - [Historical](/afp/uruk/), current state
-- Single Entry and [Double entry accounting](/afp/double-entry-bookkeeping/)
 - [Movements](/afp/movements/)
+- Single Entry and [Double entry accounting](/afp/double-entry-bookkeeping/)
 - [Plain Text accounting](/afp/plain-text-accounting/)
 - [Free and commercial software packages](/afp/free-and-commercial-software-packages/)
 - [Accounting tricks](/afp/accounting-tricks/)
