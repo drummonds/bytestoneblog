@@ -15,7 +15,9 @@ opposite sent to which current is meant to flow.  The negative charge was discov
 I am theorising that there are two problems which lead to this:
 
 - Not using negative numbers
-- Starting with 
+- Starting with a going concern rather than a fresh one
+
+## Negative numbers
 
 The problem comes in the transmission of Hindu mathematics to Italy via the Arabs.  The Hindus had
 negative numbers which they used for debts.  Along the way the Hindu/Arabic numerals were
@@ -34,6 +36,12 @@ makes more sense.  So perhaps {{% ref kleppmann2011 %}} did it and he just said
 ```
 Now, by convention, accountants flip the sign on all of the blue and pink nodes’ balances, which means that the two sums end up being equal. And that’s why it’s called a balance sheet.```
 
+## Going concern
+
+I think the reason Paciolo went for his interpretation is that he started with an inventory of a going
+concern.  The first movement is cash to equity and once you have made that choice everything has to 
+follow. If he had started with an empty balance sheet I think he might have gone in a different
+direction.
 
 
 In the end it becomes a matter of presentation and computers are adept at reformatting and

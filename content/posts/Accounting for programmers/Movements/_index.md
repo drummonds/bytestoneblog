@@ -44,7 +44,7 @@ B([Assets Cash])
 class B classAssets;
 end
 I -- £5 --> Business
-B -- £5 --> E
+E -- £5 --> B
 {{< /mermaid >}}
 
 See [Boundaries of entities](/afp/movements/boundaries/) for more details
