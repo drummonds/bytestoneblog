@@ -333,7 +333,7 @@ as assets and liabilities (in thin edges).
 The total value in the business is the sum of those internal nodes assets + liabilities, as the liabilities are
 negative.
 
-## Balance sheet inerpretation
+## Balance sheet interpretation
 
 In fact the definition of an asset is a core node with a positive balance and a liability as a core node with
 a negative liability. Typically but not always nodes are either assets or liabilities. For instance a pile of

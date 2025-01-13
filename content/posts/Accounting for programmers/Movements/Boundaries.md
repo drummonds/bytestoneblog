@@ -67,7 +67,7 @@ In contrast to the system for thermodynamics the system overall is not closed.  
 
 From now on we are only going to look at the accounting records of a single business. This is 
 one of the main tennets of double entry accounting.  Following
-{{% ref Kleppmann2011%}} each node represents an account and each edge (vector) represents a
+{{% ref Kleppmann-2011%}} each node represents an account and each edge (vector) represents a
 transaction.  
 
 

@@ -16,7 +16,7 @@ determined by simple rules:
 
 ## Accounts balance
 
-From {{% ref Kleppmann2011%}}:
+From {{% ref Kleppmann-2011%}}:
 
 The account balances have two nice properties:
 

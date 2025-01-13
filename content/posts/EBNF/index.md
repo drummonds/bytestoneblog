@@ -1,6 +1,7 @@
 ---
 title: "EBNF Extended Backus Naur Format"
 date: "2024-04-04"
+updated: "2025-01-10"
 tags:
   - EBNF
 ---
@@ -146,3 +147,15 @@ Name changes
 | ---------- | ------ |
 |            | SYNTAX |
 | PRODUCTION | SYNTAX |
+
+
+## Adding EBNF and PEG
+
+Python has been [defined in EBNF and a PEG](https://docs.python.org/3/reference/grammar.html) using data from
+[PEP-617](https://peps.python.org/pep-0617/) eg:
+
+```
+ In particular, & followed by a symbol, token or parenthesized group indicates a positive lookahead (i.e., is required to match but not consumed), while ! indicates a negative lookahead (i.e., is required not to match). We use the | separator to mean PEG’s “ordered choice” (written as / in traditional PEG grammars). 
+ ```
+
+

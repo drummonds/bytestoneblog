@@ -10,13 +10,20 @@ This is an outline of the plan to complete this section.
 Current action:
 
 Complete orange_asMoney_ac
+
+Hierachical accounts
+Accounting conventions
+Double entry requires separate input and output accounts
 Make the following Paciolo as a diversion and setup the simple graph
+Account types - correspondence of Personal real and nominal
+
+VAT as tax collectors separate input and output
+Possible pre processor for Luca
 
 show the conversion of simple graph to conventional accounting
 Add in the creation of the balance sheet and profit and loss.
 Add worked example of liabilities with purchase on credit
 Accounting equations
-important of edges
 Conversion to accounting terminology
 
 

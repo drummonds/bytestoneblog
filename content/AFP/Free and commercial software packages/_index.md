@@ -37,4 +37,4 @@ It also has good test coverage.
 
 One of the snags with it is the syntax follows ledger rather than beancount. 
 - Balance assertions come on a single posting and become order dependent.  This is 
-particle bad as the order for bank reconciliation may be different from that of entries in the file.
+particularly bad as the order for bank reconciliation may be different from that of entries in the file.

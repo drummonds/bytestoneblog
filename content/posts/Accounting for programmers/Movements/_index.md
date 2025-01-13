@@ -8,7 +8,7 @@ mermaid: true
 
 Accounting is the tracking of resources in order to answer question.. This article 
 was inspired by a post explaining accounting for computer scientists by
-{{% ref Kleppmann2011%}}. The key insight is to view accounting transactions as
+{{% ref Kleppmann-2011%}}. The key insight is to view accounting transactions as
 a [graph](<https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)>) which is a set of nodes
 (accounts) joined by edges (transactions).
 
@@ -28,6 +28,37 @@ I -- £5 --> B
 B -. Trading .-> B
 B([Business]) -- £100 --> I([Investor])
 {{< /mermaid >}}
+
+### Input and outputs
+
+We can model what the investor hopes will happening by adding trading and the revenue out:
+
+{{< mermaid >}}
+flowchart LR
+classDef classEquity fill:#EEB,stroke-width:4px;
+classDef classAssets fill:#CDA;
+I([Investor])
+I1([Investor])
+class I,I1 classEquity;
+subgraph Business
+direction LR
+E([Equity Input])
+D([Dividend output])
+class E,D classEquity;
+B([Assets])
+class B classAssets;
+R([Revenue])
+Ex([Expense])
+end
+I -- £5 --> Business
+E -- £5 --> B
+R -. Sales .-> B
+B -- £1000 --> D
+B -. Expense .-> Ex
+Business -- £1000 --> I1
+{{< /mermaid >}}
+
+## Accounting records
 
 Accounting records are within the business and have to match the external movements:
 
@@ -69,38 +100,9 @@ The [link to graph theory](/afp/movements/graphtheory/) is that each node is an 
 
 This is a very simple business model. You invest in your business. You then buy oranges
 from an orange farmer, take them to market and sell them at a profit.   You then keep the profit. I quite like
-orange trading as my wifes family in eighteenth century {{% ref Farrell2020 %}}.
+orange trading as my wifes family in eighteenth century {{% ref Farrell-2020 %}}.
 
 This is shown with accounts denominated in oranges [Orange trading example](/afp/movements/oranges/) and then [reworked using money](/afp/movements/orangesasmoney/)  to give the result below:
-
-### Input and outputs
-
-We can model what the investor hopes will happening by adding trading and the revenue out:
-
-{{< mermaid >}}
-flowchart LR
-classDef classEquity fill:#EEB,stroke-width:4px;
-classDef classAssets fill:#CDA;
-I([Investor])
-I1([Investor])
-class I,I1 classEquity;
-subgraph Business
-direction LR
-E([Equity Input])
-D([Dividend output])
-class E,D classEquity;
-B([Assets])
-class B classAssets;
-R([Revenue])
-Ex([Expense])
-end
-I -- £5 --> Business
-E -- £5 --> B
-R -. Sales .-> B
-B -- £1000 --> D
-B -. Expense .-> Ex
-Business -- £1000 --> I1
-{{< /mermaid >}}
 
 
 [Parent](/afp/) [Prev](/afp/uruk/) [Next](/afp/double-entry-bookkeeping/)

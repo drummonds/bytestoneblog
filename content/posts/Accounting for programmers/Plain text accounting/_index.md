@@ -3,9 +3,9 @@ title: "Plain text accounting"
 date: "2024-11-22"
 ---
 
-[plaintextaccounting.org](https://plaintextaccounting.org/)  has a nice overview of the topic.
+[plaintextaccounting.org](https://plaintextaccounting.org/) has a nice overview of the topic.
 
-This will be the introduction to cover a range of subjects as part of the [general accounting for programmers](/afp/) series of posts:
+This is part of the [general accounting for programmers](/afp/).
 
 - EBNF
 - Beancount flavour of plain text accounting
@@ -25,7 +25,7 @@ This will be the introduction to cover a range of subjects as part of the [gener
 
 ## Plain Text Accounting formats
 
-What is common is that this is a list of directives in one or more text files. There are a number of directirves. The order of the directives is not that important.
+What is common is that this is a list of directives in one or more text files. There are a number of directives. The order of the directives is not that important.
 
 There are a number of definitions:
 
@@ -33,6 +33,42 @@ There are a number of definitions:
 - [Hledger]()
 - Ledger the original
 - My own
+
+## EBNF format
+
+This is a partial description of Beancounts plain text journal format:
+
+```ebnf
+journal ::= entry*
+entry ::= comment | transaction
+comment ::= WS* ";" AllChar* EOL
+transaction ::= header postings
+postings ::= posting posting posting*
+
+directive ::= value-date {^knowledge-date} {* transaction | 'open' open-directive | 'balance' balance-directive}
+blank-line ::= \n;
+header ::= value white_space id  \n;
+value-date ::= (full-date | date-time);
+knowledge-date ::= (full-date | date-time);
+white-space ::= ? white space characters ? ;
+posting = account {asset-class};
+balance-posting = account;
+id = string;
+comment = string;
+string ::= '"' AllChar* '"'
+
+
+account = (`Assets` | `Liabilities` | `Equity` | `Income` | 'Expenses') : name
+name = TEXT | TEXT : name
+
+full-date       = date-fullyear "-" date-month "-" date-mday
+full-time       = partial-time time-offset
+
+date-time       = full-date "T" full-time
+```
+
+The date time format is more [fully documented in RFC-3339](https://www.rfc-editor.org/rfc/rfc3339) and
+I had an [initial version here for project Luca](https://github.com/drummonds/luca).
 
 ### Chart of accounts
 
@@ -49,24 +85,24 @@ A directive is one or more lines:
 
 directive = date type
 
-| Type      | Beancount              | Hledger                 |
-| --------- | ---------------------- | ----------------------- |
-| Posting   | Pure txn,\*,!          | Info rich               |
-| Comment   | ; Pure comment         | ;,# may contain notes   |
-| unknown   | Ignores                |                         |
-| open      | account must be opened |
-| close     |
-| commodity |
-| balance   | Balance assertion      | folded into posting leg |
-| pad       |
-| note      |
-| document  |
-| price     |
-| event     |
-| query     |
-| custom    |
+| Type      | Beancount         | Hledger                 |
+| --------- | ----------------- | ----------------------- |
+| Posting   | Pure txn,\*,!     | Info rich               |
+| Comment   | ; Pure comment    | ;,# may contain notes   |
+| unknown   | Ignores           |                         |
+| open      | account be opened |
+| close     | Optional close    |
+| commodity |                   |                         |
+| balance   | Balance assertion | folded into posting leg |
+| pad       | Auto calculate balances | |
+| note      | | |
+| document  | Neat link to a document | |
+| price     | Parameter price | |
+| event     | | |
+| query     | | |
+| custom    | For option extension | |
 
-There is also metadata and options
+There is also metadata and options.
 
 #### Posting
 
@@ -95,7 +131,6 @@ Beancount requires you to have an open account directive before an account is us
 infer the accounts
 
 Account life is OPEN -> CLOSED However this is not the only state transition possible eg
-
 
 #### Close
 
@@ -138,15 +173,15 @@ And in beancount:
 2012-02-04 balance Assets:CA:Bank:Checking    417.61 CAD
 ```
 
-The Beancount syntax is superior as the balance assertions are clear and distinct from 
-the postings and order of postings.  For balance reconciliation it is also superior.  When doing the accounting
+The Beancount syntax is superior as the balance assertions are clear and distinct from
+the postings and order of postings. For balance reconciliation it is also superior. When doing the accounting
 for a customer the bank record is one of the independent bits of evidence so the reconciliation is
 important.
 
 ### Ordering of directives
 
 Hledger recommends that directives should be ordered in date order. A unique ordering is important if you would like to have a consistent hash that is the same if the order of the directives is changed or
-the commnents.
+the comments are edited.
 
 # My plain text accounting format
 
@@ -168,10 +203,10 @@ As of 2024-11-21
 
 | Name                 | Start | Last Release | Contributors | Stars | Forks | Comment                 |
 | -------------------- | ----- | ------------ | ------------ | ----- | ----- | ----------------------- |
-| [Ledger (Go)][go1]   | 2017  | 2024         | 12           | 462   | 43      | Single currency |
+| [Ledger (Go)][go1]   | 2017  | 2024         | 12           | 462   | 43    | Single currency         |
 | [knut][go2]          | 2020  | 2024         | 3            | 58    | 10    | Multicurrency, accruals |
-| [tn47 goledger][go3] | 2017  | 2018         | 1            | 35    | 13    | Float64?
-| [Coin][go4]          | 2019  | 2024         | 2            | 10    | 0     | big Int |
+| [tn47 goledger][go3] | 2017  | 2018         | 1            | 35    | 13    | Float64?                |
+| [Coin][go4]          | 2019  | 2024         | 2            | 10    | 0     | big Int                 |
 
 [go1]: https://github.com/howeyc/ledger
 [go2]: https://github.com/sboehler/knut
@@ -192,7 +227,6 @@ A book is listed as a collection of transactions.
 ## [knut][go2]
 
 ## [goledger][go3]
-
 
 ## [coin][go4]
 

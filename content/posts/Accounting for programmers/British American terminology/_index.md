@@ -1,5 +1,6 @@
 ---
 date: 2024-12-29
+updated: 2025-01-10
 title: British and American terminology
 ---
 
@@ -36,8 +37,11 @@ British and American english terminology has diverged from a common root.
 
 Note the different meanings of stock in British and American terminology.
 
-Their are some common terms:
+There are some common terms:
 
+- Assets
+- Expenses
+- Liabilities
 - Purchases
 - Sales
 - Total Net Assets
