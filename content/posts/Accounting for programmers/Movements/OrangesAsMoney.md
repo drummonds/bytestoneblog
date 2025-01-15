@@ -94,6 +94,8 @@ F -- 25 🍊 --> Business
 
 ### Selling the stock at market
 
+So now we go to market and sell the oranges:
+
 {{< mermaid_fig title="Figure 3" caption="Selling the stock"  >}}
 flowchart RL
 {{% account_class %}}
@@ -319,9 +321,31 @@ $$
 \definecolor{income}{RGB}{187,204,238}
 \definecolor{expense}{RGB}{255,204,204}
 \colorbox{equity}{Equity}=\colorbox{asset}{Assets}-\colorbox{liability}{Liabilities}
++\colorbox{income}{Income}
+-\colorbox{expense}{Expenses}
 $$
 
 
 and using node balances:
+
+$$
+\definecolor{asset}{RGB}{204,221,170}
+\definecolor{liability}{RGB}{221,221,221}
+\definecolor{equity}{RGB}{238,238,187}
+\definecolor{income}{RGB}{187,204,238}
+\definecolor{expense}{RGB}{255,204,204}
+(-\colorbox{equity}{equityNodes})=\colorbox{asset}{assetNodes} - (-\colorbox{liability}{liabilityNodes})
++\colorbox{income}{incomeNodes}
+-(-\colorbox{expense}{expenseNodes})
+$$
+
+### Note on income and expenses
+
+These are both boundary nodes.  You could combine them in a single input and output node.  However you 
+would then lose the ability to track the total volume of sales.  So a low profit business with a large turnover
+would look the same as a high profit business with a small turnover.
+
+Inside a business if you have multiple sales lines, a single trading account loses the ability to track the 
+profitability of say of two lines, eg in this case oranges and lemons.
 
 [Parent](/afp/movements/) [Prev](/afp/movements/oranges/)

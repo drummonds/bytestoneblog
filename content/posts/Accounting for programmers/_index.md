@@ -1,11 +1,12 @@
 ---
 title: "Accounting for Programmers"
-update: "2025-01-02"
+update: "2025-01-15"
 date: "2016-10-30"
 categories: ["Humphrey"]
 tags: ["Humphrey"]
 author: "Humphrey Drummond"
 summary: "An introduction to accounting for programmers."
+mermaid: true
 ---
 # Accounting for Programmers
 
@@ -17,6 +18,31 @@ There two goals, in the first part I am exploring the nature of double entry boo
 the directed graph approach and how accounting emerges from this.  There is a lot of explanation and 
 exploration as to the nature of accounting records and why the credit/debit system is isomorphic 
 with positive and negative balances.  
+
+If you want to just read one thing then try the [explanation of an orange trading business](/afp/movements/orangesasmoney).
+
+{{< mermaid_fig title="Demo" caption="Business with a liability"  >}}
+flowchart LR
+{{% account_class %}}
+E([Equity Input **£-25**])
+class E classEquity;
+subgraph Internal
+style Internal fill:#EEE
+direction LR
+B([Cash Assets **£62.50**])
+class B classAssets;
+F([Farmer **£-25**])
+class F classLiabilities;
+end
+S([Sales **£-37.50**])
+class S classIncome;
+P([Purchases **£25**])
+class P classExpense;
+E -- £25 --> B
+S -- £37.50 --> B
+F -- £25 --> P
+{{< /mermaid_fig>}}
+
 
 The use of computers allows a freedom to present information in different ways to those bound by
 clay or paper.  For instance exact conventions become unimportant as you can display data in any
