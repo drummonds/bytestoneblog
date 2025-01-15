@@ -9,22 +9,29 @@ This is an outline of the plan to complete this section.
 
 Current action:
 
-Complete orange_asMoney_ac
+Complete orange_asMoney
+  Complete Balance sheet presentation
+  Do profit and loss calculations and presentation
+  Do profit and lost calculation
 
-Hierachical accounts
-Accounting conventions
-Double entry requires separate input and output accounts
-Make the following Paciolo as a diversion and setup the simple graph
-Account types - correspondence of Personal real and nominal
+### Future subjects
 
-VAT as tax collectors separate input and output
-Possible pre processor for Luca
+  End of period accounts
+  Banking
+    Safety deposit
+    Ponzi
+    Central bank
+  Hierachical accounts
+     input and output
+  VAT
+    Government tax collection
+  Rework Accounting conventions
+  Double entry requires separate input and output accounts
+  Account types - correspondence of Personal real and nominal
 
-show the conversion of simple graph to conventional accounting
-Add in the creation of the balance sheet and profit and loss.
-Add worked example of liabilities with purchase on credit
-Accounting equations
-Conversion to accounting terminology
+  Possible pre processor for Luca
+    Start
+
 
 
 ## Mindmap
@@ -32,9 +39,13 @@ Conversion to accounting terminology
 {{< mermaid >}}
 mindmap
   afp((accounting for programmers))
-    Historic
-      Summerian Uruk
-      Indian
+    Accounting Records 
+      historical context
+        Summerian Uruk
+        Chinese?
+        Indian
+    Single Entry and Double entry accounting
+      The PiggyBank
     Entity
     Counting
     M))Movements((
@@ -43,24 +54,18 @@ mindmap
       Negative numbers
     Balance sheet
     Profit and loss
+    Banking
+    Time series data
+    Traditional Account topics
+      VAT
+        Government tax collection
+      Division of labour
+      Petty cash accounting
+      The trial balance (and the accounting equation)
+      Reporting for Taxes
+      Reporting for management info
+      Stock
+      Invoicing
+    [Plain Text accounting](/afp/plain-text-accounting/)
+    Free and commercial software packages
 {{< /mermaid >}}
-
-
-## Text version of plan
-
-Structure
-- Accounting Records 
-  - historical context
-- Single Entry and Double entry accounting
-  - The PiggyBank
-- Movements
-- [Historical](/afp/uruk/) and current state
-- Time series data
-- Petty cash accounting
-- The trial balance (and the accounting equation)
-- Reporting for Taxes
-- Reporting for management info
-- Stock
-- Invoicing
-- [Plain Text accounting](/afp/plain-text-accounting/)
-- Free and commercial software packages
