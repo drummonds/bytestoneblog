@@ -3,17 +3,6 @@
     <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
   {{- end -}}
 
-  {{- $u := urls.Parse (.Get "src") -}}
-  {{- $src := $u.String -}}
-  {{- if not $u.IsAbs -}}
-    {{- with or (resources.Get $u.Path) (.Page.Resources.Get $u.Path)  -}}
-      {{- $src = .RelPermalink -}}
-    {{- end -}}
-  {{- end -}}
-
-  <div class="mermaid-container" style="text-align: center">
-    <div class="mermaid">{{.Inner}}</div>
-  </div>
   {{- if .Get "link" }}</a>{{ end -}}
   {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
     <figcaption style="display: flex; justify-content: space-between; align-items: center;">
@@ -34,4 +23,7 @@
       {{- end }}
     </figcaption>
   {{- end }}
+  <div class="mermaid-container" style="text-align: center">
+    <div class="mermaid">{{.Inner}}</div>
+  </div>
 </figure>
