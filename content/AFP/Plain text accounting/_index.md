@@ -194,6 +194,13 @@ the comments are edited.
 - To use parameter time series as a general concept for all data
 - To be able to use unchanged two segments
 
+## Proposed Journal Entries
+
+Aim to write journal entries like this:
+
+2025-01-01 *
+  Equity >> 15 >> Cash
+
 # Golang ledger implementations
 
 This is an abstract and an enhancement of the [PTA apps](https://plaintextaccounting.org/#pta-apps)
