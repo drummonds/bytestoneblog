@@ -135,3 +135,7 @@ I liked [Tol's colour schemes](https://personal.sron.nl/~pault/) eg the bright s
 
 Colours in default order: '#4477AA', '#EE6677', '#228833', '#CCBB44', '#66CCEE', '#AA3377', '#BBBBBB'.
 Figure 1: Bright qualitative colour scheme that is colour-blind safe. The main scheme for lines and their labels.
+
+# Slide shows
+
+- [Notation](/slides/bytestone/Notation/) - [*Notes*](/slides/bytestone/NotationNotes/)

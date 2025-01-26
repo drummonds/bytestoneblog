@@ -33,6 +33,7 @@ The problem comes in the transmission of Hindu mathematics to Italy via the Arab
 negative numbers which they used for debts.  Along the way the Hindu/Arabic numerals were
 transmitted but negative numbers were dropped. 
 
+In early Renaissance Venice ["Pacioli, like other mathematicians of his time, did his utmost to avoid even the use of a symbol for minus, let alone a negative number"](https://www.jstor.org/stable/2490577).  However the use of negative numbers for balances with the direction gives the graph representation meaning.
 The use of negative numbers with the direction gives the graph representation meaning.
 Without negative numbers you move in Paciolo's language from shall give `in dare` and
 shall receive "in habere" and by "per" and to "a" in the journal.  In the ledger you have the

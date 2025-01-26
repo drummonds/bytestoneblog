@@ -9,6 +9,8 @@ enableEmoji = true
 googleAnalytics = ""
 
 [params]
+  author = "Humphrey Drummond"
+  homepage = "https://www.bytestone.uk/"
   lazyImage = true
   enableMathJax = true # enable it in Front Matter
   enableReadingTime = true
@@ -30,6 +32,19 @@ googleAnalytics = ""
   serverURLS = 'https://abc123.api.lncldglobal.com'
   debug = false # display the visitor counts when using 'hugo server'
 
+[params.webslides]
+  autoslide = false
+  banner = false
+  changeOnClick = false
+  disableLoop = false
+  disableNavigateOnScroll = false
+  hideIndex = false
+  minWheelDelta = 40
+  scrollWait = 450
+  slideOffset = 50
+  slideshow = true
+  vertical = true
+
 [menu]
   [[menu.main]]
   name = "Home"
@@ -45,7 +60,7 @@ googleAnalytics = ""
   weight = 3
 
 [social]
-  github = "https://github.com/Drummonds"
+  github = "https://github.com/drummonds"
   rss = "index.xml"
 
 [taxonomies]
@@ -65,6 +80,10 @@ tag = "tags"
     style = "monokai" # github, dracula, vim, monokai
     tabWidth = 4
   [markup.goldmark]
+    [markup.goldmark.parser.attribute]
+        block = true
+    [markup.goldmark.renderer]
+      unsafe = true
     [markup.goldmark.extensions]
       [markup.goldmark.extensions.passthrough]
         enable = true

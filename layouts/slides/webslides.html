@@ -1,0 +1,30 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ partial "slide_metadata.html" . }}
+
+<main role="main">
+    <article id="webslides" {{- if .Site.Params.Webslides.vertical }} class="vertical"{{- end -}}>
+        {{ $sections := split .Content "<hr/>" }}
+        {{ range $sections }}
+        <section>
+            <div class="wrap">
+                {{ . | safeHTML }}
+            </div>
+        </section>
+        {{ end }}
+    </article>
+</main>
+
+{{/*  <p>This is adding mermaid before</p>
+<script type="module">
+  document.addEventListener('DOMContentLoaded', async () => {
+    const mermaid = await import('https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.esm.min.mjs');
+    mermaid.initialize({ 
+      startOnLoad: true,
+      securityLevel: 'loose'
+    });
+  });
+</script>  */}}
+
+{{ partial "webslides.html" . }}
+{{ end }}
