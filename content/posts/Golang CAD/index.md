@@ -80,6 +80,12 @@ There are other use cases like https://github.com/daveagill/go-sdf which is abou
 To build my hex plug covers for floorboard screws and compare the different viewers the old go one
  https://github.com/Yeicor/sdfx-ui? or the new rust version https://github.com/Yeicor/sdf-viewer.
 
+I am going to use the simplest UI which is
+
+- create stl with renderer
+- run task and render and copy to local direction
+- view with MeshLab
+
  
 
 ## Research
