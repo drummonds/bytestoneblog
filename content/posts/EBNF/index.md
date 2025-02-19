@@ -2,8 +2,8 @@
 title: "EBNF Extended Backus Naur Format"
 date: "2024-04-04"
 updated: "2025-01-10"
-tags:
-  - EBNF
+tags: ["EBNF"]
+summary: Introduction to EBNF
 ---
 
 EBNF is a way of describe grammars which is useful for precisely describing the formats of things.
