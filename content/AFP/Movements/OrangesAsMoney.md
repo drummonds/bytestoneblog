@@ -20,7 +20,7 @@ accounts in a conventional accounting sense (credits and debits).
 
 ### Converting stock purchase as money
 
-The conversion of amounts of things to their monetary value is a key element of accounting records. This makes it much possible to create accounts.
+The conversion of amounts of things to their monetary value is a key element of accounting records. This makes it possible to create accounts.
 So we are going to represent the stock as money and at the cost price. This is not present
 in the original stock taking accounting of the Sumerians where each type of item eg barley or malt
 was [shown on the transaction](/afp/uruk/).
