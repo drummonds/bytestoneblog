@@ -96,3 +96,8 @@ table.fixed td {
   text-align: center;
   border-bottom: 2px solid black;
 }
+
+.nav.twocol {
+  background-color: indigo;
+  columns: 2;
+}
