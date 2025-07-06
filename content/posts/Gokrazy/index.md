@@ -1,6 +1,7 @@
 ---
 title: Gokrazy WSL and photos
 date: 2024-04-28
+tags: [gophoto,go,gokrazy]
 ---
 
 Very excited to be getting gokrazy to work as a deployment platform for devices.  My first project
