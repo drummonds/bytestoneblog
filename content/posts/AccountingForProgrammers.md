@@ -10,7 +10,7 @@ summary: "An introduction to accounting for programmers."
 # Accounting for Programmers
 
 
-This is a book to introduce the concepts of accounting o programmers.  It is born of my own exploration into the subject.  It take a somewhat different approach to most books in that we will be looking at accounting
+This is a book to introduce the concepts of accounting to programmers.  It is born of my own exploration into the subject.  It take a somewhat different approach to most books in that we will be looking at accounting
 from the point of view of a programmer
 
 Structure
@@ -22,7 +22,6 @@ Structure
 - Petty cash accounting
 - The trial balance (and the accounting equation)
 - Reporting for Taxes
-- Reporting for maanagement info
 - Stock
 - Invoicing
 - Free and commercial software packages
@@ -92,8 +91,5 @@ This is an eclectic list and is just those which I have been familiar with.
 
 I have used this both directly and va piecash.  Piecash is a very nice SQLAlchemy based ORM which hides many of the idyosyncracies of GnuCash.  From a database point of view the problem is that the dataase definition has been frozen for a while and all the changes have been done by adding key value pairs in a generic KVP data.
 Sage line 50
-This has an OBC connection although it is 32bits.
+This has an ODBC connection although it is 32bits.
 
-## Beancount
-
-I don’t know a lot about this, I know noe more and still like it.

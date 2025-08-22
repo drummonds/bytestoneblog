@@ -1,6 +1,6 @@
 ---
 title: "Accounting for Programmers"
-update: "2025-01-15"
+update: "2025-08-22"
 date: "2016-10-30"
 categories: ["Humphrey"]
 tags: ["Humphrey"]
@@ -60,6 +60,7 @@ Current Structure
 - [Free and commercial software packages](/afp/free-and-commercial-software-packages/)
 - [Accounting tricks](/afp/accounting-tricks/)
 - [British and American terminology](/afp/british-american-terminology/)
+- [Slide presentations](/slides/)
 - [References](/afp/references/)
 
 
