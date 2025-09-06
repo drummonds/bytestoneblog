@@ -3,9 +3,16 @@ title: Double Entry bookkeeping
 date: 2024-12-28
 ---
 
-## Venetian double entry bookkeeping as described by Luca Paciolo
+{{% ref Sangster-2022%}} describes double entry book keeping as 
 
-Paciolo describes bookeeping in a system of 4 sets of books.  They may all have the same mark on them eg A (BC...) to identify them as all belonging together.
+``` quote
+"... double entry is mentioned by the authors, it is viewed as duality plus identification in each entry
+of the identity of the other account involved..."
+```
+
+## Venetian double entry bookkeeping as described by Luca Pacioli
+
+Pacioli describes bookeeping in a system of 4 sets of books.  They may all have the same mark on them eg A (BC...) to identify them as all belonging together.
 
 - An inventory
 - A scrap book
@@ -21,7 +28,7 @@ Pacioli describes this as a memorandum (memoriale), scrap book (squarto loglio) 
 (vachetta). This could also be described as a diary or waste book.  This
 would be where all records would be written contemporaneously.
 
-Paciolo also describes that anyone in your family (business) can make entries in the scrap book
+Pacioli also describes that anyone in your family (business) can make entries in the scrap book
 with full details of what, with whom and where it was bought or sold.
 
 ## A journal

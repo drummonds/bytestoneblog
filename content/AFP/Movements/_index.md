@@ -100,7 +100,7 @@ The [link to graph theory](/afp/movements/graphtheory/) is that each node is an 
 
 This is a very simple business model. You invest in your business. You then buy oranges
 from an orange farmer, take them to market and sell them at a profit.   You then keep the profit. I quite like
-orange trading as my wifes family in eighteenth century {{% ref Farrell-2020 %}}.
+orange trading as my wife's family in eighteenth century {{% ref Farrell-2020 %}}.
 
 This is shown with accounts denominated in oranges [Orange trading example](/afp/movements/oranges/) and then [reworked using money](/afp/movements/orangesasmoney/)  to give the result below:
 

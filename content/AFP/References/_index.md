@@ -103,6 +103,19 @@ date: 2025-01-06
 </div>
 {{< /rawhtml >}}
 
+### Sangster 2022
+
+{{< rawhtml >}}
+
+<div class="csl-bib-body" style="line-height: 1.35; ">
+  <div class="csl-entry">Sangster, A. &amp; Santini, F. (2022) Lost in translation: Pacioli’s <i>de computis et scripturis</i>. <i>Accounting History</i>. 27 (3), 311–342. doi:<a href="https://doi.org/10.1177/10323732221098443">10.1177/10323732221098443</a>.</div>
+  <span class="Z3988" title="url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.1177%2F10323732221098443&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Lost%20in%20translation%3A%20Pacioli's%20%3Ci%3Ede%20computis%20et%20scripturis%3C%2Fi%3E&amp;rft.jtitle=Accounting%20History&amp;rft.stitle=Accounting%20History&amp;rft.volume=27&amp;rft.issue=3&amp;rft.aufirst=Alan&amp;rft.aulast=Sangster&amp;rft.au=Alan%20Sangster&amp;rft.au=Fabio%20Santini&amp;rft.date=2022-08&amp;rft.pages=311-342&amp;rft.spage=311&amp;rft.epage=342&amp;rft.issn=1032-3732%2C%201749-3374&amp;rft.language=en"></span>
+</div>
+
+{{< /rawhtml >}}
+
+
+
 ### Wiegly 2003
 
 {{< rawhtml >}}
