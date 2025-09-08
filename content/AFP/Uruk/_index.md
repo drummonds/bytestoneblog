@@ -12,7 +12,9 @@ It is likely that the tokens inside represented amounts of livestock and grain.
 The whole sealed amount represents a single transaction.  For instance you could
 record the number of sheep given to a shepherd and then make sure the same number were returned.
 
-This then developed from a physical counting system using tokens to a more abstract method of using clay stamps or Cuneiform enscriptions.
+The essential element in the Bulla is that it is an arrangement between 2 parties and shared between them. It is not perfect as it can be verified only at the making of it and of the destruction of it, but it provides a verifiable record without tampering of a quantity.  You can imagine a shepherd returning the agreed number of sheep at the end of a time in a pasture and agreeing the quantities.
+
+This method of counting clay tokens then developed from a physical counting system using tokens to a more abstract method of using clay stamps or Cuneiform enscriptions on Clay tables.
 
 In the fourth millennium BC, Mesopotamian cities that traded with far way kingdoms needed to keep such records. Clay tablets recovered from the ancient Sumerian city of Uruk show early yet sophisticated tables. Here is a [drawing](https://posit-dev.github.io/great-tables/blog/design-philosophy/) of one of the recovered tablets, which contains an accounting of deliveries of barley and malt from two individuals for the production of beer.
  transactions
