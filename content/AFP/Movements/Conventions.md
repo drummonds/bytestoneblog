@@ -8,7 +8,7 @@ type: afp_single
 There are at least two of ways of modelling the account movements. The notation of
 {{% ref Kleppmann-2011%}} chooses the opposite notation although slight more obvious is the
 opposite of accounting notation as
-published by Paciolo.
+published by Pacioli.
 
 This is the overall position:
 
@@ -109,7 +109,7 @@ B -- Dr £5 Cr --> E
 The nice thing about this is that the Equity account is a creditor which is the relationship
 of the investor to the entity.
 
-Paciolo's example journal entry for
+Pacioli's example journal entry for
 accounting for inventory cash is:
 
 `November 8, MCCCCLXXXXIII in Venice.
@@ -120,7 +120,7 @@ arrow going from cash to Capital / Equity. Also there is a nice relationship bet
 side of the journal and the left hand side of the ledger.
 
 The ledger entries the left hand side is `in dare` "shall give" and for the right hand side
-`in havare` "shall receive". Benedetto Cotrugli was writing a little earlier than Paciolo in 1458
+`in havare` "shall receive". Benedetto Cotrugli was writing a little earlier than Pacioli in 1458
 in the `Art of Trade` and explains ledgers with
 `the right-hand side of the book under “sums owed” and on the left “sums owing".`  
 He keeps the cash as a debtor column as money owed. This seems the same as current practice.
@@ -147,7 +147,7 @@ This is a tricky area as [Cripps modern translation](/afp/references/#Cripps-199
 2. "A," that is "By"
 ```
 
-Paciolo has the left column marked per "in dare" and the right "in havare". Later the left hand
+Pacioli has the left column marked per "in dare" and the right "in havare". Later the left hand
 side became a debit column mark dr and the right hand side a credit column marked cr.
 
 ## Summary

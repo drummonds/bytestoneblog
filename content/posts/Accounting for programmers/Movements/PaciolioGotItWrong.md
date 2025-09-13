@@ -1,5 +1,5 @@
 ---
-title: Paciolo got it wrong and why it doesn't matter.
+title: Pacioli got it wrong and why it doesn't matter.
 date: 2025-01-06
 ---
 
@@ -35,7 +35,7 @@ transmitted but negative numbers were dropped.
 
 In early Renaissance Venice ["Pacioli, like other mathematicians of his time, did his utmost to avoid even the use of a symbol for minus, let alone a negative number"](https://www.jstor.org/stable/2490577).  However the use of negative numbers for balances with the direction gives the graph representation meaning.
 The use of negative numbers with the direction gives the graph representation meaning.
-Without negative numbers you move in Paciolo's language from shall give `in dare` and
+Without negative numbers you move in Pacioli's language from shall give `in dare` and
 shall receive "in habere" and by "per" and to "a" in the journal.  In the ledger you have the
 left and right hand side which substitute for positive and negative numbers.
 
@@ -50,7 +50,7 @@ Now, by convention, accountants flip the sign on all of the blue and pink nodesâ
 
 ## Going concern
 
-I think the reason Paciolo went for his interpretation is that he started with an inventory of a going
+I think the reason Pacioli went for his interpretation is that he started with an inventory of a going
 concern.  The first movement is cash to equity and once you have made that choice everything has to 
 follow. If he had started with an empty balance sheet I think he might have gone in a different
 direction.

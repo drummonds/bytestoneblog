@@ -15,7 +15,7 @@ balance is then either said to be credit or debit.
 
 ## Journal entries
 
-Conventionally following Cripps translation of Pacioli in a journal the entries are written with debits first and in a separate left hand column and the credit entries second in the right hand column.
+Conventionally following Cripps translation of Pacioli in a journal the entries are written with debits first and in a seperate left hand column and the credit entries second in the right hand column.
 This is confusing as the credit is the source and the debit is the destination.
 
 Benedetto Cotruglis the Art of Trade he has it more sensibly as Niall Ferguson and I don't think as Ferguson suggests that it is an unintentiol switch :

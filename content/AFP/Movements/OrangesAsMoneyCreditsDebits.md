@@ -40,9 +40,9 @@ E -- £25 --> B
 
 An investor starts the business with £25 of cash on 1st of Jan 20xx.
 
-#### Journal entry as per Paciolo
+#### Journal entry as per Pacioli
 
-Paciolo would write it
+Pacioli would write it
 
 ```
 1st January 1, MMxx in Venice. Per cash // A - Equity 25 pounds sterling
