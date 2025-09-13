@@ -3,6 +3,13 @@ title: Double Entry bookkeeping
 date: 2024-12-28
 ---
 
+{{% ref Sangster-2022%}} describes double entry book keeping as 
+
+``` quote
+"... double entry is mentioned by the authors, it is viewed as duality plus identification in each entry
+of the identity of the other account involved..."
+```
+
 ## Venetian double entry bookkeeping as described by Luca Pacioli
 
 Pacioli describes bookeeping in a system of 4 sets of books.  They may all have the same mark on them eg A (BC...) to identify them as all belonging together.
