@@ -6,11 +6,11 @@ type: afp_single
 ---
 
 There are at least two of ways of modelling the account movements. The notation of
-{{% ref Kleppmann-2011%}} chooses the opposite notation although slight more obvious is the
+{{% ref Kleppmann-2011%}} chooses the opposite notation although slightly more obvious is the
 opposite of accounting notation as
 published by Pacioli.
 
-This is the overall position:
+This is the overall position for an investor transferring £5 to a business for investment:
 
 {{< mermaid >}}
 flowchart LR
