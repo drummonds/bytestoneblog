@@ -6,7 +6,6 @@ theme = "simpleness"
 title = "Bytestone Blog"
 enableInlineShortcodes = true
 enableEmoji = true
-googleAnalytics = ""
 
 [params]
   author = "Humphrey Drummond"

@@ -6,7 +6,6 @@ theme = "simpleness"
 title = "Rainer Chiang"
 enableInlineShortcodes = true
 enableEmoji = true
-googleAnalytics = ""
 
 [params]
   lazyImage = true
