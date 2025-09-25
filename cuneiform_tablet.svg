@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f8f8"/>
+
+  <!-- Main tablet outline -->
+  <path d="M 150 150 Q 150 120 180 120 L 620 120 Q 650 120 650 150 L 650 450 Q 650 480 620 480 L 180 480 Q 150 480 150 450 Z"
+        fill="#fff" stroke="#333" stroke-width="3"/>
+
+  <!-- Grid lines -->
+  <line x1="290" y1="150" x2="290" y2="400" stroke="#333" stroke-width="1"/>
+  <line x1="430" y1="150" x2="430" y2="400" stroke="#333" stroke-width="1"/>
+  <line x1="570" y1="150" x2="570" y2="400" stroke="#333" stroke-width="1"/>
+  <line x1="150" y1="275" x2="650" y2="275" stroke="#333" stroke-width="1"/>
+  <line x1="150" y1="400" x2="650" y2="400" stroke="#333" stroke-width="1"/>
+
+  <!-- Labels with arrows -->
+  <!-- SECOND COLUMN -->
+  <text x="360" y="80" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#666">SECOND COLUMN</text>
+  <text x="360" y="105" text-anchor="middle" font-family="Arial" font-size="16" font-style="italic" fill="#666">entries for barley</text>
+  <line x1="360" y1="115" x2="360" y2="145" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- THIRD COLUMN -->
+  <text x="500" y="80" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#666">THIRD COLUMN</text>
+  <text x="500" y="105" text-anchor="middle" font-family="Arial" font-size="16" font-style="italic" fill="#666">subtotals</text>
+  <line x1="500" y1="115" x2="500" y2="145" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- FIRST COLUMN -->
+  <text x="720" y="180" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#666">FIRST COLUMN</text>
+  <text x="720" y="205" text-anchor="middle" font-family="Arial" font-size="16" font-style="italic" fill="#666">entries for malt</text>
+  <line x1="680" y1="200" x2="630" y2="220" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- FINAL COLUMN -->
+  <text x="80" y="180" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#666">FINAL COLUMN</text>
+  <text x="80" y="205" text-anchor="middle" font-family="Arial" font-size="16" font-style="italic" fill="#666">grand total</text>
+  <line x1="120" y1="200" x2="170" y2="220" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- FIRST ROW -->
+  <text x="720" y="360" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#666">FIRST ROW</text>
+  <text x="720" y="385" text-anchor="middle" font-family="Arial" font-size="16" font-style="italic" fill="#666">individual 1</text>
+
+  <!-- SECOND ROW -->
+  <text x="720" y="535" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#666">SECOND ROW</text>
+  <text x="720" y="560" text-anchor="middle" font-family="Arial" font-size="16" font-style="italic" fill="#666">individual 2</text>
+
+  <!-- BOTTOM ROW -->
+  <text x="80" y="535" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#666">BOTTOM ROW</text>
+  <text x="80" y="560" text-anchor="middle" font-family="Arial" font-size="16" font-style="italic" fill="#666">name of official</text>
+  <text x="80" y="580" text-anchor="middle" font-family="Arial" font-size="16" font-style="italic" fill="#666">in charge</text>
+
+  <!-- Cuneiform symbols - First column (malt entries) -->
+  <!-- Row 1, Col 4 -->
+  <g transform="translate(580, 170)">
+    <circle cx="5" cy="5" r="4" fill="#000"/>
+    <circle cx="15" cy="5" r="4" fill="#000"/>
+    <circle cx="5" cy="15" r="4" fill="#000"/>
+    <circle cx="15" cy="15" r="4" fill="#000"/>
+    <circle cx="25" cy="5" r="4" fill="#000"/>
+    <circle cx="25" cy="15" r="4" fill="#000"/>
+    <path d="M 0 25 Q 10 30 20 25" stroke="#000" stroke-width="2" fill="none"/>
+    <path d="M 5 35 Q 15 40 25 35" stroke="#000" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Row 1, Col 3 -->
+  <g transform="translate(440, 170)">
+    <circle cx="5" cy="5" r="4" fill="#000"/>
+    <circle cx="15" cy="5" r="4" fill="#000"/>
+    <circle cx="5" cy="15" r="4" fill="#000"/>
+    <circle cx="15" cy="15" r="4" fill="#000"/>
+    <path d="M 0 25 Q 10 30 20 25" stroke="#000" stroke-width="2" fill="none"/>
+    <path d="M 5 35 Q 15 40 25 35" stroke="#000" stroke-width="2" fill="none"/>
+    <path d="M 25 25 Q 35 30 45 25" stroke="#000" stroke-width="2" fill="none"/>
+    <circle cx="35" cy="5" r="2" fill="#000"/>
+    <circle cx="40" cy="10" r="2" fill="#000"/>
+  </g>
+
+  <!-- Row 1, Col 2 -->
+  <g transform="translate(300, 170)">
+    <circle cx="5" cy="5" r="4" fill="#000"/>
+    <circle cx="15" cy="5" r="4" fill="#000"/>
+    <circle cx="5" cy="15" r="4" fill="#000"/>
+    <circle cx="15" cy="15" r="4" fill="#000"/>
+    <circle cx="5" cy="25" r="4" fill="#000"/>
+    <circle cx="15" cy="25" r="4" fill="#000"/>
+    <path d="M 25 5 L 35 15" stroke="#000" stroke-width="2"/>
+    <path d="M 35 5 L 25 15" stroke="#000" stroke-width="2"/>
+    <path d="M 20 25 Q 30 30 40 25" stroke="#000" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Row 1, Col 1 -->
+  <g transform="translate(160, 170)">
+    <circle cx="5" cy="5" r="6" fill="#000"/>
+    <circle cx="5" cy="18" r="4" fill="#000"/>
+    <circle cx="15" cy="18" r="4" fill="#000"/>
+    <circle cx="5" cy="28" r="4" fill="#000"/>
+    <circle cx="15" cy="28" r="4" fill="#000"/>
+    <circle cx="25" cy="28" r="4" fill="#000"/>
+    <rect x="35" y="5" width="8" height="12" fill="none" stroke="#000" stroke-width="1"/>
+    <line x1="37" y1="8" x2="41" y2="8" stroke="#000" stroke-width="1"/>
+    <line x1="37" y1="12" x2="41" y2="12" stroke="#000" stroke-width="1"/>
+    <path d="M 30 35 Q 40 40 50 35" stroke="#000" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Row 2, Col 4 -->
+  <g transform="translate(580, 300)">
+    <circle cx="5" cy="5" r="4" fill="#000"/>
+    <circle cx="15" cy="5" r="4" fill="#000"/>
+    <path d="M 0 15 Q 10 20 20 15" stroke="#000" stroke-width="2" fill="none"/>
+    <path d="M 5 25 Q 15 30 25 25" stroke="#000" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Row 2, Col 3 -->
+  <g transform="translate(440, 300)">
+    <circle cx="5" cy="5" r="4" fill="#000"/>
+    <circle cx="15" cy="15" r="4" fill="#000"/>
+    <path d="M 0 25 Q 10 30 20 25" stroke="#000" stroke-width="2" fill="none"/>
+    <rect x="25" y="5" width="12" height="8" fill="none" stroke="#000" stroke-width="1"/>
+    <line x1="27" y1="7" x2="35" y2="7" stroke="#000" stroke-width="1"/>
+    <line x1="27" y1="11" x2="35" y2="11" stroke="#000" stroke-width="1"/>
+  </g>
+
+  <!-- Row 2, Col 2 -->
+  <g transform="translate(300, 300)">
+    <circle cx="5" cy="5" r="4" fill="#000"/>
+    <circle cx="15" cy="5" r="4" fill="#000"/>
+    <circle cx="25" cy="5" r="4" fill="#000"/>
+    <circle cx="35" cy="5" r="4" fill="#000"/>
+    <circle cx="5" cy="15" r="4" fill="#000"/>
+    <circle cx="15" cy="15" r="4" fill="#000"/>
+    <circle cx="25" cy="15" r="4" fill="#000"/>
+    <circle cx="35" cy="15" r="4" fill="#000"/>
+    <path d="M 0 25 Q 20 35 40 25" stroke="#000" stroke-width="2" fill="none"/>
+    <path d="M 5 40 Q 20 50 35 40" stroke="#000" stroke-width="2" fill="none"/>
+    <line x1="45" y1="15" x2="55" y2="25" stroke="#000" stroke-width="2"/>
+    <rect x="50" y="5" width="8" height="8" fill="none" stroke="#000" stroke-width="1"/>
+  </g>
+
+  <!-- Row 2, Col 1 -->
+  <g transform="translate(160, 300)">
+    <circle cx="5" cy="5" r="4" fill="#000"/>
+    <circle cx="15" cy="15" r="4" fill="#000"/>
+    <path d="M 25 5 L 35 15" stroke="#000" stroke-width="2"/>
+    <path d="M 35 5 L 25 15" stroke="#000" stroke-width="2"/>
+    <rect x="40" y="5" width="8" height="12" fill="none" stroke="#000" stroke-width="1"/>
+    <line x1="42" y1="8" x2="46" y2="8" stroke="#000" stroke-width="1"/>
+    <line x1="42" y1="12" x2="46" y2="12" stroke="#000" stroke-width="1"/>
+    <path d="M 0 35 Q 20 45 40 35" stroke="#000" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Bottom section - official name -->
+  <g transform="translate(350, 430)">
+    <path d="M 0 10 L 15 0 L 30 10 L 15 20 Z" fill="none" stroke="#000" stroke-width="2"/>
+    <rect x="35" y="5" width="20" height="10" fill="none" stroke="#000" stroke-width="1"/>
+    <line x1="37" y1="7" x2="53" y2="7" stroke="#000" stroke-width="1"/>
+    <line x1="37" y1="10" x2="53" y2="10" stroke="#000" stroke-width="1"/>
+    <line x1="37" y1="13" x2="53" y2="13" stroke="#000" stroke-width="1"/>
+  </g>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

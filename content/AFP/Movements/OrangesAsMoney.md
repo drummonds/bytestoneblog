@@ -23,7 +23,7 @@ accounts in a conventional accounting sense (credits and debits).
 The conversion of amounts of things to their monetary value is a key element of accounting records. This makes it possible to create accounts.
 So we are going to represent the stock as money and at the cost price. This is not present
 in the original stock taking accounting of the Sumerians where each type of item eg barley or malt
-was [shown on the transaction](/afp/uruk/).
+was [shown on the transaction](//afp/historical-accounting//).
 
 ## Trading
 
@@ -289,7 +289,7 @@ cells in Excel:
 | Income       | -ve         | Credit Normal   | -1        |
 | Expense      | +ve         | Debit Normal    | +1        |
 
-Accountants like to start with the [accounting equation](https://en.wikipedia.org/wiki/Accounting_equation) rather 
+Accountants like to start with the [accounting equation](https://en.wikipedia.org/wiki/Accounting_equation) rather
 than the outcome of treating transactions as movements within a single entity.  I am going to present it for a
 point in time as:
 
@@ -341,11 +341,11 @@ $$
 
 ### Note on income and expenses
 
-These are both boundary nodes.  You could combine them in a single input and output node.  However you 
+These are both boundary nodes.  You could combine them in a single input and output node.  However you
 would then lose the ability to track the total volume of sales.  So a low profit business with a large turnover
 would look the same as a high profit business with a small turnover.
 
-Inside a business if you have multiple sales lines, a single trading account loses the ability to track the 
+Inside a business if you have multiple sales lines, a single trading account loses the ability to track the
 profitability of say of two lines, eg in this case oranges and lemons.
 
 [Parent](/afp/movements/) [Prev](/afp/movements/oranges/)

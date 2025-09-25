@@ -1,12 +1,13 @@
 ---
 title: Accounting movements
 date: 2025-01-01
+weight: 1
 mermaid: true
 ---
 
 ## Accounting Movements is just graph theory
 
-Accounting is the tracking of resources in order to answer question.. This article 
+Accounting is the tracking of resources in order to answer question.. This article
 was inspired by a post explaining accounting for computer scientists by
 {{% ref Kleppmann-2011%}}. The key insight is to view accounting transactions as
 a [graph](<https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)>) which is a set of nodes
@@ -105,4 +106,4 @@ orange trading as my wife's family in eighteenth century {{% ref Farrell-2020 %}
 This is shown with accounts denominated in oranges [Orange trading example](/afp/movements/oranges/) and then [reworked using money](/afp/movements/orangesasmoney/)  to give the result below:
 
 
-[Parent](/afp/) [Prev](/afp/uruk/) [Next](/afp/double-entry-bookkeeping/)
+[Parent](/afp/) [Prev](/afp/historical-accounting/) [Next](/afp/double-entry-bookkeeping/)

@@ -13,14 +13,14 @@ This allows complete accounts to be done.
 
 The conversion of amounts of things to their monetary value is a key element of accounting records.  This makes it possible to create accounts
 So we are going to represent the stock as money and at the cost price.  This is not present
-in the original stock taking accounting of the Sumerians where each type of item eg barley or malt 
-was [shown on the transaction](/afp/uruk/).
+in the original stock taking accounting of the Sumerians where each type of item eg barley or malt
+was [shown on the transaction](/afp/historical-accounting/).
 
 ## Trading
 
   So to recap the scenario is:
 
-   - invest in your business.  
+   - invest in your business.
    - buy oranges from an orange farmer
    - sell them at a profit at market
 
@@ -47,7 +47,7 @@ flowchart LR
 
 ### Buying stock / inventory
 
-I have used the term stock as it is a British English term 
+I have used the term stock as it is a British English term
 [Wikipedia has inventory](https://en.wikipedia.org/wiki/Inventory) as the American synonym.
 
 Having got investment in the business lets buy 25 oranges from a farmer for one pound for each
@@ -67,7 +67,7 @@ flowchart RL
       P([Purchases **£-25**])
       class P classExpense;
    end
-   Business == £25 ==> F 
+   Business == £25 ==> F
    P == £25 ==> B
    F == 25 🍊 ==> Business
 {{< /mermaid >}}
@@ -119,7 +119,7 @@ flowchart RL
    end
    I == £25 ==> Business
    B ==  £25 ==> E
-   Business == £25 ==> F 
+   Business == £25 ==> F
    P == £25 ==> B
    F == 25 🍊 ==> Business
    B == £37.50 ==> S
@@ -128,10 +128,10 @@ flowchart RL
 {{< /mermaid >}}
 
 From this you can see that no money is owed to the Farmer nor is there any stock.  However the
-overall profit and health of the business is unclear.  At a point in time (eg after trading) the 
+overall profit and health of the business is unclear.  At a point in time (eg after trading) the
 value of a business is the value of the assets minus its liabilities.  The value incudes the
 investments by the entrepreneur.
 
 
 
-[Parent](/afp/movements/) [Prev](/afp/movements/oranges/) 
+[Parent](/afp/movements/) [Prev](/afp/movements/oranges/)

@@ -4,15 +4,17 @@ date: 2025-01-05
 ---
 ## Accounting records
 
+Pacioli sums up nicely why you need to keep records
+
 This is a [term HMRC](https://www.gov.uk/running-a-limited-company/company-and-accounting-records), the UK tax office require companies to keep.  This nicely sums up one of the reasons that accounting records are kept
 which is to collect and ensure that taxes are paid.
 
 When running a company you are concerned with the economic activity during a period on which you can pay a loss.
-However the [Domesday book](https://en.wikipedia.org/wiki/Domesday_Book) is more a record of what William the 
+However the [Domesday book](https://en.wikipedia.org/wiki/Domesday_Book) is more a record of what William the
 Conquereor rules over at a point in time, 1086.  In order that taxes can be collected.
 
 However if you are running a business or enterprise it is difficult to know if you are making a profit or loss
-unless you keep records.  My father was fascinated by the netting of salmon off the East Coast of Scotland and was convinced that there was money in it.  After purchase of a boat, engines, net and licenses we hauled in a 
+unless you keep records.  My father was fascinated by the netting of salmon off the East Coast of Scotland and was convinced that there was money in it.  After purchase of a boat, engines, net and licenses we hauled in a
 few salmon from the sea. It was clear that this was not a success but no records were kept and so the actual
 money lost was not known.  Some businesses like shops can run on very small margins and accurate record keeping
 is essential to remain profitable.
@@ -22,7 +24,7 @@ is essential to remain profitable.
 When you are looking at an accounting system it usually applies to a specific entity.  This is the bounds of the system.  So often this is a limited or public company.  This can range from the smallest micro company to the largest quoted company eg Google or Exxon.
 
 - Summerian
-- 
+-
 - Restrictions
 The piggy bank is the simplest model of an accounting system you have a single box into which you can put money in or take money out.  At any one point in time there is so much money in the piggy.
 You could imagine a business selling oranges on the street and supposing you are able to get oranges on a sale or return basis from friendly green grocers.  At the beginning of the day you borrow a box of oranges and go out onto the street.  During the day you sell your oranges and put the money in the piggy bank. You sell your oranges and at the end of the day your return to your friendly green grocers.  You return the unsold oranges, pay the green grocer.  The money left over in your piggy bank at the end of the day is your profit.
