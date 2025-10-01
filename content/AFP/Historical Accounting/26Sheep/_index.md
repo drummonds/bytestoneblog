@@ -5,7 +5,7 @@ date: 2025-09-21
 
 I went to the Louvre today and saw this:
 
-From about 10,000 BP to about 6,000 BP [hollow clay bullae](https://en.wikipedia.org/wiki/Bulla_(seal)) were used to [record transactions](https://www.schoyencollection.com/mathematics-collection/pre-literate-counting/bulla-envelope-ms-4632 transactions).
+From about 10,000 BP to about 6,000 BP [hollow clay bullae](https://en.wikipedia.org/wiki/Bulla_(seal)) were used to [record transactions](https://www.schoyencollection.com/mathematics-collection/pre-literate-counting/bulla-envelope-ms-4632).
 It is likely that the tokens inside represented amounts of livestock and grain.
 The whole sealed amount represents a single transaction.  For instance you could
 record the number of sheep given to a shepherd and then make sure the same number were returned.

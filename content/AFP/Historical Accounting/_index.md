@@ -4,16 +4,19 @@ date: "2024-12-27"
 updated: "2025-09-21"
 ---
 
+## From counting to transactions or balances to journals
 Recording of accounts has been done for a very long time.  The earliest known numerical records, notches on bones are found in the Paleolithic era in [Africa](https://en.wikipedia.org/wiki/Lebombo_bone) and the [Levant](https://arstechnica.com/science/2018/05/notched-gazelle-bones-may-be-the-signature-of-a-paleolithic-culture/) 30- 40,000 years ago.  However it is not clear that they these are records of hunting trips but have some other purpose.
 
-When agriculture became more widespread in the [Fertile Crescent](https://en.wikipedia.org/wiki/Fertile_Crescent) (ca. 10,000 years ago), there was the need to document and manage economic transactions to do with farming, livestock, and the division of labour.
+When agriculture became more widespread in the [Fertile Crescent](https://en.wikipedia.org/wiki/Fertile_Crescent) (ca. 10,000 years ago), there was the need to document and manage economic transactions to do with farming, livestock, and the division of labour.  There are abundant examples of clay tokens found in the middle east from 10,000 BCE in  [Tell_Abu_Hureyra](https://en.wikipedia.org/wiki/Tell_Abu_Hureyra) Syria tokens
 
-From about 10,000 BP to about 6,000 BP [hollow clay bullae](https://en.wikipedia.org/wiki/Bulla_(seal)) were used to [record transactions](https://www.schoyencollection.com/mathematics-collection/pre-literate-counting/bulla-envelope-ms-4632 transactions).
+Later these tokens were found in [hollow clay balls](https://en.wikipedia.org/wiki/Bulla_(seal)) later with a seal marking them. were used to [record transactions](https://www.schoyencollection.com/mathematics-collection/pre-literate-counting/bulla-envelope-ms-4632).  This example is on display at the Louvre where I visited it.
 It is likely that the tokens inside represented amounts of livestock and grain.
 The whole sealed amount represents a single transaction.  For instance you could
-record the number of sheep given to a shepherd and then make sure the same number were returned.
+record the number of sheep given to a shepherd and then make sure the same number were returned, see [26 sheep](/afp/historical-accounting/26sheep/)
 
-The essential element in the Bulla is that it is an arrangement between 2 parties and shared between them. It is not perfect as it can be verified only at the making of it and of the destruction of it, but it provides a verifiable record without tampering of a quantity.  You can imagine a shepherd returning the agreed number of sheep at the end of a time in a pasture and agreeing the quantities.
+## Transactions
+
+The essential element in the Bulla is that it is an arrangement between 2 parties and shared between them.  There is a reduced level of trust as the object is a little complxt to make and might have required multiple people to witness it. It is not perfect as it can be verified only at the making of it and of the destruction of it, but it provides a verifiable record without tampering of a quantity.  You can imagine a shepherd returning the agreed number of sheep at the end of a time in a pasture and agreeing the quantities.  Later examples have marked on the outside the contents so that they can be looked at without the destructive reading.
 
 This method of counting clay tokens then developed from a physical counting system using tokens to a more abstract method of using clay stamps or Cuneiform enscriptions on Clay tables.
 
@@ -40,10 +43,10 @@ As a bonus, the table has a footer, since the bottom row contains the name of th
 In Mycenae there was a lot of trade in oil that was recorded using Linear B on
 clay tablets.  For instance the following about an [oil transaction](https://mycenaeanmiscellany.wordpress.com/2018/09/16/linear-b-translated-kn-fp1-6-7-16-and-48/).  The palace had large amphora of oil which were given to artisans to become perfumed oil.
 
-## Cuneiform tablet as transaction
+## Cuneiform tablet as a transaction
 
 The Cuneiform tablet represents a single transaction from perhaps the temple store to a brewer so
-that the amount of beer that is to be received is known.   It highlights a transfer of a physical commodity from one party to another.
+that the amount of beer that is/afp/historical-accounting/26sheep/ to be received is known.   It highlights a transfer of a physical commodity from one party to another.
 
 It would also help in stock keeping in the temple grain stores.
 (eg balances of an account).

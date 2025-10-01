@@ -1,26 +1,9 @@
 ---
-title: Pacioli got it wrong and why it doesn't matter.
-date: 2025-08-23
-updated: 2025-09-07
+title: Negative Numbers in Historical Accounting
+description: Understanding the concept of negative numbers in historical accounting practices.
+date: 2025-10-01
+tags: [accounting, history, negative numbers]
 ---
-
-Pacioli
-
-After doing a worked example of trading using normal accounting conventions with graphs and it
- just seems wrong and `a bit abitrary` as Tiger Beatle puts it in
-[their documentation](https://github.com/tigerbeetle/tigerbeetle/blob/main/docs/coding/financial-accounting.md).  Luca Pacioli's wrote the original textbook in 1494 {{% ref Pacioli-1494 %}} and everyone has copied
- the conventions since.
-
-I think it is wrong rather than just a matter of convention.    There are other good examples in
-Science where for instance the electron has a negative charge so the flow of electrons is in the
-opposite sent to which current is meant to flow.  The negative charge was discovered in
-[1897 by JJ Thompson](https://en.wikipedia.org/wiki/Electron)
-
-I am theorising that there are two problems which lead to this:
-
-- Not using negative numbers
-- Starting with a going concern rather than a fresh one
-
 ## Negative numbers
 
 The Chinese ca 200 BCE first [invented and used negative numbers](https://nrich.maths.org/articles/history-negative-numbers).  A rod system

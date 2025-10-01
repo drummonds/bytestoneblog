@@ -62,7 +62,7 @@ Current Structure
 - [Accounting tricks](/afp/accounting-tricks/)
 - [British and American terminology](/afp/british-american-terminology/)
 - [Slide presentations](/slides/)
-- [Historical](/afp/historical-accounting/), current state
+- [Historical Accounting](/afp/historical-accounting/)
 - [References](/afp/references/)
 
 ### Current plan of work
