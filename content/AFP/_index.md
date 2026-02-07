@@ -51,9 +51,9 @@ the code in the same the Black does with Python.
 
 
 
-It is currently a work in progress so see the overall [plan](/afp/_plan/).
+It is currently a work in progress so see the overall plan further down this page.
 
-Current Structure
+## Current Structure
 - [Movements](/afp/movements/)
 - [Accounting Records](/afp/accounting-records/)
 - Single Entry and [Double entry accounting](/afp/double-entry-bookkeeping/)
