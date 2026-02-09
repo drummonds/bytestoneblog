@@ -1,6 +1,6 @@
 ---
 title: "Claude, Singularity Postgres and Gokrazy"
-date: "2026-01-07"
+date: 2026-01-07
 ---
 
 My son wrote a great piece about [Lectures in London](https://taydrummond.com/lectures_in_london) which I really like.
