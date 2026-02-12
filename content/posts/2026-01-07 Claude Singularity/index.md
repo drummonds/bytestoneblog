@@ -1,6 +1,8 @@
 ---
 title: "Claude, Singularity Postgres and Gokrazy"
 date: 2026-01-07
+tags: ["AI"]
+summary: Claude, Singularity Postgres and Gokrazy
 ---
 
 My son wrote a great piece about [Lectures in London](https://taydrummond.com/lectures_in_london) which I really like.
