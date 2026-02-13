@@ -9,8 +9,8 @@
   {{- if .Params.favicon }}
   <link rel="icon" href="{{ .Site.Params.favicon }}">
   {{- end }}
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/simpleness.css">
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+  <link rel="stylesheet" href="{{ "css/simpleness.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="alternate" type="application/rss+xml" href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" title="{{ .Site.Title }}">
   <!-- Font Awesome -->

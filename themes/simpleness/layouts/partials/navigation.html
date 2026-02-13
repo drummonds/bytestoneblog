@@ -1,10 +1,10 @@
 <nav class="navigation">
   <div class="nav-left">
     {{ if not (gt (len .Site.Menus) 0) }}
-    <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+    <a href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
     {{ end }}
     <div class="nav-item nav-title">
-      <a href="{{ .Site.BaseURL }}"> {{ .Site.Title }}</a>
+      <a href="{{ "/" | relURL }}"> {{ .Site.Title }}</a>
     </div>
     <div class="nav-item nav-menu">
       {{ range .Site.Menus.main }}
@@ -24,7 +24,7 @@
     </a>
     {{ end }}
     {{ if .Site.Params.Social.rss }}
-    <a href="{{ "index.xml" | absLangURL }}" target="_blank">
+    <a href="{{ "index.xml" | relLangURL }}" target="_blank">
       <i title="RSS" class="fas fa-rss"></i>
     </a>
     {{ end }}
