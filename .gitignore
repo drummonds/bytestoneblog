@@ -1,2 +1,17 @@
-# Get rid of cached files
+# Hugo build output
 public/
+.hugo_build.lock
+
+# Terraform / OpenTofu
+infra/.terraform/
+infra/*.tfstate
+infra/*.tfstate.backup
+infra/.terraform.lock.hcl
+infra/terraform.tfvars
+
+# Go
+/cmd/server/server
+/cmd/deploy/deploy
+
+# Messages for me
+ManualNextSteps.md

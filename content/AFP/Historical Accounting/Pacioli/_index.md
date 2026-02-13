@@ -1,12 +1,14 @@
 ---
 title: "Pacioli"
 date: "2025-10-01"
+revised: 2026-02-13
 ---
 
-Luca Pacioli published the first book on accounting, Summa de arithmetica, geometria, proportioni et proportionalita, in 1494.  I used to think that it mattered that the first book was written by a Ragusian merchant Benedetto Contrugli.
+Luca Pacioli published the first book on accounting, Summa de arithmetica, geometria, proportioni et proportionalita, in 1494.  I used to think that it mattered that the first book was written by a Ragusian merchant Benedetto Contrugli and that he should have got the credit.
 
-However i think he wrote clearly and formalised the practice that had been developed in renaisance Italy.
-It is more of a textbook than an invention.  The history of how the Ventians arrived a this point is complex coming from Indian and Arabic sources.
+However Pacioli wrote clearly and formalised the practice that had been developed in Renaissance Italy. His exposition is a masterpiece which I have come back to several times.
+It is more of a textbook than an invention.  The history of how the Venetians arrived a this point is complex coming from Indian and Arabic sources.
+From a business perspective it is vital if a business is make a profit or a loss but conceptually it is just a difference in sign.
 
 The ICAEW has a nice digitised copy of [Pacioli's book.](https://icaew.onlineculture.co.uk/ttp/?id=b2f80d6f-2e46-4cd5-9e8f-ac7a00ef4390&type=book).  Geisjeeck has a good english translation of Pacioli's book which i available at the Internet Archive.
 

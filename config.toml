@@ -1,4 +1,5 @@
 baseURL = "https://www.bytestone.uk/"
+relativeURLs = true
 languageCode = "en"
 DefaultContentLanguage = "en"
 theme = "simpleness"

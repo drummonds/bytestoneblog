@@ -1,0 +1,9 @@
+.git
+.github
+.vscode
+.claude
+public
+infra
+*.md
+!content/**/*.md
+.hugo_build.lock

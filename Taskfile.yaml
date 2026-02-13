@@ -3,13 +3,13 @@
 version: '3'
 
 vars:
-  GREETING: Hello, World!
+  PROJECT_ID: '{{.PROJECT_ID | default ""}}'
 
 tasks:
   default:
+    desc: Show available tasks
     cmds:
-      - echo "{{.GREETING}}"
-    silent: true
+      - task --list-all
 
   download_theme:
     aliases: [dt]
@@ -17,3 +17,80 @@ tasks:
     cmds:
       - rm -rf themes/simpleness
       - git clone https://github.com/RainerChiang/simpleness.git themes/simpleness
+
+  hugo:
+    desc: Build the Hugo site
+    cmds:
+      - hugo --minify
+
+  serve:
+    desc: Run Hugo development server
+    cmds:
+      - hugo server -D
+
+  server:
+    desc: Build and run the Go file server locally against public/
+    deps: [hugo]
+    cmds:
+      - go run ./cmd/server -dir public
+
+  container-build:
+    desc: Build the container image with Podman
+    cmds:
+      - podman build -t blog:local -f Containerfile .
+
+  container-run:
+    desc: Run the container image locally
+    deps: [container-build]
+    cmds:
+      - podman run --rm -p 8080:8080 blog:local
+
+  infra-init:
+    desc: Initialize Terraform/OpenTofu
+    dir: infra
+    cmds:
+      - tofu init
+
+  infra-plan:
+    desc: Show Terraform/OpenTofu plan
+    dir: infra
+    cmds:
+      - tofu plan
+
+  infra-apply:
+    desc: Apply Terraform/OpenTofu changes
+    dir: infra
+    cmds:
+      - tofu apply
+
+  check:
+    desc: Run Go checks (fmt, vet, test)
+    cmds:
+      - go fmt ./...
+      - go vet ./...
+
+  deploy:
+    desc: Build and deploy the blog to Cloud Run
+    cmds:
+      - go run ./cmd/deploy -project {{.PROJECT_ID}}
+    preconditions:
+      - sh: test -n "{{.PROJECT_ID}}"
+        msg: "PROJECT_ID is required: task deploy PROJECT_ID=your-project"
+
+  release:*:*:
+    desc: "Release and deploy: task release:v0.1.0:\"new blog post\" PROJECT_ID=bytestone"
+    vars:
+      TAG: '{{index .MATCH 0}}'
+      MSG: '{{index .MATCH 1}}'
+    cmds:
+      - task: hugo
+      - task: check
+      - git add .
+      - git commit -am "{{.MSG}}"
+      - git tag "{{.TAG}}"
+      - git push origin "{{.TAG}}"
+      - git push
+      - task: deploy
+    preconditions:
+      - sh: test -n "{{.PROJECT_ID}}"
+        msg: "PROJECT_ID is required: task release:TAG:MSG PROJECT_ID=your-project"
