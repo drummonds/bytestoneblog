@@ -2,16 +2,27 @@
 public/
 .hugo_build.lock
 
-# Terraform / OpenTofu
+# Terraform / OpenTofu (GCP)
 infra/.terraform/
 infra/*.tfstate
 infra/*.tfstate.backup
 infra/.terraform.lock.hcl
 infra/terraform.tfvars
 
+# Terraform / OpenTofu (OVH)
+infra/ovh/.terraform/
+infra/ovh/*.tfstate
+infra/ovh/*.tfstate.backup
+infra/ovh/.terraform.lock.hcl
+infra/ovh/terraform.tfvars
+infra/ovh/kubeconfig.yml
+
 # Go
 /cmd/server/server
 /cmd/deploy/deploy
+/cmd/bootstrap/bootstrap
+/deploy
+/bootstrap
 
 # Messages for me
 ManualNextSteps.md

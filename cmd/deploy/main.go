@@ -17,53 +17,74 @@ import (
 )
 
 func main() {
-	project := flag.String("project", "", "GCP project ID (required)")
+	target := flag.String("target", "gcp", "deploy target: gcp or ovh")
+	project := flag.String("project", "", "GCP project ID (required for gcp)")
 	region := flag.String("region", "europe-west2", "GCP region")
 	tag := flag.String("tag", "", "image tag (default: git short SHA)")
 	dryRun := flag.Bool("dry-run", false, "print commands without executing")
 	skipBuild := flag.Bool("skip-build", false, "skip Hugo and container build steps")
+	registryHost := flag.String("registry-host", "registry.bytestone.uk", "OVH registry hostname")
+	kubeconfig := flag.String("kubeconfig", "", "path to kubeconfig (OVH only, default: infra/ovh/kubeconfig.yml)")
 	flag.Parse()
-
-	if *project == "" {
-		log.Fatal("flag -project is required")
-	}
 
 	if *tag == "" {
 		*tag = gitTag()
 	}
 
-	registry := fmt.Sprintf("%s-docker.pkg.dev/%s/blog", *region, *project)
-	image := fmt.Sprintf("%s/blog:%s", registry, *tag)
-	serviceName := fmt.Sprintf("projects/%s/locations/%s/services/blog", *project, *region)
+	switch *target {
+	case "gcp":
+		deployGCP(*project, *region, *tag, *dryRun, *skipBuild)
+	case "ovh":
+		deployOVH(*registryHost, *kubeconfig, *tag, *dryRun, *skipBuild)
+	default:
+		log.Fatalf("unknown target %q (use gcp or ovh)", *target)
+	}
+}
 
-	log.Printf("project=%s region=%s tag=%s image=%s", *project, *region, *tag, image)
+// buildSite runs the shared Hugo + container build steps.
+func buildSite(dryRun bool, image string) {
+	step("Building Hugo site", func() {
+		runCmd(dryRun, "hugo", "--minify")
+	})
+	step("Building container image", func() {
+		runCmd(dryRun, "podman", "build", "-t", image, "-f", "Containerfile", ".")
+	})
+}
 
-	if !*skipBuild {
-		step("Checking prerequisites", func() { checkPrereqs() })
-		step("Building Hugo site", func() {
-			run_cmd(*dryRun, "hugo", "--minify")
+func deployGCP(project, region, tag string, dryRun, skipBuild bool) {
+	if project == "" {
+		log.Fatal("flag -project is required for gcp target")
+	}
+
+	registry := fmt.Sprintf("%s-docker.pkg.dev/%s/blog", region, project)
+	image := fmt.Sprintf("%s/blog:%s", registry, tag)
+	serviceName := fmt.Sprintf("projects/%s/locations/%s/services/blog", project, region)
+
+	log.Printf("target=gcp project=%s region=%s tag=%s image=%s", project, region, tag, image)
+
+	if !skipBuild {
+		step("Checking prerequisites", func() {
+			checkPrereqs("hugo", "podman", "gcloud")
 		})
-		step("Building container image", func() {
-			run_cmd(*dryRun, "podman", "build", "-t", image, "-f", "Containerfile", ".")
-		})
+		buildSite(dryRun, image)
 	}
 
 	authFile := filepath.Join(os.TempDir(), "podman-gcp-auth.json")
 
 	step("Logging in to Artifact Registry", func() {
-		if *dryRun {
+		if dryRun {
 			log.Printf("[dry-run] podman login %s", registry)
 			return
 		}
-		loginRegistry(registry, authFile)
+		loginGCPRegistry(registry, authFile)
 	})
 
 	step("Pushing image to Artifact Registry", func() {
-		run_cmd(*dryRun, "podman", "push", "--authfile", authFile, image)
+		runCmd(dryRun, "podman", "push", "--authfile", authFile, image)
 	})
 
 	step("Updating Cloud Run service", func() {
-		if *dryRun {
+		if dryRun {
 			log.Printf("[dry-run] would update Cloud Run service to image %s", image)
 			return
 		}
@@ -72,8 +93,82 @@ func main() {
 		}
 	})
 
-	log.Println("deploy complete")
+	log.Println("deploy complete (gcp)")
 }
+
+func deployOVH(registryHost, kubeconfig, tag string, dryRun, skipBuild bool) {
+	// Image tagged for the external registry (for push).
+	pushImage := fmt.Sprintf("%s/blog:%s", registryHost, tag)
+	// Image reference used inside the cluster (registry ClusterIP service).
+	clusterImage := fmt.Sprintf("registry.blog.svc.cluster.local:5000/blog:%s", tag)
+
+	if kubeconfig == "" {
+		repoRoot := repoRoot()
+		kubeconfig = filepath.Join(repoRoot, "infra", "ovh", "kubeconfig.yml")
+	}
+	os.Setenv("KUBECONFIG", kubeconfig)
+
+	log.Printf("target=ovh registry=%s tag=%s kubeconfig=%s", registryHost, tag, kubeconfig)
+
+	if !skipBuild {
+		step("Checking prerequisites", func() {
+			checkPrereqs("hugo", "podman", "kubectl")
+		})
+		buildSite(dryRun, pushImage)
+	}
+
+	authFile := filepath.Join(os.TempDir(), "podman-ovh-auth.json")
+
+	step("Logging in to OVH registry", func() {
+		if dryRun {
+			log.Printf("[dry-run] podman login %s", registryHost)
+			return
+		}
+		loginOVHRegistry(registryHost, authFile)
+	})
+
+	step("Pushing image to OVH registry", func() {
+		runCmd(dryRun, "podman", "push", "--authfile", authFile, pushImage)
+	})
+
+	step("Updating Kubernetes deployment", func() {
+		runCmd(dryRun, "kubectl", "set", "image",
+			"deployment/blog", "blog="+clusterImage,
+			"-n", "blog",
+		)
+	})
+
+	step("Waiting for rollout", func() {
+		runCmd(dryRun, "kubectl", "rollout", "status",
+			"deployment/blog", "-n", "blog",
+			"--timeout=120s",
+		)
+	})
+
+	log.Println("deploy complete (ovh)")
+}
+
+func loginOVHRegistry(host, authFile string) {
+	password := os.Getenv("OVH_REGISTRY_PASSWORD")
+	if password == "" {
+		log.Fatal("OVH_REGISTRY_PASSWORD environment variable is required")
+	}
+
+	cmd := exec.Command("podman", "login",
+		"--authfile", authFile,
+		"-u", "admin",
+		"--password-stdin",
+		host,
+	)
+	cmd.Stdin = strings.NewReader(password)
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	if err := cmd.Run(); err != nil {
+		log.Fatalf("podman login failed: %v", err)
+	}
+}
+
+// --- shared helpers ---
 
 func step(name string, fn func()) {
 	log.Printf("==> %s", name)
@@ -82,17 +177,22 @@ func step(name string, fn func()) {
 	log.Printf("    done (%s)", time.Since(start).Round(time.Millisecond))
 }
 
-func checkPrereqs() {
-	for _, bin := range []string{"hugo", "podman", "gcloud"} {
+func checkPrereqs(bins ...string) {
+	for _, bin := range bins {
 		if _, err := exec.LookPath(bin); err != nil {
 			log.Fatalf("prerequisite %q not found in PATH", bin)
 		}
 	}
 
-	// Verify gcloud auth.
-	out, err := exec.Command("gcloud", "auth", "print-access-token").CombinedOutput()
-	if err != nil {
-		log.Fatalf("gcloud not authenticated: %s\n%s", err, out)
+	// If gcloud is in the list, verify auth.
+	for _, bin := range bins {
+		if bin == "gcloud" {
+			out, err := exec.Command("gcloud", "auth", "print-access-token").CombinedOutput()
+			if err != nil {
+				log.Fatalf("gcloud not authenticated: %s\n%s", err, out)
+			}
+			return
+		}
 	}
 }
 
@@ -104,7 +204,7 @@ func gitTag() string {
 	return strings.TrimSpace(string(out))
 }
 
-func run_cmd(dryRun bool, name string, args ...string) {
+func runCmd(dryRun bool, name string, args ...string) {
 	if dryRun {
 		log.Printf("[dry-run] %s %s", name, strings.Join(args, " "))
 		return
@@ -117,8 +217,15 @@ func run_cmd(dryRun bool, name string, args ...string) {
 	}
 }
 
-func loginRegistry(registry, authFile string) {
-	// Extract the hostname (e.g. "europe-west2-docker.pkg.dev") from the registry path.
+func repoRoot() string {
+	out, err := exec.Command("git", "rev-parse", "--show-toplevel").Output()
+	if err != nil {
+		log.Fatal("not in a git repository")
+	}
+	return strings.TrimSpace(string(out))
+}
+
+func loginGCPRegistry(registry, authFile string) {
 	host := strings.SplitN(registry, "/", 2)[0]
 
 	token, err := exec.Command("gcloud", "auth", "print-access-token").Output()
@@ -147,7 +254,6 @@ func updateCloudRunService(ctx context.Context, serviceName, image string) error
 	}
 	defer client.Close()
 
-	// Get current service.
 	svc, err := client.GetService(ctx, &runpb.GetServiceRequest{
 		Name: serviceName,
 	})
@@ -155,7 +261,6 @@ func updateCloudRunService(ctx context.Context, serviceName, image string) error
 		return fmt.Errorf("get service: %w", err)
 	}
 
-	// Update the container image.
 	svc.Template.Containers[0].Image = image
 
 	op, err := client.UpdateService(ctx, &runpb.UpdateServiceRequest{
@@ -168,7 +273,6 @@ func updateCloudRunService(ctx context.Context, serviceName, image string) error
 		return fmt.Errorf("update service: %w", err)
 	}
 
-	// Wait for the new revision to be serving.
 	log.Println("    waiting for new revision…")
 	_, err = op.Wait(ctx)
 	if err != nil {
