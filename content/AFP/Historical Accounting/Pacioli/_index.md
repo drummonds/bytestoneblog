@@ -12,7 +12,7 @@ From a business perspective it is vital if a business is make a profit or a loss
 
 The ICAEW has a nice digitised copy of [Pacioli's book.](https://icaew.onlineculture.co.uk/ttp/?id=b2f80d6f-2e46-4cd5-9e8f-ac7a00ef4390&type=book).  Geisjeeck has a good english translation of Pacioli's book which i available at the Internet Archive.
 
-There is a lot in this short book which is a handbook for Renaissance traders and the foundation of curret accounting practice but I want to focus on two areas:
+There is a lot in this short book which is a handbook for Renaissance traders and the foundation of current accounting practice but I want to focus on two areas:
 
 - the 4 books of record
 - recording of journal entries
@@ -35,17 +35,19 @@ Ledger (Quaderno). Many, on account of their small business, use only the last
 two, that is, the journal and the ledger.
 ```
 Although Pacioli counts three books, the inventory is an important part of the
-process and the simplest to undersstand.  In a stock take at the end of a year
+process and the simplest to understand.  In a stock take at the end of a year
 it is rare that there is an exact match and some adjustments will be needed.
 Constructing the inventory is also the starting point of accounting records.  It
 will be a much smaller document than th others.
 
 There is duplication between the books.  The inventory is a point of time record
-like a balance sheet.  The memoronadum, journal and ledger all cover a period of time.
+like a balance sheet.  The memorandum, journal and ledger all cover a period of time.
 From any one of the other three books it is possible to reconstruct with a
-signifcant amount of work a ledger and
+significant amount of work a ledger and
 journal to at least the level of the numerical entries.  So this provides a level of redundancy.
 The double entry of items provides for error checking.
+
+Something that is clear is that the memorandum or day book
 
 ## Recording of accounting journals
 

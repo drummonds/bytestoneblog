@@ -26,3 +26,5 @@ infra/ovh/kubeconfig.yml
 
 # Messages for me
 ManualNextSteps.md
+
+.env
