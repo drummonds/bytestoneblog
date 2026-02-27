@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg
+  xmlns='http://www.w3.org/2000/svg'
+  xmlns:xlink='http://www.w3.org/1999/xlink'
+
+  width='490' height='640'>
+
+  <style>
+    rect, line, path { stroke-width: 1.5px; stroke: black; fill: transparent; }
+    rect, line, path { stroke-linecap: square; stroke-linejoin: rounded; }
+    path { fill: transparent; }
+    text.literal { font-family: monospace; }
+    line.ellipsis { stroke-dasharray: 1 3.5; }
+    tspan.hex { font-family: monospace; font-size: 90%; }
+    path.arrow { fill: black; }
+  </style>
+
+  <g transform='translate(40 50)'>
+    <text x='-30' y='-10'>journal:</text>
+    <path d='M5.5 4 v12 m 4 0 v-12' class='station'/>
+    <path d='M160.5 4 v12 m 4 0 v-12' class='station'/>
+    <rect x='60' y='30' height='20' width='50' rx='0' ry='0' class='rule'/>
+    <text x='85' y='45' text-anchor='middle' class='rule'>entry</text>
+    <path d='M40 20 v10 q0 10 10 10 h10'/>
+    <path d='M110 40 h10 q10 0 10 -10'/>
+    <path d='M120 10 q10 0 10 10 v10'/>
+    <path d='M40 20 q0 -10 10 -10'/>
+    <path d='M10 10 h150'/>
+  </g>
+
+  <g transform='translate(40 150)'>
+    <text x='-30' y='-10'>entry:</text>
+    <path d='M5.5 14 v12 m 4 0 v-12' class='station'/>
+    <path d='M200.5 14 v12 m 4 0 v-12' class='station'/>
+    <rect x='60' y='10' height='20' width='90' rx='0' ry='0' class='rule'/>
+    <text x='105' y='25' text-anchor='middle' class='rule'>comment</text>
+    <rect x='60' y='40' height='20' width='90' rx='0' ry='0' class='rule'/>
+    <text x='105' y='55' text-anchor='middle' class='rule'>transaction</text>
+    <path d='M170 30 v10'/>
+    <path d='M150 50 h10 q10 0 10 -10'/>
+    <path d='M40 40 q0 10 10 10 h10'/>
+    <path d='M170 30 q0 -10 10 -10'/>
+    <path d='M150 20 h50'/>
+    <path d='M30 20 q10 0 10 10 v10'/>
+    <path d='M10 20 h50'/>
+  </g>
+
+  <g transform='translate(40 260)'>
+    <text x='-30' y='-10'>comment:</text>
+    <path d='M5.5 14 v12 m 4 0 v-12' class='station'/>
+    <path d='M420.5 14 v12 m 4 0 v-12' class='station'/>
+    <rect x='60' y='40' height='20' width='50' rx='0' ry='0' class='rule'/>
+    <text x='85' y='55' text-anchor='middle' class='rule'>WSP</text>
+    <rect x='160' y='10' height='20' width='20' rx='8' ry='8' class='literal'/>
+    <text x='170' y='25' text-anchor='middle' class='literal'>;</text>
+    <rect x='230' y='40' height='20' width='70' rx='0' ry='0' class='rule'/>
+    <text x='265' y='55' text-anchor='middle' class='rule'>VCHAR</text>
+    <rect x='350' y='10' height='20' width='50' rx='0' ry='0' class='rule'/>
+    <text x='375' y='25' text-anchor='middle' class='rule'>CRLF</text>
+    <path d='M210 30 v10 q0 10 10 10 h10'/>
+    <path d='M300 50 h10 q10 0 10 -10'/>
+    <path d='M310 20 q10 0 10 10 v10'/>
+    <path d='M210 30 q0 -10 10 -10'/>
+    <path d='M180 20 h170'/>
+    <path d='M40 30 v10 q0 10 10 10 h10'/>
+    <path d='M110 50 h10 q10 0 10 -10'/>
+    <path d='M120 20 q10 0 10 10 v10'/>
+    <path d='M40 30 q0 -10 10 -10'/>
+    <path d='M400 20 h20'/>
+    <path d='M10 20 h150'/>
+  </g>
+
+  <g transform='translate(40 370)'>
+    <text x='-30' y='-10'>transaction:</text>
+    <path d='M5.5 14 v12 m 4 0 v-12' class='station'/>
+    <path d='M210.5 14 v12 m 4 0 v-12' class='station'/>
+    <rect x='30' y='10' height='20' width='70' rx='0' ry='0' class='rule'/>
+    <text x='65' y='25' text-anchor='middle' class='rule'>header</text>
+    <rect x='120' y='10' height='20' width='70' rx='0' ry='0' class='rule'/>
+    <text x='155' y='25' text-anchor='middle' class='rule'>postings</text>
+    <path d='M100 20 h20'/>
+    <path d='M190 20 h20'/>
+    <path d='M10 20 h20'/>
+  </g>
+
+  <g transform='translate(40 450)'>
+    <text x='-30' y='-10'>postings:</text>
+    <path d='M5.5 14 v12 m 4 0 v-12' class='station'/>
+    <path d='M180.5 14 v12 m 4 0 v-12' class='station'/>
+    <text x='95' y='80' text-anchor='middle' class='comment'>(at least twice)</text>
+    <rect x='60' y='40' height='20' width='70' rx='0' ry='0' class='rule'/>
+    <text x='95' y='55' text-anchor='middle' class='rule'>posting</text>
+    <path d='M40 30 v10 q0 10 10 10 h10'/>
+    <path d='M130 50 h10 q10 0 10 -10'/>
+    <path d='M140 20 q10 0 10 10 v10'/>
+    <path d='M40 30 q0 -10 10 -10'/>
+    <path d='M10 20 h170'/>
+  </g>
+
+</svg>

@@ -1,6 +1,7 @@
 ---
 title: "Augmented Backus Naur Format"
-date: "2025-02-15"
+date: 2025-02-15
+updated: 2026-02-27
 tags: ["ABNF", "EBNF"]
 summary: A comparison of ABNF and EBNF notation systems
 mermaid: true
@@ -20,7 +21,7 @@ wsn[<b>1970</b>: <a href='https://en.wikipedia.org/wiki/Wirth_syntax_notation'>W
 ebnf[<b>1977</b>: <a href='https://dl.acm.org/doi/pdf/10.1145/359863.359883'>Wirth</a> <a href='https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form'>EBNF</a>]
 xml[<b>2006</b>: <a href='https://www.w3.org/TR/xml/'>XML EBNF</a>]
 gon[<b>2009</b>: <a href='https://pkg.go.dev/golang.org/x/exp/ebnf'>Go EBNF</a>]
-abnf[<b>2010</b>: <a href='https://en.wikipedia.org/wiki/Wirth_syntax_notation'>Augmented BNF</a>]
+abnf[<b>2010</b>: <a href='https://en.wikipedia.org/wiki/Augmented_Backus%E2%80%93Naur_form'>Augmented BNF</a>]
 iso[<b>1996</b>: <a href='https://en.wikipedia.org/wiki/Wirth_syntax_notation'>ISO BNF</a>]
 
 pan --> bal

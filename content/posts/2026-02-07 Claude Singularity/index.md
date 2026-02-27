@@ -1,6 +1,6 @@
 ---
 title: "Claude, Singularity Postgres and Gokrazy"
-date: 2026-01-07
+date: 2026-02-07
 tags: ["AI"]
 summary: Claude, Singularity Postgres and Gokrazy
 ---
