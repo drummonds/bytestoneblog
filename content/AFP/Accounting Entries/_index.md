@@ -1,6 +1,7 @@
 ---
 tile: Accounting Entries
 date: 2025-01-05
+show_in_timeline: true
 ---
 ## Accounting records
 

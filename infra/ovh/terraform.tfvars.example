@@ -1,6 +1,0 @@
-ovh_project_id = "your-ovh-project-id"
-region         = "GRA9"
-cluster_name   = "blog"
-k8s_version    = "1.31"
-node_flavor    = "d2-2"
-domain         = "bytestone.uk"

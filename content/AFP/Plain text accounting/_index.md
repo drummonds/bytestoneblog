@@ -1,6 +1,7 @@
 ---
 title: "Plain text accounting"
 date: "2024-11-22"
+show_in_timeline: true
 ---
 
 [plaintextaccounting.org](https://plaintextaccounting.org/) has a nice overview of the topic.

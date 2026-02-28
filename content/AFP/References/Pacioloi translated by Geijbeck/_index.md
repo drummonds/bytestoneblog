@@ -1,6 +1,7 @@
 ---
 title: Pacioli Transalated by Geisjbeck
 date: 2026-02-12
+show_in_timeline: true
 ---
 
 As has been said previously the original can be seen as image by the ICAEW:

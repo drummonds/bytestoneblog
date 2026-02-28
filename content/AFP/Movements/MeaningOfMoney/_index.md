@@ -1,6 +1,7 @@
 ---
 title: Meaning of Money
 date: 2025-10-10
+show_in_timeline: true
 ---
 
 When I think of money I visualise it as coins in my hands.  However when you

@@ -3,6 +3,7 @@ title: Accounting movements - trading oranges
 date: 2025-01-01
 mermaid: true
 type: afp_single
+show_in_timeline: true
 ---
 
 

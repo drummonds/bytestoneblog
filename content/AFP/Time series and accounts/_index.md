@@ -1,6 +1,7 @@
 ---
 title: "Time series and accounts"
 date: "2024-12-28"
+show_in_timeline: true
 ---
 
 ## Time series functions

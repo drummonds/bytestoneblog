@@ -2,9 +2,6 @@
 
 version: '3'
 
-vars:
-  PROJECT_ID: '{{.PROJECT_ID | default ""}}'
-
 tasks:
   default:
     desc: Show available tasks
@@ -69,16 +66,8 @@ tasks:
       - go fmt ./...
       - go vet ./...
 
-  deploy:
-    desc: Build and deploy the blog to Cloud Run
-    cmds:
-      - go run ./cmd/deploy -project {{.PROJECT_ID}}
-    preconditions:
-      - sh: test -n "{{.PROJECT_ID}}"
-        msg: "PROJECT_ID is required: task deploy PROJECT_ID=your-project"
-
   release:*:*:
-    desc: "Release and deploy: task release:v0.1.0:\"new blog post\" PROJECT_ID=bytestone"
+    desc: "Release: task release:v0.1.0:\"new blog post\""
     vars:
       TAG: '{{index .MATCH 0}}'
       MSG: '{{index .MATCH 1}}'
@@ -90,10 +79,6 @@ tasks:
       - git tag "{{.TAG}}"
       - git push origin "{{.TAG}}"
       - git push
-      - task: deploy
-    preconditions:
-      - sh: test -n "{{.PROJECT_ID}}"
-        msg: "PROJECT_ID is required: task release:TAG:MSG PROJECT_ID=your-project"
 
   book:md:
     desc: Generate combined AFP markdown (for debugging)
@@ -106,60 +91,3 @@ tasks:
     cmds:
       - go run ./cmd/afp2book -pdf afp-book.pdf
 
-  # --- OVH ---
-
-  ovh-init:
-    desc: Initialize OpenTofu for OVH
-    dir: infra/ovh
-    cmds:
-      - tofu init
-
-  ovh-plan:
-    desc: Show OpenTofu plan for OVH
-    dir: infra/ovh
-    cmds:
-      - tofu plan
-
-  ovh-apply:
-    desc: Apply OpenTofu changes for OVH
-    dir: infra/ovh
-    cmds:
-      - tofu apply
-
-  ovh-kubeconfig:
-    desc: Extract kubeconfig from OVH OpenTofu state
-    dir: infra/ovh
-    cmds:
-      - tofu output -raw kubeconfig > kubeconfig.yml
-      - chmod 600 kubeconfig.yml
-      - echo "Wrote infra/ovh/kubeconfig.yml"
-
-  ovh-bootstrap:
-    desc: Bootstrap OVH cluster (nginx-ingress, cert-manager, manifests)
-    cmds:
-      - go run ./cmd/bootstrap
-
-  ovh-bootstrap-dry-run:
-    desc: Dry-run OVH cluster bootstrap
-    cmds:
-      - go run ./cmd/bootstrap -dry-run
-
-  deploy-ovh:
-    desc: Build and deploy the blog to OVH Kubernetes
-    cmds:
-      - go run ./cmd/deploy -target ovh
-
-  release-ovh:*:*:
-    desc: "Release and deploy to OVH: task release-ovh:v0.1.0:\"new blog post\""
-    vars:
-      TAG: '{{index .MATCH 0}}'
-      MSG: '{{index .MATCH 1}}'
-    cmds:
-      - task: hugo
-      - task: check
-      - git add .
-      - git commit -am "{{.MSG}}"
-      - git tag "{{.TAG}}"
-      - git push origin "{{.TAG}}"
-      - git push
-      - task: deploy-ovh

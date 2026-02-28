@@ -2,6 +2,7 @@
 title: "Pacioli"
 date: "2025-10-01"
 revised: 2026-02-13
+show_in_timeline: true
 ---
 
 Luca Pacioli published the first book on accounting, Summa de arithmetica, geometria, proportioni et proportionalita, in 1494.  I used to think that it mattered that the first book was written by a Ragusian merchant Benedetto Contrugli and that he should have got the credit.

@@ -1,6 +1,7 @@
 ---
 title: using Journal entries as plain text
 date: 2025-01-10
+show_in_timeline: true
 ---
 
 # Journal Entries

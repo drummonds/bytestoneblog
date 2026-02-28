@@ -3,6 +3,7 @@ title: Pacioli got it wrong and why it doesn't matter.
 date: 2025-08-23
 updated: 2025-09-30
 mermaid: true
+show_in_timeline: true
 ---
 
 
