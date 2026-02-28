@@ -2,6 +2,7 @@
 title: Boundaries
 date: 2025-01-05
 mermaid: true
+show_in_timeline: true
 ---
 
 ## Entity and the boundary of the entity

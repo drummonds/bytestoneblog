@@ -2,6 +2,7 @@
 title: "Historic accounting records"
 date: "2024-12-27"
 updated: "2025-09-21"
+show_in_timeline: true
 ---
 
 ## From counting to transactions or balances to journals

@@ -105,3 +105,14 @@ img {
     align: center;
     height: auto;
 }
+
+.badge-afp {
+    display: inline-block;
+    background: #4a6fa5;
+    color: #fff;
+    font-size: 0.7em;
+    font-weight: 600;
+    padding: 0.1em 0.5em;
+    border-radius: 3px;
+    vertical-align: middle;
+}

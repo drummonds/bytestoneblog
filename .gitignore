@@ -21,10 +21,16 @@ infra/ovh/kubeconfig.yml
 /cmd/server/server
 /cmd/deploy/deploy
 /cmd/bootstrap/bootstrap
+/cmd/afp2book/afp2book
 /deploy
 /bootstrap
+
+# Book generation
+afp-book.md
+afp-book.pdf
 
 # Messages for me
 ManualNextSteps.md
 
 .env
+

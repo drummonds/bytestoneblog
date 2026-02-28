@@ -145,9 +145,11 @@ commodity = 1*ALPHA
 
 ## Multiple files - Corpus of accounts
 
-It may not convient or practical to have a single file represent the whole of the accounting journal.
+It may not convenient or practical to have a single file represent the whole of the accounting journal.
 
-Pacioll describes having multiple books, the first one marked with a * and then A etcera.
+Pacioli describes having multiple books, the first one marked with a * and then A etcera.  The ledgers openbalance is copied from the 
+previous one. 
+
 
 ## Periods
 

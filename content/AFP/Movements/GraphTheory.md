@@ -2,6 +2,7 @@
 title: Accounting transactions as graph theory
 date: 2025-01-05
 mermaid: true
+show_in_timeline: true
 ---
 
 A transaction represents a transfer of value, eg investing in a business, the transaction consists of an amount, a source and a destination.  The transaction is a transfer from the source to the destination.

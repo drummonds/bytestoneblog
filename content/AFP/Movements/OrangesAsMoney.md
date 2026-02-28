@@ -4,6 +4,7 @@ date: 2025-01-07
 updated: 2025-01-13
 mermaid: true
 type: afp_single
+show_in_timeline: true
 ---
 
 The first time through I tried using the conventional accounting conventions but the

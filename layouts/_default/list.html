@@ -1,8 +1,12 @@
 {{ define "main" }}
 {{ $Pages := .Pages }}
-{{ $home := .IsHome }}
 {{ if .IsHome }}
-{{ $Pages = where site.RegularPages "Type" "in" .Site.Params.mainSections }}
+  {{ $posts := where site.RegularPages "Type" "in" .Site.Params.mainSections }}
+  {{ $afpPages := where (where site.Pages "Section" "afp") ".Params.show_in_timeline" true }}
+  {{ $Pages = union $posts $afpPages }}
+{{ else if eq .Section "posts" }}
+  {{ $afpPages := where (where site.Pages "Section" "afp") ".Params.show_in_timeline" true }}
+  {{ $Pages = union $Pages $afpPages }}
 {{ end }}
 <article class="archive">
   {{ if not .IsHome }}
@@ -17,15 +21,18 @@
 
   {{ end }}
   <div class="archive-list">
-    {{ range $Pages.GroupByDate "2006" }}
+    {{ range ($Pages.ByDate.Reverse).GroupByDate "2006" }}
     <h2 class="archive-year">{{ .Key }}</h2>
     <ul>
-      {{ range .Pages.GroupByDate "January"}} <!-- .Pages in $Pages -->
+      {{ range .Pages.GroupByDate "January"}}
       {{ range .Pages }}
       <li class="archive-item">
         {{ if .Date }}
-        <time datetime="{{ .Date.Format " 2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
+        <a href="{{ .RelPermalink }}">
+          {{ if eq .Section "afp" }}<span class="badge-afp">AFP</span> {{ end }}
+          {{ .Title }}
+        </a>
         {{ end }}
       </li>
       {{ end }}
@@ -35,6 +42,6 @@
   </div>
   <aside>
     Last modified on {{ .Lastmod.Format "2006-01-02"}}.
-  </aside> 
+  </aside>
 </article>
 {{ end }}

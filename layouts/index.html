@@ -1,22 +1,10 @@
 {{ define "main" }}
-{{ $Pages := .Pages }}
-{{ $home := .IsHome }}
-<h2>My Layout/index.html</h2>
+{{ $posts := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{ $afpPages := where (where site.Pages ".Params.show_in_timeline" true) "Section" "afp" }}
+{{ $allPages := union $posts $afpPages }}
+{{ $paginator := .Paginate ($allPages.ByDate.Reverse) }}
 <article class="archive">
   <div class="post-list">
-    <!-- Display AFP Content -->
-    <h2>Accounting for Programmers</h2>
-    <p>This is an extended series of articles on understanding accounting from
-      a programming perspective.  It is a work in progress which is working towards a book.</p>
-    <p>
-    <ul>
-      <li><a href="/afp/">Accounting for programmers</a></li>
-    </ul>
-    </p>
-
-    <!-- Display Regular Posts -->
-    {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
-    <h2>Blog Posts</h2>
     <div class="archive-list">
       {{ range $paginator.Pages.GroupByDate "2006" }}
         <h2 class="archive-year">{{ .Key }}</h2>
@@ -27,7 +15,10 @@
                 <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
                   {{ .Date.Format "2006-01-02" }}
                 </time>
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                <a href="{{ .RelPermalink }}">
+                  {{ if eq .Section "afp" }}<span class="badge-afp">AFP</span> {{ end }}
+                  {{ .Title }}
+                </a>
               {{ end }}
             </li>
           {{ end }}

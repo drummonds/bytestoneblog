@@ -3,6 +3,7 @@ title: Accounting movements
 date: 2025-01-01
 weight: 1
 mermaid: true
+show_in_timeline: true
 ---
 
 ## Accounting Movements is just graph theory

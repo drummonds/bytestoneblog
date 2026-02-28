@@ -95,6 +95,17 @@ tasks:
       - sh: test -n "{{.PROJECT_ID}}"
         msg: "PROJECT_ID is required: task release:TAG:MSG PROJECT_ID=your-project"
 
+  book:md:
+    desc: Generate combined AFP markdown (for debugging)
+    cmds:
+      - go run ./cmd/afp2book > afp-book.md
+      - echo "Wrote afp-book.md"
+
+  book:pdf:
+    desc: Generate AFP book PDF via pandoc+typst
+    cmds:
+      - go run ./cmd/afp2book -pdf afp-book.pdf
+
   # --- OVH ---
 
   ovh-init:
