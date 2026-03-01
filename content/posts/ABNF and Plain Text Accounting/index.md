@@ -1,6 +1,7 @@
 ---
 title: ABNF and Plain Text Accounting
 date: 2026-02-26
+updated: 2026-03-01
 ---
 
 Plain text accounting is a useful way to describe a machine and human readable accounting journal.  Some formats
@@ -147,8 +148,8 @@ commodity = 1*ALPHA
 
 It may not convenient or practical to have a single file represent the whole of the accounting journal.
 
-Pacioli describes having multiple books, the first one marked with a * and then A etcera.  The ledgers openbalance is copied from the 
-previous one. 
+Pacioli describes having multiple books, the first one marked with a * and then A etcera.  The ledgers opening balance is copied from the 
+previous books closing balance. 
 
 
 ## Periods
