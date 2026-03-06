@@ -39,7 +39,7 @@ Although Pacioli counts three books, the inventory is an important part of the
 process and the simplest to understand.  In a stock take at the end of a year
 it is rare that there is an exact match and some adjustments will be needed.
 Constructing the inventory is also the starting point of accounting records.  It
-will be a much smaller document than th others.
+will be a much smaller document than the others.
 
 There is duplication between the books.  The inventory is a point of time record
 like a balance sheet.  The memorandum, journal and ledger all cover a period of time.
