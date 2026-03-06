@@ -1,0 +1,5 @@
+# Figure 1: Investment
+# Investor puts £25 cash into the business
+
+2024-01-01 * Investor puts cash into business
+  Equity:Input -> Asset:Cash investment 25.00 GBP

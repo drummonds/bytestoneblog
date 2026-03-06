@@ -1,0 +1,11 @@
+# Figure 6: Unfinished business with a liability
+# Instead of paying cash, farmer extends credit (a liability)
+
+2024-01-01 * Investor puts cash into business
+  Equity:Input -> Asset:Cash investment 25.00 GBP
+
+2024-01-02 * Buy oranges on credit from farmer
+  Liability:Farmer -> Expense:Purchases oranges on credit 25.00 GBP
+
+2024-01-03 * Sell oranges at market
+  Income:Sales -> Asset:Cash market sales 37.50 GBP

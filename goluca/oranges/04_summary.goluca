@@ -1,0 +1,12 @@
+# Figure 4: Summary with external actors
+# All transactions shown with Investor, Farmer, Market external nodes
+# TODO: pta2svg needs view/style support to distinguish internal vs external actors
+
+2024-01-01 * Investor puts cash into business
+  Equity:Input -> Asset:Cash investment 25.00 GBP
+
+2024-01-02 * Buy 25 oranges from farmer
+  Asset:Cash -> Expense:Purchases oranges 25.00 GBP
+
+2024-01-03 * Sell 25 oranges at market
+  Income:Sales -> Asset:Cash market sales 37.50 GBP
