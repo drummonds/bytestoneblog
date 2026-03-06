@@ -15,8 +15,18 @@ tasks:
       - rm -rf themes/simpleness
       - git clone https://github.com/RainerChiang/simpleness.git themes/simpleness
 
+  svg:generate:
+    desc: Generate SVGs from goluca files using pta2svg
+    cmds:
+      - for f in goluca/oranges/*.goluca; do name=$(basename "$f" .goluca); pta2svg -o "static/svg/oranges/${name}.svg" "$f"; done
+    sources:
+      - goluca/oranges/*.goluca
+    generates:
+      - static/svg/oranges/*.svg
+
   hugo:
     desc: Build the Hugo site
+    deps: [svg:generate]
     cmds:
       - hugo --minify
 

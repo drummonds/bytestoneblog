@@ -1,0 +1,8 @@
+# Figure 2: Buying stock
+# Business spends £25 buying 25 oranges from farmer
+
+2024-01-01 * Investor puts cash into business
+  Equity:Input -> Asset:Cash investment 25.00 GBP
+
+2024-01-02 * Buy 25 oranges from farmer
+  Asset:Cash -> Expense:Purchases oranges 25.00 GBP

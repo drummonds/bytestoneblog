@@ -1,0 +1,24 @@
+<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
+  {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
+    <figcaption style="display: flex; justify-content: space-between; align-items: center;">
+      {{ with (.Get "title") -}}
+        <h4 style="margin: 0; font-style: italic; font-size: 0.9em;">
+          <a href="#{{ . | urlize }}" style="text-decoration: none; color: inherit;" id="{{ . | urlize }}">{{ . }}</a>
+        </h4>
+      {{- end -}}
+      {{- if or (.Get "caption") (.Get "attr") -}}
+        <p style="margin: 0; flex-grow: 1; text-align: center;">
+          {{- .Get "caption" | markdownify -}}
+          {{- with .Get "attrlink" }}
+            <a href="{{ . }}">
+          {{- end -}}
+          {{- .Get "attr" | markdownify -}}
+          {{- if .Get "attrlink" }}</a>{{ end -}}
+        </p>
+      {{- end }}
+    </figcaption>
+  {{- end }}
+  <div style="text-align: center">
+    {{ readFile (printf "static/%s" (.Get "src")) | safeHTML }}
+  </div>
+</figure>

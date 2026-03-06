@@ -59,6 +59,8 @@ I -- £25 --> Business
 E -- £25 --> B
 {{< /mermaid_fig >}}
 
+{{< svg_fig title="Figure 1b" caption="Investment (goluca)" src="svg/oranges/01_investment.svg" >}}
+
 ### Buying stock / inventory
 
 For each stage there is only the entries of that stage although the balances of any nodes
@@ -93,6 +95,8 @@ B -- £25 --> P
 F -- 25 🍊 --> Business
 {{< /mermaid_fig >}}
 
+{{< svg_fig title="Figure 2b" caption="Buying stock (goluca)" src="svg/oranges/02_buy_oranges.svg" >}}
+
 ### Selling the stock at market
 
 So now we go to market and sell the oranges:
@@ -120,6 +124,8 @@ S -- £37.50 --> B
 M -- £37.50 --> Business
 Business -- 25 🍊 --> M
 {{< /mermaid_fig >}}
+
+{{< svg_fig title="Figure 3b" caption="Selling the stock (goluca)" src="svg/oranges/03_sell_oranges.svg" >}}
 
 So when you make a sale you transfer money from the Sales revenue node to the cash
 node.
@@ -160,6 +166,8 @@ M -- £37.50 --> Business
 Business -- 25 🍊 --> M
 {{< /mermaid_fig>}}
 
+{{< svg_fig title="Figure 4b" caption="Summary (goluca)" src="svg/oranges/04_summary.svg" >}}
+
 From this you can see that no money is owed to the Farmer nor is there any stock. There
 is also a nice flow of capital from left to right. The total value of the business is the sum
 of all the nodes (1) inside the internal box. Since this is a directed graph this is necessarily the
@@ -193,6 +201,8 @@ S -- £37.50 --> B
 B -- £25 --> P
 {{< /mermaid_fig>}}
 
+{{< svg_fig title="Figure 5b" caption="Summary for the business (goluca)" src="svg/oranges/05_business_summary.svg" >}}
+
 ## Adding an example liability
 
 If we modify the story a bit we can add a liability. If instead of giving cash to the farmer
@@ -220,6 +230,8 @@ E -- £25 --> B
 S -- £37.50 --> B
 F -- £25 --> P
 {{< /mermaid_fig>}}
+
+{{< svg_fig title="Figure 6b" caption="Unfinished business with a liability (goluca)" src="svg/oranges/06_liability.svg" >}}
 
 Looking at the business we have inputs and outputs in external nodes (in bold edges) and internal nodes such
 as assets and liabilities (in thin edges).
