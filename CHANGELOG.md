@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.2.5] - 2026-03-06
+
+ - Release prep
+
 ## [0.2.4] - 2026-03-06
 
  - Starting transition to own goluca format
