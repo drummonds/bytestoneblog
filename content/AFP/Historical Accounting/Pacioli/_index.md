@@ -35,9 +35,9 @@ is called Memorandum (Memoriale) , the second Journal (Giornale) , and the third
 Ledger (Quaderno). Many, on account of their small business, use only the last
 two, that is, the journal and the ledger.
 ```
-Although Pacioli counts three books, the inventory is an important part of the
+So including the inventory Paciolio has four books.  The inventory is an important part of the
 process and the simplest to understand.  In a stock take at the end of a year
-it is rare that there is an exact match and some adjustments will be needed.
+it is rare that there is an exact match and some adjustments will be needed, so you will need an annual inventory.
 Constructing the inventory is also the starting point of accounting records.  It
 will be a much smaller document than the others.
 
