@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.2.6] - 2026-03-07
+
+ - Fixing counting error
+
 ## [0.2.5] - 2026-03-06
 
  - Release prep
