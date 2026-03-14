@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.2.9] - 2026-03-14
+
+ - Adding docs
+
 ## [0.2.8] - 2026-03-14
 
  - Updating date
