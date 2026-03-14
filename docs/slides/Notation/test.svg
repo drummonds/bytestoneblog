@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewBox="0 0 679.3333740234375 251.25"
+    style="max-width: 679.3333740234375px;" class="flowchart" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns="http://www.w3.org/2000/svg" width="100%" id="mermaid-1737854097114">
+    <style>
+        #mermaid-1737854097114 {
+            font-family: "trebuchet ms", verdana, arial, sans-serif;
+            font-size: 16px;
+            fill: #333;
+        }
+
+        #mermaid-1737854097114 .error-icon {
+            fill: #552222;
+        }
+
+        #mermaid-1737854097114 .error-text {
+            fill: #552222;
+            stroke: #552222;
+        }
+
+        #mermaid-1737854097114 .edge-thickness-normal {
+            stroke-width: 1px;
+        }
+
+        #mermaid-1737854097114 .edge-thickness-thick {
+            stroke-width: 3.5px;
+        }
+
+        #mermaid-1737854097114 .edge-pattern-solid {
+            stroke-dasharray: 0;
+        }
+
+        #mermaid-1737854097114 .edge-thickness-invisible {
+            stroke-width: 0;
+            fill: none;
+        }
+
+        #mermaid-1737854097114 .edge-pattern-dashed {
+            stroke-dasharray: 3;
+        }
+
+        #mermaid-1737854097114 .edge-pattern-dotted {
+            stroke-dasharray: 2;
+        }
+
+        #mermaid-1737854097114 .marker {
+            fill: #333333;
+            stroke: #333333;
+        }
+
+        #mermaid-1737854097114 .marker.cross {
+            stroke: #333333;
+        }
+
+        #mermaid-1737854097114 svg {
+            font-family: "trebuchet ms", verdana, arial, sans-serif;
+            font-size: 16px;
+        }
+
+        #mermaid-1737854097114 p {
+            margin: 0;
+        }
+
+        #mermaid-1737854097114 .label {
+            font-family: "trebuchet ms", verdana, arial, sans-serif;
+            color: #333;
+        }
+
+        #mermaid-1737854097114 .cluster-label text {
+            fill: #333;
+        }
+
+        #mermaid-1737854097114 .cluster-label span {
+            color: #333;
+        }
+
+        #mermaid-1737854097114 .cluster-label span p {
+            background-color: transparent;
+        }
+
+        #mermaid-1737854097114 .label text,
+        #mermaid-1737854097114 span {
+            fill: #333;
+            color: #333;
+        }
+
+        #mermaid-1737854097114 .node rect,
+        #mermaid-1737854097114 .node circle,
+        #mermaid-1737854097114 .node ellipse,
+        #mermaid-1737854097114 .node polygon,
+        #mermaid-1737854097114 .node path {
+            fill: #ECECFF;
+            stroke: #9370DB;
+            stroke-width: 1px;
+        }
+
+        #mermaid-1737854097114 .rough-node .label text,
+        #mermaid-1737854097114 .node .label text,
+        #mermaid-1737854097114 .image-shape .label,
+        #mermaid-1737854097114 .icon-shape .label {
+            text-anchor: middle;
+        }
+
+        #mermaid-1737854097114 .node .katex path {
+            fill: #000;
+            stroke: #000;
+            stroke-width: 1px;
+        }
+
+        #mermaid-1737854097114 .rough-node .label,
+        #mermaid-1737854097114 .node .label,
+        #mermaid-1737854097114 .image-shape .label,
+        #mermaid-1737854097114 .icon-shape .label {
+            text-align: center;
+        }
+
+        #mermaid-1737854097114 .node.clickable {
+            cursor: pointer;
+        }
+
+        #mermaid-1737854097114 .root .anchor path {
+            fill: #333333 !important;
+            stroke-width: 0;
+            stroke: #333333;
+        }
+
+        #mermaid-1737854097114 .arrowheadPath {
+            fill: #333333;
+        }
+
+        #mermaid-1737854097114 .edgePath .path {
+            stroke: #333333;
+            stroke-width: 2.0px;
+        }
+
+        #mermaid-1737854097114 .flowchart-link {
+            stroke: #333333;
+            fill: none;
+        }
+
+        #mermaid-1737854097114 .edgeLabel {
+            background-color: rgba(232, 232, 232, 0.8);
+            text-align: center;
+        }
+
+        #mermaid-1737854097114 .edgeLabel p {
+            background-color: rgba(232, 232, 232, 0.8);
+        }
+
+        #mermaid-1737854097114 .edgeLabel rect {
+            opacity: 0.5;
+            background-color: rgba(232, 232, 232, 0.8);
+            fill: rgba(232, 232, 232, 0.8);
+        }
+
+        #mermaid-1737854097114 .labelBkg {
+            background-color: rgba(232, 232, 232, 0.5);
+        }
+
+        #mermaid-1737854097114 .cluster rect {
+            fill: #ffffde;
+            stroke: #aaaa33;
+            stroke-width: 1px;
+        }
+
+        #mermaid-1737854097114 .cluster text {
+            fill: #333;
+        }
+
+        #mermaid-1737854097114 .cluster span {
+            color: #333;
+        }
+
+        #mermaid-1737854097114 div.mermaidTooltip {
+            position: absolute;
+            text-align: center;
+            max-width: 200px;
+            padding: 2px;
+            font-family: "trebuchet ms", verdana, arial, sans-serif;
+            font-size: 12px;
+            background: hsl(80, 100%, 96.2745098039%);
+            border: 1px solid #aaaa33;
+            border-radius: 2px;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        #mermaid-1737854097114 .flowchartTitleText {
+            text-anchor: middle;
+            font-size: 18px;
+            fill: #333;
+        }
+
+        #mermaid-1737854097114 rect.text {
+            fill: none;
+            stroke-width: 0;
+        }
+
+        #mermaid-1737854097114 .icon-shape,
+        #mermaid-1737854097114 .image-shape {
+            background-color: rgba(232, 232, 232, 0.8);
+            text-align: center;
+        }
+
+        #mermaid-1737854097114 .icon-shape p,
+        #mermaid-1737854097114 .image-shape p {
+            background-color: rgba(232, 232, 232, 0.8);
+            padding: 2px;
+        }
+
+        #mermaid-1737854097114 .icon-shape rect,
+        #mermaid-1737854097114 .image-shape rect {
+            opacity: 0.5;
+            background-color: rgba(232, 232, 232, 0.8);
+            fill: rgba(232, 232, 232, 0.8);
+        }
+
+        #mermaid-1737854097114 :root {
+            --mermaid-font-family: "trebuchet ms", verdana, arial, sans-serif;
+        }
+
+        #mermaid-1737854097114 .classAssets&gt;
+
+        * {
+            fill: #CDA !important;
+        }
+
+        #mermaid-1737854097114 .classAssets span {
+            fill: #CDA !important;
+        }
+
+        #mermaid-1737854097114 .classBusiness&gt;
+
+        * {
+            fill: #FFFFDE !important;
+        }
+
+        #mermaid-1737854097114 .classBusiness span {
+            fill: #FFFFDE !important;
+        }
+
+        #mermaid-1737854097114 .classEquity&gt;
+
+        * {
+            fill: #EEB !important;
+            stroke-width: 4px !important;
+        }
+
+        #mermaid-1737854097114 .classEquity span {
+            fill: #EEB !important;
+            stroke-width: 4px !important;
+        }
+
+        #mermaid-1737854097114 .classExpense&gt;
+
+        * {
+            fill: #FCC !important;
+            stroke-width: 4px !important;
+        }
+
+        #mermaid-1737854097114 .classExpense span {
+            fill: #FCC !important;
+            stroke-width: 4px !important;
+        }
+
+        #mermaid-1737854097114 .classIncome&gt;
+
+        * {
+            fill: #BCE !important;
+            stroke-width: 4px !important;
+        }
+
+        #mermaid-1737854097114 .classIncome span {
+            fill: #BCE !important;
+            stroke-width: 4px !important;
+        }
+
+        #mermaid-1737854097114 .classInvestor&gt;
+
+        * {
+            fill: #ECECFF !important;
+            stroke-width: 4px !important;
+        }
+
+        #mermaid-1737854097114 .classInvestor span {
+            fill: #ECECFF !important;
+            stroke-width: 4px !important;
+        }
+
+        #mermaid-1737854097114 .classLiabilities&gt;
+
+        * {
+            fill: #DDD !important;
+        }
+
+        #mermaid-1737854097114 .classLiabilities span {
+            fill: #DDD !important;
+        }
+    </style>
+    <g>
+        <marker orient="auto" markerHeight="8" markerWidth="8" markerUnits="userSpaceOnUse" refY="5" refX="5"
+            viewBox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1737854097114_flowchart-v2-pointEnd">
+            <path style="stroke-width: 1px; stroke-dasharray: 1px, 0px;" class="arrowMarkerPath"
+                d="M 0 0 L 10 5 L 0 10 z"></path>
+        </marker>
+        <marker orient="auto" markerHeight="8" markerWidth="8" markerUnits="userSpaceOnUse" refY="5" refX="4.5"
+            viewBox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1737854097114_flowchart-v2-pointStart">
+            <path style="stroke-width: 1px; stroke-dasharray: 1px, 0px;" class="arrowMarkerPath"
+                d="M 0 5 L 10 10 L 10 0 z"></path>
+        </marker>
+        <marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5" refX="11"
+            viewBox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1737854097114_flowchart-v2-circleEnd">
+            <circle style="stroke-width: 1px; stroke-dasharray: 1px, 0px;" class="arrowMarkerPath" r="5" cy="5" cx="5">
+            </circle>
+        </marker>
+        <marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5" refX="-1"
+            viewBox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1737854097114_flowchart-v2-circleStart">
+            <circle style="stroke-width: 1px; stroke-dasharray: 1px, 0px;" class="arrowMarkerPath" r="5" cy="5" cx="5">
+            </circle>
+        </marker>
+        <marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5.2" refX="12"
+            viewBox="0 0 11 11" class="marker cross flowchart-v2" id="mermaid-1737854097114_flowchart-v2-crossEnd">
+            <path style="stroke-width: 2px; stroke-dasharray: 1px, 0px;" class="arrowMarkerPath"
+                d="M 1,1 l 9,9 M 10,1 l -9,9"></path>
+        </marker>
+        <marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5.2" refX="-1"
+            viewBox="0 0 11 11" class="marker cross flowchart-v2" id="mermaid-1737854097114_flowchart-v2-crossStart">
+            <path style="stroke-width: 2px; stroke-dasharray: 1px, 0px;" class="arrowMarkerPath"
+                d="M 1,1 l 9,9 M 10,1 l -9,9"></path>
+        </marker>
+        <g class="root">
+            <g class="clusters">
+                <g data-look="classic" id="Internal" class="cluster">
+                    <rect height="235.25" width="213.35000610351562" y="8" x="255.4666748046875"
+                        style="fill:#EEE !important"></rect>
+                    <g transform="translate(333.9583435058594, 8)" class="cluster-label">
+                        <foreignObject height="24" width="56.366668701171875">
+                            <div xmlns="http://www.w3.org/1999/xhtml"
+                                style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                                <span class="nodeLabel">
+                                    <p>Internal</p>
+                                </span></div>
+                        </foreignObject>
+                    </g>
+                </g>
+            </g>
+            <g class="edgePaths">
+                <path marker-end="url(#mermaid-1737854097114_flowchart-v2-pointEnd)" style=""
+                    class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link"
+                    id="L_E_B_0"
+                    d="M157.667,55.25L165.817,55.25C173.967,55.25,190.267,55.25,206.567,55.25C222.867,55.25,239.167,55.25,256.69,59.16C274.213,63.07,292.959,70.89,302.332,74.8L311.705,78.71">
+                </path>
+                <path marker-end="url(#mermaid-1737854097114_flowchart-v2-pointEnd)" style=""
+                    class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link"
+                    id="L_S_B_1"
+                    d="M144.475,161.5L154.824,161.5C165.172,161.5,185.869,161.5,204.368,161.5C222.867,161.5,239.167,161.5,258.904,154.792C278.642,148.085,301.818,134.669,313.405,127.962L324.993,121.254">
+                </path>
+                <path marker-end="url(#mermaid-1737854097114_flowchart-v2-pointEnd)" style=""
+                    class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link"
+                    id="L_F_P_2"
+                    d="M419.067,188.75L427.358,188.75C435.65,188.75,452.233,188.75,466.788,188.75C481.342,188.75,493.867,188.75,505.725,188.75C517.583,188.75,528.775,188.75,534.371,188.75L539.967,188.75">
+                </path>
+            </g>
+            <g class="edgeLabels">
+                <g transform="translate(206.5666732788086, 55.25)" class="edgeLabel">
+                    <g transform="translate(-12.574996948242188, -12)" class="label">
+                        <foreignObject height="24" width="25.149993896484375">
+                            <div class="labelBkg" xmlns="http://www.w3.org/1999/xhtml"
+                                style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                                <span class="edgeLabel">
+                                    <p>£25</p>
+                                </span></div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(206.5666732788086, 161.5)" class="edgeLabel">
+                    <g transform="translate(-23.900001525878906, -12)" class="label">
+                        <foreignObject height="24" width="47.80000305175781">
+                            <div class="labelBkg" xmlns="http://www.w3.org/1999/xhtml"
+                                style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                                <span class="edgeLabel">
+                                    <p>£37.50</p>
+                                </span></div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(506.3916778564453, 188.75)" class="edgeLabel">
+                    <g transform="translate(-12.574996948242188, -12)" class="label">
+                        <foreignObject height="24" width="25.149993896484375">
+                            <div class="labelBkg" xmlns="http://www.w3.org/1999/xhtml"
+                                style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                                <span class="edgeLabel">
+                                    <p>£25</p>
+                                </span></div>
+                        </foreignObject>
+                    </g>
+                </g>
+            </g>
+            <g class="nodes">
+                <g transform="translate(82.83333587646484, 55.25)" id="flowchart-E-0" class="node default classEquity">
+                    <rect height="39" width="149.6666717529297" y="-19.5" x="-74.83333587646484" ry="19.5" rx="19.5"
+                        style="fill:#EEB !important;stroke-width:4px !important" class="basic label-container"></rect>
+                    <g transform="translate(-62.458335876464844, -12)" style="" class="label">
+                        <rect></rect>
+                        <foreignObject height="24" width="124.91667175292969">
+                            <div xmlns="http://www.w3.org/1999/xhtml"
+                                style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                                <span class="nodeLabel">
+                                    <p>Equity Input <strong>£-25</strong></p>
+                                </span></div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(362.1416778564453, 99.75)" id="flowchart-B-2" class="node default classAssets">
+                    <rect height="39" width="163.35000610351562" y="-19.5" x="-81.67500305175781" ry="19.5" rx="19.5"
+                        style="fill:#CDA !important" class="basic label-container"></rect>
+                    <g transform="translate(-69.30000305175781, -12)" style="" class="label">
+                        <rect></rect>
+                        <foreignObject height="24" width="138.60000610351562">
+                            <div xmlns="http://www.w3.org/1999/xhtml"
+                                style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                                <span class="nodeLabel">
+                                    <p>Cash Assets <strong>£62.50</strong></p>
+                                </span></div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(362.1416778564453, 188.75)" id="flowchart-F-3"
+                    class="node default classLiabilities">
+                    <rect height="39" width="113.85000610351562" y="-19.5" x="-56.92500305175781" ry="19.5" rx="19.5"
+                        style="fill:#DDD !important" class="basic label-container"></rect>
+                    <g transform="translate(-44.55000305175781, -12)" style="" class="label">
+                        <rect></rect>
+                        <foreignObject height="24" width="89.10000610351562">
+                            <div xmlns="http://www.w3.org/1999/xhtml"
+                                style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                                <span class="nodeLabel">
+                                    <p>Farmer <strong>£-25</strong></p>
+                                </span></div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(82.83333587646484, 161.5)" id="flowchart-S-4" class="node default classIncome">
+                    <rect height="39" width="123.28334045410156" y="-19.5" x="-61.64167022705078" ry="19.5" rx="19.5"
+                        style="fill:#BCE !important;stroke-width:4px !important" class="basic label-container"></rect>
+                    <g transform="translate(-49.26667022705078, -12)" style="" class="label">
+                        <rect></rect>
+                        <foreignObject height="24" width="98.53334045410156">
+                            <div xmlns="http://www.w3.org/1999/xhtml"
+                                style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                                <span class="nodeLabel">
+                                    <p>Sales <strong>£-37.50</strong></p>
+                                </span></div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(607.6500091552734, 188.75)" id="flowchart-P-5"
+                    class="node default classExpense">
+                    <rect height="39" width="127.36666870117188" y="-19.5" x="-63.68333435058594" ry="19.5" rx="19.5"
+                        style="fill:#FCC !important;stroke-width:4px !important" class="basic label-container"></rect>
+                    <g transform="translate(-51.30833435058594, -12)" style="" class="label">
+                        <rect></rect>
+                        <foreignObject height="24" width="102.61666870117188">
+                            <div xmlns="http://www.w3.org/1999/xhtml"
+                                style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                                <span class="nodeLabel">
+                                    <p>Purchases <strong>£25</strong></p>
+                                </span></div>
+                        </foreignObject>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

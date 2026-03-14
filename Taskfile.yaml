@@ -30,6 +30,12 @@ tasks:
     cmds:
       - hugo --minify
 
+  docs:build:
+    desc: Build the Hugo site into docs/ for statichost deployment
+    deps: [svg:generate]
+    cmds:
+      - hugo --minify -d docs
+
   serve:
     desc: Run Hugo development server
     cmds:
@@ -75,20 +81,6 @@ tasks:
     cmds:
       - go fmt ./...
       - go vet ./...
-
-  release:*:*:
-    desc: "Release: task release:v0.1.0:\"new blog post\""
-    vars:
-      TAG: '{{index .MATCH 0}}'
-      MSG: '{{index .MATCH 1}}'
-    cmds:
-      - task: hugo
-      - task: check
-      - git add .
-      - git commit -am "{{.MSG}}"
-      - git tag "{{.TAG}}"
-      - git push origin "{{.TAG}}"
-      - git push
 
   book:md:
     desc: Generate combined AFP markdown (for debugging)

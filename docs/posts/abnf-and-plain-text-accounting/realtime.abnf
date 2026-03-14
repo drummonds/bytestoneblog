@@ -1,0 +1,9 @@
+plain-text-accounting = *{ transaction | posting | balance-check | data-point}
+balance-check = datetime ["%" knowledge_date_time] "balance" account amount [comment] EOL
+data-point = datetime ["%" knowledge_date_time] "data" name value [comment] EOL
+posting = datetime ["%" knowledge_date_time] ("*" "transaction"} *2{comment} EOL {metadata | posting_leg}
+balance-check = datetime ["%" knowledge_date_time] "balance" account amount [comment] EOL
+metadata = "  " parameter [comment] EOL
+posting_leg = " "account amount [comment] EOL
+posting_id_link = " " parameter EOL  ; Unique reference to posting
+comment = ";" comment_text EOL

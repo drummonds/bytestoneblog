@@ -1,0 +1,130 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.157.0"><title>Accounting sign conventions | Bytestone Blog</title><meta name=description content="Varying notes on a very long journey to build bytestone."><link rel=stylesheet href=../../../css/simpleness.css><link rel=stylesheet href=../../../css/style.css><link rel=canonical href=https://www.bytestone.uk/afp/movements/conventions/><link rel=alternate type=application/rss+xml href title="Bytestone Blog"><link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css integrity=sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq crossorigin=anonymous></link><script defer src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js integrity=sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js integrity=sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI crossorigin=anonymous onload=renderMathInElement(document.body)></script></head><body class=container><nav class=navigation><div class=nav-left><div class="nav-item nav-title"><a href=../../../>Bytestone Blog</a></div><div class="nav-item nav-menu"><a href=../../../>Home</a>
+<a href=../../../afp/>AFP</a>
+<a href=../../../about/>About</a></div></div><div class="nav-item nav-right fontawesome"></div></nav><article class=post><header class=post-header><h1 style=text-align:center>Accounting sign conventions</h1><div class=post-metadata><time datetime=2025-01-05T00:00:00Z>2025 January 05</time> &nbsp;
+<i class="far fa-clock"></i>
+4 min
+15 s
+&nbsp;</div></header><div class=post-text><p>There are at least two of ways of modelling the account movements. The notation of
+<em><a href=../../../afp/references/#kleppmann-2011>Kleppmann 2011</a></em> chooses the opposite notation although slightly more obvious is the
+opposite of accounting notation as
+published by Pacioli.</p><p>This is the overall position for an investor transferring £5 to a business for investment:</p><div class=mermaid-container style=text-align:center><div class=mermaid>flowchart LR
+classDef classAssets fill:#CDA;
+classDef classBusiness fill:#FFFFDE;
+classDef classEquity fill:#EEB,stroke-width:4px;
+classDef classExpense fill:#FCC,stroke-width:4px;
+classDef classIncome fill:#BCE,stroke-width:4px;
+classDef classInvestor fill:#ECECFF,stroke-width:4px;
+classDef classLiabilities fill:#DDD;
+class I classInvestor;
+I([Investor])
+subgraph Business
+B([...Accounts...])
+class B classAssets;
+end
+I -- £5 --> Business</div></div><p>and if you had a single entry accounting system you might represent this as a positive balance.
+For a double entry accounting system you are representing not just the value but a movement from
+one account to another.</p><p>There are now choices on how to represent this transaction inside the business when you have two accounts/nodes:</p><div class=mermaid-container style=text-align:center><div class=mermaid>flowchart LR
+classDef classAssets fill:#CDA;
+classDef classBusiness fill:#FFFFDE;
+classDef classEquity fill:#EEB,stroke-width:4px;
+classDef classExpense fill:#FCC,stroke-width:4px;
+classDef classIncome fill:#BCE,stroke-width:4px;
+classDef classInvestor fill:#ECECFF,stroke-width:4px;
+classDef classLiabilities fill:#DDD;
+I([Investor])
+class I classInvestor;
+subgraph Business
+direction LR
+E([Equity Input])
+class E classEquity;
+B([Cash Assets])
+class B classAssets;
+end
+I -- £5 --> Business
+E x-- ?? --x B</div></div><p>So following Kleppman you can do the following with positive balances for assets and negative
+balances for equity:</p><div class=mermaid-container style=text-align:center><div class=mermaid>flowchart LR
+classDef classAssets fill:#CDA;
+classDef classBusiness fill:#FFFFDE;
+classDef classEquity fill:#EEB,stroke-width:4px;
+classDef classExpense fill:#FCC,stroke-width:4px;
+classDef classIncome fill:#BCE,stroke-width:4px;
+classDef classInvestor fill:#ECECFF,stroke-width:4px;
+classDef classLiabilities fill:#DDD;
+I([Investor])
+class I classInvestor;
+subgraph Business
+direction LR
+E([Equity Input **£-5**])
+class E classEquity;
+B([Cash Assets **£5**])
+class B classAssets;
+end
+I -- £5 --> Business
+E -- £5 --> B</div></div><p>or following conventional accounting and reversing direction:</p><div class=mermaid-container style=text-align:center><div class=mermaid>flowchart LR
+classDef classAssets fill:#CDA;
+classDef classBusiness fill:#FFFFDE;
+classDef classEquity fill:#EEB,stroke-width:4px;
+classDef classExpense fill:#FCC,stroke-width:4px;
+classDef classIncome fill:#BCE,stroke-width:4px;
+classDef classInvestor fill:#ECECFF,stroke-width:4px;
+classDef classLiabilities fill:#DDD;
+I([Investor])
+class I classInvestor;
+subgraph Business
+direction LR
+E([Equity Input **£5**])
+class E classEquity;
+B([Cash Assets **£-5**])
+class B classAssets;
+end
+I -- £5 --> Business
+B -- £5 --> E</div></div><p>This seems slightly odd in that the cash is negative when you add cash, but the equity account
+representing the investor is positive and does not change as the cash is used in the entity, eg
+purchasing stock. It may make more sense in that the investor is not giving cash but rather
+becoming a creditor by providing liquidity. So the focus is on the creditor relationship
+rather than on the actual money.
+Using conventional accounting terminology the same arrangement can be looked at like:</p><div class=mermaid-container style=text-align:center><div class=mermaid>flowchart LR
+classDef classAssets fill:#CDA;
+classDef classBusiness fill:#FFFFDE;
+classDef classEquity fill:#EEB,stroke-width:4px;
+classDef classExpense fill:#FCC,stroke-width:4px;
+classDef classIncome fill:#BCE,stroke-width:4px;
+classDef classInvestor fill:#ECECFF,stroke-width:4px;
+classDef classLiabilities fill:#DDD;
+I([Investor])
+class I classInvestor;
+subgraph Business
+direction LR
+E([Equity Input<br>Dr ∥ Cr<br>-- ∥ **£5**])
+class E classEquity;
+B([Cash Assets<br>Dr ∥ Cr<br>**£5** ∥ -- ])
+class B classAssets;
+end
+I -- £5 --> Business
+B -- Dr £5 Cr --> E</div></div><p>The nice thing about this is that the Equity account is a creditor which is the relationship
+of the investor to the entity.</p><p>Pacioli&rsquo;s example journal entry for
+accounting for inventory cash is:</p><p><code>November 8, MCCCCLXXXXIII in Venice. Per cash // A - Capital 24 gold ducats...</code></p><p>where per is translated as italian for By and A Italian for to. This this argues for an
+arrow going from cash to Capital / Equity. Also there is a nice relationship between the lefthand
+side of the journal and the left hand side of the ledger.</p><p>The ledger entries the left hand side is <code>in dare</code> &ldquo;shall give&rdquo; and for the right hand side
+<code>in havare</code> &ldquo;shall receive&rdquo;. Benedetto Cotrugli was writing a little earlier than Pacioli in 1458
+in the <code>Art of Trade</code> and explains ledgers with
+<code>the right-hand side of the book under “sums owed” and on the left “sums owing".</code><br>He keeps the cash as a debtor column as money owed. This seems the same as current practice.</p><p>I am going to quote directly from <em><a href=../../../afp/references/#geisjbeck-1914>Geisjbeck 1914</a></em> <strong>Chapter 11</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-fallback data-lang=fallback><span style=display:flex><span>CHAPTER 11.
+</span></span><span style=display:flex><span>THE TWO EXPRESSIONS USED IN THE JOURNAL, ESPECIALLY IN VENICE, THE ONE
+</span></span><span style=display:flex><span>CALLED &#34;PER,&#34; AND THE OTHER &#34;A,&#34; AND WHAT IS UNDERSTOOD BY THEM.
+</span></span><span style=display:flex><span>As we have said, there are two expressions {termini} used in the said Journal; the one is called &#34;per,&#34;
+</span></span><span style=display:flex><span>and the other is called &#34;a,&#34; each of which has a meaning of its own. &#34;Per&#34; indicates the debtor {debitore}
+</span></span><span style=display:flex><span>one or more as the case may be, and &#34;a,&#34; creditor {creditore} , one or more as the case may be. Never is
+</span></span><span style=display:flex><span>any item entered in the Journal which also is to be entered in the Ledger, without preceding it by one of
+</span></span><span style=display:flex><span>the two expressions. At the beginning of each entry, we always provide &#34;per,&#34; because, first, the debtor
+</span></span><span style=display:flex><span>must be given, and immediately after the creditor, the one separated from the other by two little slanting
+</span></span><span style=display:flex><span>parallels {virgolette} , thus, //, as the example below will show.
+</span></span></code></pre></div><p>This is a tricky area as <a href=../../../afp/references/#Cripps-1994>Cripps modern translation</a> gets it the wrong way round see the foot notes on page 20 say:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-fallback data-lang=fallback><span style=display:flex><span>1. &#34;Per,&#34; that is &#34;To&#34;
+</span></span><span style=display:flex><span>2. &#34;A,&#34; that is &#34;By&#34;
+</span></span></code></pre></div><p>Pacioli has the left column marked per &ldquo;in dare&rdquo; and the right &ldquo;in havare&rdquo;. Later the left hand
+side became a debit column mark dr and the right hand side a credit column marked cr.</p><h2 id=summary>Summary</h2><p>There are a number of ways to define an account, the best way is to look at the cash account:</p><table><thead><tr><th>Source</th><th>Type</th><th>Result</th></tr></thead><tbody><tr><td>Here</td><td>Asset</td><td>+ve Positive</td></tr><tr><td>Pacioli</td><td>Debtor</td><td>In dare (-ve)</td></tr><tr><td>Accounting Practice</td><td>Debtor</td><td>Dr</td></tr><tr><td><a href=https://ledger-cli.org/doc/ledger3.html#Stating-where-money-goes>Ledger</a></td><td>Assets</td><td>+Ve</td></tr><tr><td>Kleppmann</td><td>Asset</td><td>+Ve</td></tr><tr><td>HLedger</td><td>Asset with sign flip</td><td>-ve</td></tr></tbody></table><p><a href=../../../afp/movements/>Parent</a> <a href=../../../afp/movements/boundaries/>Prev</a> <a href=../../../afp/movements/graphtheory/>Next</a></p></div><footer class=post-footer></footer><div class=comments><div class=comments></div></div></article><div class=foot>&copy; 2018 - 2026 &#183;
+<a href=../../../>Bytestone Blog </a>&#183;
+Theme <a href=https://github.com/RainerChiang/simpleness>Simpleness</a> Powered by <a href=https://gohugo.io/>Hugo</a> &#183;
+<a href=#><i class="fas fa-chevron-up"></i></a></div></body><script src=../../../js/lazyload.min.js></script><script>var lazyImage=new LazyLoad({container:document.getElementById("article")})</script><script src=../../../js/feather.min.js></script><script>feather.replace()</script><script type=module>
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js></script><script>MathJax={tex:{displayMath:[["\\[","\\]"],["$$","$$"]],inlineMath:[["\\(","\\)"]]}}</script></html>

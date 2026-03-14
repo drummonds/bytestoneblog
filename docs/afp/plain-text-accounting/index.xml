@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Plain text accounting on Bytestone Blog</title><link>https://www.bytestone.uk/afp/plain-text-accounting/</link><description>Recent content in Plain text accounting on Bytestone Blog</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 10 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.bytestone.uk/afp/plain-text-accounting/index.xml" rel="self" type="application/rss+xml"/><item><title>using Journal entries as plain text</title><link>https://www.bytestone.uk/afp/plain-text-accounting/journalasplaintext/</link><pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate><guid>https://www.bytestone.uk/afp/plain-text-accounting/journalasplaintext/</guid><description>&lt;h1 id="journal-entries"&gt;Journal Entries&lt;/h1&gt;
+&lt;p&gt;Pacioli as translated by &lt;em&gt;&lt;a href="../../afp/references/#geisjbeck-1914"&gt;Geisjbeck 1914&lt;/a&gt;&lt;/em&gt; has a very nice division of the primary records into:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Opening Inventory&lt;/li&gt;
+&lt;li&gt;Day book&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Journal&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Ledger&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The journal is a neat list of entries which are cross referenced and entered in the ledger. Now a computer
+is great at animating that data so you only need to enter the journal data. Each journal entry is a single
+transaction in date order.&lt;/p&gt;
+&lt;h2 id="two-legs-better"&gt;Two legs better&lt;/h2&gt;
+&lt;p&gt;I am taken with the idea of the directed graph to inform the way you create plain text accounting.
+Most plain text formats follow [ledger from John Wiegley] &lt;em&gt;&lt;a href="../../afp/references/#wiegly-2003"&gt;Wiegly 2003&lt;/a&gt;&lt;/em&gt; in that they are journals
+which support transactions with multiple posting legs:&lt;/p&gt;</description></item></channel></rss>

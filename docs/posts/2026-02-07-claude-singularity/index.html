@@ -1,0 +1,28 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.157.0"><title>Claude, Singularity Postgres and Gokrazy | Bytestone Blog</title><meta name=description content="Varying notes on a very long journey to build bytestone."><link rel=stylesheet href=../../css/simpleness.css><link rel=stylesheet href=../../css/style.css><link rel=canonical href=https://www.bytestone.uk/posts/2026-02-07-claude-singularity/><link rel=alternate type=application/rss+xml href title="Bytestone Blog"><link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css integrity=sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq crossorigin=anonymous></link><script defer src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js integrity=sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js integrity=sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI crossorigin=anonymous onload=renderMathInElement(document.body)></script></head><body class=container><nav class=navigation><div class=nav-left><div class="nav-item nav-title"><a href=../../>Bytestone Blog</a></div><div class="nav-item nav-menu"><a href=../../>Home</a>
+<a href=../../afp/>AFP</a>
+<a href=../../about/>About</a></div></div><div class="nav-item nav-right fontawesome"></div></nav><article class=post><header class=post-header><h1 style=text-align:center>Claude, Singularity Postgres and Gokrazy</h1><div class=post-metadata><time datetime=2026-02-07T00:00:00Z>2026 February 07</time> &nbsp;
+<i class="far fa-clock"></i>
+1 min
+26 s
+&nbsp;</div></header><div class=post-text><p>My son wrote a great piece about <a href=https://taydrummond.com/lectures_in_london>Lectures in London</a> which I really like.
+To create the lecture scanning page idea he enlisted ChatGPT.
+As he was writing ChatGPT went from 5.2 to 5.3
+and whereas 5.2 was having difficulties executing the task the latest version 5.3 was very successful.</p><p>He had been chatting to one of his friends at Anthropic who was saying they and openAI were using their coding models for about 70% of the code. It feels like the singularity although it is happening relatively slowly as we go through it eg months and years rather than
+seconds that for instance Nick Bostrom talked about.</p><p>For my own code I tried working with Gokrazy and trying to find a nice way to use databases. go-sqlite was great but using
+a different dialect of SQL leads to trouble and complexity. I thought about CockroachDB as it is written in GO but it is
+quite a large project without an easy build. So I decided to create a translation layer to convert postgres to sqlite and
+then use the pure go sqlite project. For simple cases this worked well and in a few hours I had a working library
+<a href=https://github.com/drummonds/go-postgres>github.com/drummonds/go-postgres</a> and in no time at all a working demo
+todo list that uses it <a href=https://github.com/drummonds/pglike_todo>github.com/drummonds/pglike_todo</a> and this installed
+happily in to gokrazy. A solid win!</p><p>One of the things that has come out of this is the idea that I might concentrate on in home projects being on simple databases and
+using gokrazy on Raspberry pi 5. When I want to grow them I will deploy on cloud architecture rather than deploy baby versions of
+cloud at home.
+I started this particular journey when Paperless-NGX crashed due
+to a postgres database update and I think that I am getting much
+closer to actually getting it done with go-postgres making it simpler
+and Claude helping write the code.</p></div><footer class=post-footer><div class=post-tags><i class="fas fa-tags"></i>
+<a href=../../tags/ai>AI</a>
+&nbsp;</div></footer><div class=comments><div class=comments></div></div></article><div class=foot>&copy; 2018 - 2026 &#183;
+<a href=../../>Bytestone Blog </a>&#183;
+Theme <a href=https://github.com/RainerChiang/simpleness>Simpleness</a> Powered by <a href=https://gohugo.io/>Hugo</a> &#183;
+<a href=#><i class="fas fa-chevron-up"></i></a></div></body><script src=../../js/lazyload.min.js></script><script>var lazyImage=new LazyLoad({container:document.getElementById("article")})</script><script src=../../js/feather.min.js></script><script>feather.replace()</script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js></script><script>MathJax={tex:{displayMath:[["\\[","\\]"],["$$","$$"]],inlineMath:[["\\(","\\)"]]}}</script></html>

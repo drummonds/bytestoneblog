@@ -7,7 +7,7 @@ updated: 2026-03-14
 Plain text accounting is a useful way to describe a machine and human readable accounting journal.  Some formats
 are single file format and some are multiple file formats.  F
 
-The software primarily beancount and ledger transform the data into useful reports as well as validating that the
+The software primarily Beancount and ledger transform the data into useful reports as well as validating that the
 data is correct in the first place.
 
 The reports that can be run are:
