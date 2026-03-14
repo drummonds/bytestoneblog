@@ -1,7 +1,7 @@
 ---
 title: ABNF and Plain Text Accounting
 date: 2026-02-26
-updated: 2026-03-01
+updated: 2026-03-14
 ---
 
 Plain text accounting is a useful way to describe a machine and human readable accounting journal.  Some formats
@@ -32,7 +32,9 @@ as accounting movements.
 
 # Data formats
 
-This is a real time format I have used:
+##  PTA ABNF
+
+This is a plain text accounting (PTA) real time format I have used:
 
 ```ABNF
 plain-text-accounting = *(transaction / posting / balance-check / data-point)
@@ -51,6 +53,19 @@ posting-id-link = " " parameter EOL
 
 comment = ";" comment-text EOL
 ```
+
+### Datetime formats
+
+
+Default format is YYYY-MM-DDThh:mm:ssZ for UTC format, or YYYY-MM-DDThh:mm:ss+ZZ:zz or for microsecond format YYYY-MM-DDThh:mm:ss.uuuuuu+ZZ:zz (both millisecond and nano second should be valid)
+
+Alternatives will be
+
+-"Open" which is a date time at the start of the ledger "Close" I think will be less common at the end
+- YYYY-MM-DD underordered datetime
+- YYYY-MM-DD_n is an orderdate dateime allowing intermediate balance checks to take place
+
+Looking for notations for start of period and end of period
 
 ![PTA Railroad Diagram](pta-railroad.svg)
 
