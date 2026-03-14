@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.2.7] - 2026-03-14
+
+ - Updating PTA ABNF
+
 ## [0.2.6] - 2026-03-07
 
  - Fixing counting error
