@@ -1,6 +1,6 @@
 ---
 title: ABNF and Plain Text Accounting
-date: 2026-02-26
+date: 2026-03-14
 updated: 2026-03-14
 ---
 
