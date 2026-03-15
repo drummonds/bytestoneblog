@@ -63,3 +63,8 @@ tasks:
     cmds:
       - go run ./cmd/afp2book -pdf afp-book.pdf
 
+  post:release:
+    desc: Commands to run after sucessful release
+    cmds:
+      - task public:build && tp pages deploy
+
