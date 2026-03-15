@@ -30,51 +30,21 @@ tasks:
     cmds:
       - hugo --minify
 
-  docs:build:
-    desc: Build the Hugo site into docs/ for statichost deployment
+  public:build:
+    desc: Build the Hugo site into public/ for blog deployment
     deps: [svg:generate]
     cmds:
-      - hugo --minify -d docs
+      - hugo --minify
+
+  docs:build:
+    desc: Build project documentation into docs/
+    cmds:
+      - task-plus md2html --file index.md --dst docs
 
   serve:
     desc: Run Hugo development server
     cmds:
       - hugo server -D
-
-  server:
-    desc: Build and run the Go file server locally against public/
-    deps: [hugo]
-    cmds:
-      - go run ./cmd/server -dir public
-
-  container-build:
-    desc: Build the container image with Podman
-    cmds:
-      - podman build -t blog:local -f Containerfile .
-
-  container-run:
-    desc: Run the container image locally
-    deps: [container-build]
-    cmds:
-      - podman run --rm -p 8080:8080 blog:local
-
-  infra-init:
-    desc: Initialize Terraform/OpenTofu
-    dir: infra
-    cmds:
-      - tofu init
-
-  infra-plan:
-    desc: Show Terraform/OpenTofu plan
-    dir: infra
-    cmds:
-      - tofu plan
-
-  infra-apply:
-    desc: Apply Terraform/OpenTofu changes
-    dir: infra
-    cmds:
-      - tofu apply
 
   check:
     desc: Run Go checks (fmt, vet, test)

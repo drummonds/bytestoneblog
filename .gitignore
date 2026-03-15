@@ -1,29 +1,12 @@
 # Hugo build output
 public/
+
+# Generated documentation
+docs/
 .hugo_build.lock
 
-# Terraform / OpenTofu (GCP)
-infra/.terraform/
-infra/*.tfstate
-infra/*.tfstate.backup
-infra/.terraform.lock.hcl
-infra/terraform.tfvars
-
-# Terraform / OpenTofu (OVH)
-infra/ovh/.terraform/
-infra/ovh/*.tfstate
-infra/ovh/*.tfstate.backup
-infra/ovh/.terraform.lock.hcl
-infra/ovh/terraform.tfvars
-infra/ovh/kubeconfig.yml
-
 # Go
-/cmd/server/server
-/cmd/deploy/deploy
-/cmd/bootstrap/bootstrap
 /cmd/afp2book/afp2book
-/deploy
-/bootstrap
 
 # Book generation
 afp-book.md
@@ -35,3 +18,4 @@ ManualNextSteps.md
 .env
 
 .claude/settings.json
+.vscode/

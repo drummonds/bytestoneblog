@@ -40,4 +40,4 @@ These pages appear with a blue **AFP** badge in the blog list. The templates mer
 | Documentation | https://h3-bytestoneblog.statichost.page/ |
 | Source (Codeberg) | https://codeberg.org/hum3/bytestoneblog |
 | Mirror (GitHub) | https://github.com/drummonds/bytestoneblog |
-| Docs repo | https://codeberg.org/hum3/bytestoneblog-docs |
+| Blog | https://www.bytestone.uk/ |

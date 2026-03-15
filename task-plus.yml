@@ -3,6 +3,11 @@ remotes:
   - github
 pages_build:
   - task docs:build
+  - task public:build
 pages_deploy:
   - type: statichost
+    site: h3-bytestoneblog
+    dir: docs
+  - type: statichost
     site: blog-bytestone
+    dir: public
