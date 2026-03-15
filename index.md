@@ -4,7 +4,6 @@ Tooling and infrastructure documentation for the [Bytestone Blog](https://www.by
 
 ## Commands
 
-- `cmd/server` — Go file server for serving the Hugo site
 - `cmd/afp2book` — Generate AFP (Accounting for Programmers) book from blog content
 
 ## Build
@@ -14,7 +13,6 @@ Tooling and infrastructure documentation for the [Bytestone Blog](https://www.by
 | `task public:build` | Build the Hugo blog into `public/` |
 | `task docs:build` | Build this documentation into `docs/` |
 | `task serve` | Run Hugo dev server |
-| `task server` | Build Hugo + run Go file server locally |
 
 ## Deployment
 
