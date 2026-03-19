@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.2.13] - 2026-03-19
+
+ - fixing banking slides
+
 ## [0.2.12] - 2026-03-15
 
  - removing -docs site
