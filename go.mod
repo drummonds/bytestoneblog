@@ -1,4 +1,4 @@
-module github.com/drummonds/bytestoneblog
+module codeberg.org/hum3/bytestoneblog
 
 go 1.24.0
 
